@@ -5,10 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; NeuroMANCER 0.1 documentation</title>
+  <title>PWA Maps &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
@@ -29,7 +30,6 @@
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -72,7 +72,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -110,16 +110,6 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gnn.html">gnn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loss.html">loss</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 </ul>
 
             
@@ -165,12 +155,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>PWA Maps</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/pwa_maps.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -182,19 +174,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <section id="module-pwa_maps">
+<span id="pwa-maps"></span><h1>PWA Maps<a class="headerlink" href="#module-pwa_maps" title="Permalink to this heading">¶</a></h1>
+<p>Functions for obtaining local affine maps of fully connected neural networks</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pwa_maps.lpv_batched">
+<span class="sig-prename descclassname"><span class="pre">pwa_maps.</span></span><span class="sig-name descname"><span class="pre">lpv_batched</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pwa_maps.html#lpv_batched"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pwa_maps.lpv_batched" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
-  
-  <div id="search-results">
-  
-  </div>
+<dl class="py function">
+<dt class="sig sig-object py" id="pwa_maps.pwa_batched">
+<span class="sig-prename descclassname"><span class="pre">pwa_maps.</span></span><span class="sig-name descname"><span class="pre">pwa_batched</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pwa_maps.html#pwa_batched"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pwa_maps.pwa_batched" title="Permalink to this definition">¶</a></dt>
+<dd><p>function returning parameters of a local affine map of a fully connected neural network
+for a given input x, where the following holds:
+y = fx(x) = Astar*x + bstar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fx</strong> – (nn.Module) fully connected neural network</p></li>
+<li><p><strong>x</strong> – (torch.Tensor, shape=[batchsize, in_features])</p></li>
+<li><p><strong>use_bias</strong> – flag for turning bias on and off</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Astar, bstar of a local affine map of the network fx: y = Astar*x + bstar</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
 
            </div>
            
@@ -232,14 +241,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

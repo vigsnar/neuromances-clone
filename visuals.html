@@ -1,46 +1,46 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Visuals &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Arg" href="arg.html" />
@@ -84,7 +84,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -92,7 +91,7 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
@@ -107,7 +106,42 @@
 <li class="toctree-l1"><a class="reference internal" href="signals.html">Signals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trainer.html">Trainer</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Visuals</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Visuals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#visuals.Visualizer"><code class="docutils literal notranslate"><span class="pre">Visualizer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.Visualizer.eval"><code class="docutils literal notranslate"><span class="pre">Visualizer.eval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.Visualizer.train_output"><code class="docutils literal notranslate"><span class="pre">Visualizer.train_output()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.Visualizer.train_plot"><code class="docutils literal notranslate"><span class="pre">Visualizer.train_plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visuals.VisualizerClosedLoop"><code class="docutils literal notranslate"><span class="pre">VisualizerClosedLoop</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerClosedLoop.eval"><code class="docutils literal notranslate"><span class="pre">VisualizerClosedLoop.eval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerClosedLoop.plot_matrix"><code class="docutils literal notranslate"><span class="pre">VisualizerClosedLoop.plot_matrix()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visuals.VisualizerDobleIntegrator"><code class="docutils literal notranslate"><span class="pre">VisualizerDobleIntegrator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerDobleIntegrator.eval"><code class="docutils literal notranslate"><span class="pre">VisualizerDobleIntegrator.eval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerDobleIntegrator.train_output"><code class="docutils literal notranslate"><span class="pre">VisualizerDobleIntegrator.train_output()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visuals.VisualizerOpen"><code class="docutils literal notranslate"><span class="pre">VisualizerOpen</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerOpen.eval"><code class="docutils literal notranslate"><span class="pre">VisualizerOpen.eval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerOpen.plot_matrix"><code class="docutils literal notranslate"><span class="pre">VisualizerOpen.plot_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerOpen.plot_traj"><code class="docutils literal notranslate"><span class="pre">VisualizerOpen.plot_traj()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerOpen.train_output"><code class="docutils literal notranslate"><span class="pre">VisualizerOpen.train_output()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerOpen.train_plot"><code class="docutils literal notranslate"><span class="pre">VisualizerOpen.train_plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visuals.VisualizerTrajectories"><code class="docutils literal notranslate"><span class="pre">VisualizerTrajectories</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerTrajectories.eval"><code class="docutils literal notranslate"><span class="pre">VisualizerTrajectories.eval()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visuals.VisualizerUncertaintyOpen"><code class="docutils literal notranslate"><span class="pre">VisualizerUncertaintyOpen</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerUncertaintyOpen.eval"><code class="docutils literal notranslate"><span class="pre">VisualizerUncertaintyOpen.eval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visuals.VisualizerUncertaintyOpen.plot_traj"><code class="docutils literal notranslate"><span class="pre">VisualizerUncertaintyOpen.plot_traj()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arg.html">Arg</a></li>
 <li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
@@ -118,7 +152,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -153,20 +186,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
       <li>Visuals</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/visuals.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -181,54 +212,54 @@
            <div itemprop="articleBody">
             
   <section id="module-visuals">
-<span id="visuals"></span><h1>Visuals<a class="headerlink" href="#module-visuals" title="Permalink to this headline">¶</a></h1>
+<span id="visuals"></span><h1>Visuals<a class="headerlink" href="#module-visuals" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
-<dt id="visuals.Visualizer">
-<em class="property">class </em><code class="sig-prename descclassname">visuals.</code><code class="sig-name descname">Visualizer</code><a class="reference internal" href="_modules/visuals.html#Visualizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.Visualizer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.Visualizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">visuals.</span></span><span class="sig-name descname"><span class="pre">Visualizer</span></span><a class="reference internal" href="_modules/visuals.html#Visualizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.Visualizer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt id="visuals.Visualizer.eval">
-<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outputs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#Visualizer.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.Visualizer.eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.Visualizer.eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#Visualizer.eval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.Visualizer.eval" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="visuals.Visualizer.train_output">
-<code class="sig-name descname">train_output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#Visualizer.train_output"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.Visualizer.train_output" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.Visualizer.train_output">
+<span class="sig-name descname"><span class="pre">train_output</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#Visualizer.train_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.Visualizer.train_output" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="visuals.Visualizer.train_plot">
-<code class="sig-name descname">train_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outputs</span></em>, <em class="sig-param"><span class="n">epochs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#Visualizer.train_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.Visualizer.train_plot" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.Visualizer.train_plot">
+<span class="sig-name descname"><span class="pre">train_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#Visualizer.train_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.Visualizer.train_plot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="visuals.VisualizerClosedLoop">
-<em class="property">class </em><code class="sig-prename descclassname">visuals.</code><code class="sig-name descname">VisualizerClosedLoop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u_key</span><span class="o">=</span><span class="default_value">'U_pred_policy'</span></em>, <em class="sig-param"><span class="n">y_key</span><span class="o">=</span><span class="default_value">'Y_pred_dynamics'</span></em>, <em class="sig-param"><span class="n">r_key</span><span class="o">=</span><span class="default_value">'Rf'</span></em>, <em class="sig-param"><span class="n">d_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ymin_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ymax_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">umin_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">umax_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ctrl_outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">savedir</span><span class="o">=</span><span class="default_value">'test_control'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerClosedLoop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerClosedLoop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerClosedLoop">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">visuals.</span></span><span class="sig-name descname"><span class="pre">VisualizerClosedLoop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'U_pred_policy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Y_pred_dynamics'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Rf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ymin_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ymax_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">umin_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">umax_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctrl_outputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savedir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'test_control'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerClosedLoop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerClosedLoop" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt id="visuals.VisualizerClosedLoop.eval">
-<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outputs</span></em>, <em class="sig-param"><span class="n">plot_weights</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">'CL_control.png'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerClosedLoop.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerClosedLoop.eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerClosedLoop.eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'CL_control.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerClosedLoop.eval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerClosedLoop.eval" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="visuals.VisualizerClosedLoop.plot_matrix">
-<code class="sig-name descname">plot_matrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerClosedLoop.plot_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerClosedLoop.plot_matrix" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerClosedLoop.plot_matrix">
+<span class="sig-name descname"><span class="pre">plot_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerClosedLoop.plot_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerClosedLoop.plot_matrix" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="visuals.VisualizerDobleIntegrator">
-<em class="property">class </em><code class="sig-prename descclassname">visuals.</code><code class="sig-name descname">VisualizerDobleIntegrator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataset</span></em>, <em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">verbosity</span></em>, <em class="sig-param"><span class="n">savedir</span></em>, <em class="sig-param"><span class="n">nstep</span><span class="o">=</span><span class="default_value">40</span></em>, <em class="sig-param"><span class="n">x0</span><span class="o">=</span><span class="default_value">array([[1.5], [1.5]])</span></em>, <em class="sig-param"><span class="n">training_visuals</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">trace_movie</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerDobleIntegrator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerDobleIntegrator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerDobleIntegrator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">visuals.</span></span><span class="sig-name descname"><span class="pre">VisualizerDobleIntegrator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savedir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nstep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([[1.5],</span> <span class="pre">[1.5]])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">training_visuals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_movie</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerDobleIntegrator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerDobleIntegrator" title="Permalink to this definition">¶</a></dt>
 <dd><p>custom visualizer for double integrator example</p>
 <dl class="py method">
-<dt id="visuals.VisualizerDobleIntegrator.eval">
-<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trainer</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerDobleIntegrator.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerDobleIntegrator.eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerDobleIntegrator.eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trainer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerDobleIntegrator.eval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerDobleIntegrator.eval" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="visuals.VisualizerDobleIntegrator.train_output">
-<code class="sig-name descname">train_output</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trainer</span></em>, <em class="sig-param"><span class="n">epoch_policy</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerDobleIntegrator.train_output"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerDobleIntegrator.train_output" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerDobleIntegrator.train_output">
+<span class="sig-name descname"><span class="pre">train_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trainer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch_policy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerDobleIntegrator.train_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerDobleIntegrator.train_output" title="Permalink to this definition">¶</a></dt>
 <dd><p>visualize evolution of closed-loop contro and policy landscape during training
 :return:</p>
 </dd></dl>
@@ -236,52 +267,52 @@
 </dd></dl>
 
 <dl class="py class">
-<dt id="visuals.VisualizerOpen">
-<em class="property">class </em><code class="sig-prename descclassname">visuals.</code><code class="sig-name descname">VisualizerOpen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">verbosity</span></em>, <em class="sig-param"><span class="n">savedir</span></em>, <em class="sig-param"><span class="n">training_visuals</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">trace_movie</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerOpen" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerOpen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">visuals.</span></span><span class="sig-name descname"><span class="pre">VisualizerOpen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savedir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">training_visuals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_movie</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerOpen" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt id="visuals.VisualizerOpen.eval">
-<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outputs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerOpen.eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerOpen.eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.eval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerOpen.eval" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>outputs</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="visuals.VisualizerOpen.plot_matrix">
-<code class="sig-name descname">plot_matrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.plot_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerOpen.plot_matrix" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerOpen.plot_matrix">
+<span class="sig-name descname"><span class="pre">plot_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.plot_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerOpen.plot_matrix" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="visuals.VisualizerOpen.plot_traj">
-<code class="sig-name descname">plot_traj</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">true_traj</span></em>, <em class="sig-param"><span class="n">pred_traj</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">'open_loop.png'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.plot_traj"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerOpen.plot_traj" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerOpen.plot_traj">
+<span class="sig-name descname"><span class="pre">plot_traj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">true_traj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_traj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'open_loop.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.plot_traj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerOpen.plot_traj" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="visuals.VisualizerOpen.train_output">
-<code class="sig-name descname">train_output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.train_output"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerOpen.train_output" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerOpen.train_output">
+<span class="sig-name descname"><span class="pre">train_output</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.train_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerOpen.train_output" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="visuals.VisualizerOpen.train_plot">
-<code class="sig-name descname">train_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outputs</span></em>, <em class="sig-param"><span class="n">epoch</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.train_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerOpen.train_plot" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerOpen.train_plot">
+<span class="sig-name descname"><span class="pre">train_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerOpen.train_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerOpen.train_plot" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>outputs</strong> – </p></li>
 <li><p><strong>epoch</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
@@ -290,34 +321,34 @@
 </dd></dl>
 
 <dl class="py class">
-<dt id="visuals.VisualizerTrajectories">
-<em class="property">class </em><code class="sig-prename descclassname">visuals.</code><code class="sig-name descname">VisualizerTrajectories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">plot_keys</span></em>, <em class="sig-param"><span class="n">verbosity</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerTrajectories"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerTrajectories" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerTrajectories">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">visuals.</span></span><span class="sig-name descname"><span class="pre">VisualizerTrajectories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerTrajectories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerTrajectories" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt id="visuals.VisualizerTrajectories.eval">
-<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outputs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerTrajectories.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerTrajectories.eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerTrajectories.eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerTrajectories.eval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerTrajectories.eval" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="visuals.VisualizerUncertaintyOpen">
-<em class="property">class </em><code class="sig-prename descclassname">visuals.</code><code class="sig-name descname">VisualizerUncertaintyOpen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataset</span></em>, <em class="sig-param"><span class="n">savedir</span></em>, <em class="sig-param"><span class="n">dynamics_name</span><span class="o">=</span><span class="default_value">'dynamics'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerUncertaintyOpen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerUncertaintyOpen" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerUncertaintyOpen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">visuals.</span></span><span class="sig-name descname"><span class="pre">VisualizerUncertaintyOpen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savedir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamics_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dynamics'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerUncertaintyOpen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerUncertaintyOpen" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt id="visuals.VisualizerUncertaintyOpen.eval">
-<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outputs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerUncertaintyOpen.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerUncertaintyOpen.eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerUncertaintyOpen.eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerUncertaintyOpen.eval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerUncertaintyOpen.eval" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>outputs</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="visuals.VisualizerUncertaintyOpen.plot_traj">
-<code class="sig-name descname">plot_traj</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">true_traj</span></em>, <em class="sig-param"><span class="n">pred_traj</span></em>, <em class="sig-param"><span class="n">pred_mean</span></em>, <em class="sig-param"><span class="n">pred_std</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">'open_loop.png'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerUncertaintyOpen.plot_traj"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#visuals.VisualizerUncertaintyOpen.plot_traj" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="visuals.VisualizerUncertaintyOpen.plot_traj">
+<span class="sig-name descname"><span class="pre">plot_traj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">true_traj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_traj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_std</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'open_loop.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/visuals.html#VisualizerUncertaintyOpen.plot_traj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#visuals.VisualizerUncertaintyOpen.plot_traj" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -329,29 +360,29 @@
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="arg.html" class="btn btn-neutral float-right" title="Arg" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="trainer.html" class="btn btn-neutral float-left" title="Trainer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="arg.html" class="btn btn-neutral float-right" title="Arg" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trainer.html" class="btn btn-neutral float-left" title="Trainer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -359,6 +390,7 @@
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

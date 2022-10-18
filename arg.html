@@ -1,46 +1,46 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Arg &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Callbacks" href="callbacks.html" />
@@ -84,7 +84,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -92,7 +91,7 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
@@ -108,7 +107,25 @@
 <li class="toctree-l1"><a class="reference internal" href="simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trainer.html">Trainer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Arg</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Arg</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arg.ArgParser"><code class="docutils literal notranslate"><span class="pre">ArgParser</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#arg.ArgParser.check_for_group"><code class="docutils literal notranslate"><span class="pre">ArgParser.check_for_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arg.ArgParser.group"><code class="docutils literal notranslate"><span class="pre">ArgParser.group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arg.ArgParser.parse_arg_groups"><code class="docutils literal notranslate"><span class="pre">ArgParser.parse_arg_groups()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.add"><code class="docutils literal notranslate"><span class="pre">add()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.ctrl_loss"><code class="docutils literal notranslate"><span class="pre">ctrl_loss()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.data"><code class="docutils literal notranslate"><span class="pre">data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.freeze"><code class="docutils literal notranslate"><span class="pre">freeze()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.lin"><code class="docutils literal notranslate"><span class="pre">lin()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.loss"><code class="docutils literal notranslate"><span class="pre">loss()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.opt"><code class="docutils literal notranslate"><span class="pre">opt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.policy"><code class="docutils literal notranslate"><span class="pre">policy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arg.ssm"><code class="docutils literal notranslate"><span class="pre">ssm()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
@@ -118,7 +135,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -153,20 +169,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
       <li>Arg</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/arg.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -181,48 +195,48 @@
            <div itemprop="articleBody">
             
   <section id="module-arg">
-<span id="arg"></span><h1>Arg<a class="headerlink" href="#module-arg" title="Permalink to this headline">¶</a></h1>
+<span id="arg"></span><h1>Arg<a class="headerlink" href="#module-arg" title="Permalink to this heading">¶</a></h1>
 <p>This module contains an extension of the argparse.ArgumentParser class and some
 parsers that are generally useful for writing training scripts using the neuromancer library.
 ArgumentParser is extended to take advantage of grouped arguments when passing
 command line arguments to functions and to abbreviate argparse’s verbose method names.</p>
 <dl class="py class">
-<dt id="arg.ArgParser">
-<em class="property">class </em><code class="sig-prename descclassname">arg.</code><code class="sig-name descname">ArgParser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.ArgParser" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.ArgParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">ArgParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.ArgParser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Subclass argparser for abbreviated method calls, separate namespaces for argument groups, and optional command line
 prefix so that we can reuse parser definitions.</p>
 <dl class="py method">
-<dt id="arg.ArgParser.check_for_group">
-<code class="sig-name descname">check_for_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser.check_for_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.ArgParser.check_for_group" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.ArgParser.check_for_group">
+<span class="sig-name descname"><span class="pre">check_for_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser.check_for_group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.ArgParser.check_for_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function will return the argument group if it exists</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>group_name</strong> – (str) Name of the argument group</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(argparse._ArgumentGroup or None)</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="arg.ArgParser.group">
-<code class="sig-name descname">group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_name</span></em>, <em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser.group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.ArgParser.group" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.ArgParser.group">
+<span class="sig-name descname"><span class="pre">group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser.group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.ArgParser.group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Monkey patch to abbreviate verbose call to add_argument_group. If an argument group exists by
 the name group_name it will be returned, otherwise a new argument group will be created and returned.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>group_name</strong> – (str) Name of the argument group</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>argparse._ArgumentGroup</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="arg.ArgParser.parse_arg_groups">
-<code class="sig-name descname">parse_arg_groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser.parse_arg_groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.ArgParser.parse_arg_groups" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.ArgParser.parse_arg_groups">
+<span class="sig-name descname"><span class="pre">parse_arg_groups</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser.parse_arg_groups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.ArgParser.parse_arg_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>In addition to returning a single Namespace of all arguments returns a dictionary of Namespaces for each argument group
 :return:</p>
 <blockquote>
@@ -236,153 +250,153 @@ the name group_name it will be returned, otherwise a new argument group will be 
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.add">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">argname</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.add" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.add">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">argname</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Monkey patch for argument group objects.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – Refers to instantiated object of class being patched</p></li>
 <li><p><strong>argname</strong> – (str) Command line argument</p></li>
 <li><p><strong>kwargs</strong> – Whatever keyword args this thing accepts</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Whatever add_argument returns (I think it is an Action object)</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.ctrl_loss">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">ctrl_loss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ctrl_loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.ctrl_loss" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.ctrl_loss">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">ctrl_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ctrl_loss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.ctrl_loss" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for special control loss arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.data">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">system</span><span class="o">=</span><span class="default_value">'CSTR'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.data">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'CSTR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for data arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.freeze">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">freeze</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#freeze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.freeze" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.freeze">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">freeze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#freeze"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.freeze" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for weight freezing arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.lin">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">lin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#lin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.lin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.lin">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">lin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#lin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.lin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for linear map arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.log">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.log" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.log">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for logging arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.loss">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">loss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.loss" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.loss">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#loss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.loss" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for loss function arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.opt">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">opt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#opt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.opt" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.opt">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">opt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#opt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.opt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for optimization arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.policy">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#policy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.policy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.policy">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for control policy arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="arg.ssm">
-<code class="sig-prename descclassname">arg.</code><code class="sig-name descname">ssm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ssm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arg.ssm" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="arg.ssm">
+<span class="sig-prename descclassname"><span class="pre">arg.</span></span><span class="sig-name descname"><span class="pre">ssm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ssm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.ssm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Command line parser for state space model arguments</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>prefix</strong> – (str) Optional prefix for command line arguments to resolve naming conflicts when multiple parsers
 are bundled as parents.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(arg.ArgParse) A command line parser</p>
 </dd>
 </dl>
@@ -395,29 +409,29 @@ are bundled as parents.</p>
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="callbacks.html" class="btn btn-neutral float-right" title="Callbacks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="visuals.html" class="btn btn-neutral float-left" title="Visuals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="callbacks.html" class="btn btn-neutral float-right" title="Callbacks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="visuals.html" class="btn btn-neutral float-left" title="Visuals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -425,6 +439,7 @@ are bundled as parents.</p>
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

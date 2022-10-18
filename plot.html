@@ -1,46 +1,46 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Plot &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Problem" href="problem.html" />
@@ -84,7 +84,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -92,7 +91,7 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
@@ -101,7 +100,35 @@
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operators.html">Operators</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Plot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#plot.Animator"><code class="docutils literal notranslate"><span class="pre">Animator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#plot.Animator.__call__"><code class="docutils literal notranslate"><span class="pre">Animator.__call__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plot.Animator.find_mat"><code class="docutils literal notranslate"><span class="pre">Animator.find_mat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plot.Animator.make_and_save"><code class="docutils literal notranslate"><span class="pre">Animator.make_and_save()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.cl_simulate"><code class="docutils literal notranslate"><span class="pre">cl_simulate()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.get_colors"><code class="docutils literal notranslate"><span class="pre">get_colors()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.lpv_batched"><code class="docutils literal notranslate"><span class="pre">lpv_batched()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_cl"><code class="docutils literal notranslate"><span class="pre">plot_cl()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_cl_train"><code class="docutils literal notranslate"><span class="pre">plot_cl_train()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_loss_DPC"><code class="docutils literal notranslate"><span class="pre">plot_loss_DPC()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_loss_mpp"><code class="docutils literal notranslate"><span class="pre">plot_loss_mpp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_matrices"><code class="docutils literal notranslate"><span class="pre">plot_matrices()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_model_graph"><code class="docutils literal notranslate"><span class="pre">plot_model_graph()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_policy"><code class="docutils literal notranslate"><span class="pre">plot_policy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_policy_train"><code class="docutils literal notranslate"><span class="pre">plot_policy_train()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_solution_mpp"><code class="docutils literal notranslate"><span class="pre">plot_solution_mpp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_traj"><code class="docutils literal notranslate"><span class="pre">plot_traj()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.plot_trajectories"><code class="docutils literal notranslate"><span class="pre">plot_trajectories()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.pltCL"><code class="docutils literal notranslate"><span class="pre">pltCL()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.pltCorrelate"><code class="docutils literal notranslate"><span class="pre">pltCorrelate()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.pltOL"><code class="docutils literal notranslate"><span class="pre">pltOL()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.pltPhase"><code class="docutils literal notranslate"><span class="pre">pltPhase()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.pltRecurrence"><code class="docutils literal notranslate"><span class="pre">pltRecurrence()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot.trajectory_movie"><code class="docutils literal notranslate"><span class="pre">trajectory_movie()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="problem.html">Problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rnn.html">RNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signals.html">Signals</a></li>
@@ -118,7 +145,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -153,20 +179,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
       <li>Plot</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/plot.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -181,34 +205,34 @@
            <div itemprop="articleBody">
             
   <section id="module-plot">
-<span id="plot"></span><h1>Plot<a class="headerlink" href="#module-plot" title="Permalink to this headline">¶</a></h1>
+<span id="plot"></span><h1>Plot<a class="headerlink" href="#module-plot" title="Permalink to this heading">¶</a></h1>
 <p>Various helper functions for plotting.</p>
 <dl class="py class">
-<dt id="plot.Animator">
-<em class="property">class </em><code class="sig-prename descclassname">plot.</code><code class="sig-name descname">Animator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dynamics_model</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#Animator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.Animator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.Animator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">Animator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dynamics_model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#Animator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.Animator" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt id="plot.Animator.__call__">
-<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#Animator.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.Animator.__call__" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.Animator.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#Animator.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.Animator.__call__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call self as a function.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="plot.Animator.find_mat">
-<code class="sig-name descname">find_mat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#Animator.find_mat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.Animator.find_mat" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.Animator.find_mat">
+<span class="sig-name descname"><span class="pre">find_mat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#Animator.find_mat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.Animator.find_mat" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="plot.Animator.make_and_save">
-<code class="sig-name descname">make_and_save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#Animator.make_and_save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.Animator.make_and_save" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.Animator.make_and_save">
+<span class="sig-name descname"><span class="pre">make_and_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#Animator.make_and_save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.Animator.make_and_save" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.cl_simulate">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">cl_simulate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">net</span></em>, <em class="sig-param"><span class="n">nstep</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">x0</span><span class="o">=</span><span class="default_value">array([[1.], [1.]])</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#cl_simulate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.cl_simulate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.cl_simulate">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">cl_simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nstep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([[1.],</span> <span class="pre">[1.]])</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#cl_simulate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.cl_simulate" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>A</strong> – </p></li>
 <li><p><strong>B</strong> – </p></li>
@@ -217,38 +241,38 @@
 <li><p><strong>x0</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.get_colors">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">get_colors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">k</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#get_colors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.get_colors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.get_colors">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">get_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#get_colors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.get_colors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns k colors evenly spaced across the color wheel.
 :param k: (int) Number of colors you want.
 :return: (np.array, shape=[k, 3])</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.lpv_batched">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">lpv_batched</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fx</span></em>, <em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#lpv_batched"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.lpv_batched" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.lpv_batched">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">lpv_batched</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#lpv_batched"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.lpv_batched" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_cl">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_cl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">U</span></em>, <em class="sig-param"><span class="n">nstep</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">save_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trace_movie</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_cl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_cl" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_cl">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_cl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nstep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_movie</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_cl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_cl" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_cl_train">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_cl_train</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X_list</span></em>, <em class="sig-param"><span class="n">U_list</span></em>, <em class="sig-param"><span class="n">nstep</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">save_path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_cl_train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_cl_train" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_cl_train">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_cl_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nstep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_cl_train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_cl_train" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_loss_DPC">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_loss_DPC</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">dataset</span></em>, <em class="sig-param"><span class="n">xmin</span><span class="o">=</span><span class="default_value">- 5</span></em>, <em class="sig-param"><span class="n">xmax</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">save_path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_loss_DPC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_loss_DPC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_loss_DPC">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_loss_DPC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_loss_DPC"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_loss_DPC" title="Permalink to this definition">¶</a></dt>
 <dd><p>plot loss function for trained DPC model
 :param model:
 :param dataset:
@@ -259,8 +283,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_loss_mpp">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_loss_mpp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">dataset</span></em>, <em class="sig-param"><span class="n">xmin</span><span class="o">=</span><span class="default_value">- 2</span></em>, <em class="sig-param"><span class="n">xmax</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">save_path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_loss_mpp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_loss_mpp" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_loss_mpp">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_loss_mpp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_loss_mpp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_loss_mpp" title="Permalink to this definition">¶</a></dt>
 <dd><p>plots loss function for multiparametric problem with 2 parameters
 :param model:
 :param dataset:
@@ -271,12 +295,12 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_matrices">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_matrices</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">matrices</span></em>, <em class="sig-param"><span class="n">labels</span></em>, <em class="sig-param"><span class="n">figname</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_matrices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_matrices" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_matrices">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_matrices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_matrices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_matrices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plots and saves figure of a grid of matrices.
 Useful for inspecting layers of weights of neural networks.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>matrices</strong> – (list of lists of 2-way np.arrays) Grid of matrices to plot</p></li>
 <li><p><strong>labels</strong> – (list of lists of str) Labels for plotted matrices</p></li>
@@ -284,7 +308,7 @@ Useful for inspecting layers of weights of neural networks.</p>
 </ul>
 </dd>
 </dl>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">neuromancer.plot</span> <span class="k">as</span> <span class="nn">plot</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">neuromancer.plot</span> <span class="k">as</span> <span class="nn">plot</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">color_matrices</span> <span class="o">=</span> <span class="p">[[</span><span class="n">plot</span><span class="o">.</span><span class="n">get_colors</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">labels</span> <span class="o">=</span> <span class="p">[[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="o">*</span><span class="n">j</span><span class="si">}</span><span class="s1"> X 3 matrix&#39;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="o">.</span><span class="n">plot_matrices</span><span class="p">(</span><span class="n">color_matrices</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="s1">&#39;matrix_grid.png&#39;</span><span class="p">)</span>
@@ -293,23 +317,23 @@ Useful for inspecting layers of weights of neural networks.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_model_graph">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_model_graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">data_keys</span></em>, <em class="sig-param"><span class="n">include_objectives</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">fname</span><span class="o">=</span><span class="default_value">'model_graph.png'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_model_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_model_graph" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_model_graph">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_model_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_objectives</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model_graph.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_model_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_model_graph" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_policy">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">net</span></em>, <em class="sig-param"><span class="n">xmin</span><span class="o">=</span><span class="default_value">- 5</span></em>, <em class="sig-param"><span class="n">xmax</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">save_path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_policy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_policy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_policy">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">net</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_policy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_policy_train">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_policy_train</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">policy</span></em>, <em class="sig-param"><span class="n">policy_list</span></em>, <em class="sig-param"><span class="n">xmin</span><span class="o">=</span><span class="default_value">- 5</span></em>, <em class="sig-param"><span class="n">xmax</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">save_path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_policy_train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_policy_train" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_policy_train">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_policy_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_policy_train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_policy_train" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_solution_mpp">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_solution_mpp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">xmin</span><span class="o">=</span><span class="default_value">- 2</span></em>, <em class="sig-param"><span class="n">xmax</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">save_path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_solution_mpp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_solution_mpp" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_solution_mpp">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_solution_mpp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_solution_mpp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_solution_mpp" title="Permalink to this definition">¶</a></dt>
 <dd><p>plots solution landscape for problem with 2 parameters and 1 decision variable
 :param net:
 :param xmin:
@@ -319,10 +343,10 @@ Useful for inspecting layers of weights of neural networks.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_traj">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_traj</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_traj"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_traj" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_traj">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_traj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_traj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_traj" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – (dict {str: np.array}) Dictionary of labels and time series</p></li>
 <li><p><strong>figname</strong> – (str)</p></li>
@@ -332,19 +356,19 @@ Useful for inspecting layers of weights of neural networks.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.plot_trajectories">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">plot_trajectories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">traj1</span></em>, <em class="sig-param"><span class="n">traj2</span></em>, <em class="sig-param"><span class="n">labels</span></em>, <em class="sig-param"><span class="n">figname</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_trajectories"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.plot_trajectories" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.plot_trajectories">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">plot_trajectories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">traj1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traj2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#plot_trajectories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.plot_trajectories" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="plot.pltCL">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">pltCL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Y</span></em>, <em class="sig-param"><span class="n">R</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">U</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">D</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">X</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ctrl_outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Ymin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Ymax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Umin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Umax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltCL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.pltCL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.pltCL">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">pltCL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctrl_outputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ymin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ymax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Umin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Umax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltCL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.pltCL" title="Permalink to this definition">¶</a></dt>
 <dd><p>plot input output closed loop dataset</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.pltCorrelate">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">pltCorrelate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltCorrelate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.pltCorrelate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.pltCorrelate">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">pltCorrelate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltCorrelate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.pltCorrelate" title="Permalink to this definition">¶</a></dt>
 <dd><p>plot correlation matrices of time series data</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://realpython.com/numpy-scipy-pandas-correlation-python/">https://realpython.com/numpy-scipy-pandas-correlation-python/</a></p></li>
@@ -352,16 +376,16 @@ Useful for inspecting layers of weights of neural networks.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.pltOL">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">pltOL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Y</span></em>, <em class="sig-param"><span class="n">Ytrain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">U</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">D</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">X</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltOL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.pltOL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.pltOL">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">pltOL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ytrain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltOL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.pltOL" title="Permalink to this definition">¶</a></dt>
 <dd><p>plot trained open loop dataset</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.pltPhase">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">pltPhase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltPhase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.pltPhase" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.pltPhase">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">pltPhase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltPhase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.pltPhase" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>X</strong> – (np.array, shape=[numpoints, {2,3}])</p></li>
 <li><p><strong>figname</strong> – (str) Filename for plot with extension for file type.</p></li>
@@ -376,7 +400,7 @@ Useful for inspecting layers of weights of neural networks.</p>
 <li><p><a class="reference external" href="http://kitchingroup.cheme.cmu.edu/blog/2013/02/21/Phase-portraits-of-a-system-of-ODEs/">http://kitchingroup.cheme.cmu.edu/blog/2013/02/21/Phase-portraits-of-a-system-of-ODEs/</a></p></li>
 <li><p><a class="reference external" href="http://systems-sciences.uni-graz.at/etextbook/sw2/phpl_python.html">http://systems-sciences.uni-graz.at/etextbook/sw2/phpl_python.html</a></p></li>
 </ul>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt; import numpy as np</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt; import numpy as np</span>
 <span class="go">&gt;&gt; import neuromancer.plot as plot</span>
 <span class="go">&gt;&gt; x = np.stack([np.linspace(-10, 10, 100)]*100)</span>
 <span class="go">&gt;&gt; y = np.stack([np.linspace(-10, 10, 100)]*100).T</span>
@@ -388,8 +412,8 @@ Useful for inspecting layers of weights of neural networks.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.pltRecurrence">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">pltRecurrence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltRecurrence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.pltRecurrence" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.pltRecurrence">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">pltRecurrence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#pltRecurrence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.pltRecurrence" title="Permalink to this definition">¶</a></dt>
 <dd><p>plot recurrence of time series data</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pyts.readthedocs.io/en/stable/auto_examples/image/plot_rp.html">https://pyts.readthedocs.io/en/stable/auto_examples/image/plot_rp.html</a></p></li>
@@ -401,8 +425,8 @@ Useful for inspecting layers of weights of neural networks.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="plot.trajectory_movie">
-<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">trajectory_movie</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">true_traj</span></em>, <em class="sig-param"><span class="n">pred_traj</span></em>, <em class="sig-param"><span class="n">figname</span><span class="o">=</span><span class="default_value">'traj.mp4'</span></em>, <em class="sig-param"><span class="n">freq</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">fps</span><span class="o">=</span><span class="default_value">15</span></em>, <em class="sig-param"><span class="n">dpi</span><span class="o">=</span><span class="default_value">100</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#trajectory_movie"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.trajectory_movie" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="plot.trajectory_movie">
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">trajectory_movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">true_traj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_traj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'traj.mp4'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plot.html#trajectory_movie"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plot.trajectory_movie" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -412,29 +436,29 @@ Useful for inspecting layers of weights of neural networks.</p>
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="problem.html" class="btn btn-neutral float-right" title="Problem" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="operators.html" class="btn btn-neutral float-left" title="Operators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="problem.html" class="btn btn-neutral float-right" title="Problem" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="operators.html" class="btn btn-neutral float-left" title="Operators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -442,6 +466,7 @@ Useful for inspecting layers of weights of neural networks.</p>
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

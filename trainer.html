@@ -1,46 +1,46 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Trainer &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Visuals" href="visuals.html" />
@@ -84,7 +84,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -92,7 +91,7 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
@@ -106,7 +105,18 @@
 <li class="toctree-l1"><a class="reference internal" href="rnn.html">RNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signals.html">Signals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulators.html">Simulators</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Trainer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Trainer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#trainer.Trainer"><code class="docutils literal notranslate"><span class="pre">Trainer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#trainer.Trainer.evaluate"><code class="docutils literal notranslate"><span class="pre">Trainer.evaluate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trainer.Trainer.test"><code class="docutils literal notranslate"><span class="pre">Trainer.test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trainer.Trainer.train"><code class="docutils literal notranslate"><span class="pre">Trainer.train()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#trainer.freeze_weight"><code class="docutils literal notranslate"><span class="pre">freeze_weight()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trainer.move_batch_to_device"><code class="docutils literal notranslate"><span class="pre">move_batch_to_device()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trainer.unfreeze_weight"><code class="docutils literal notranslate"><span class="pre">unfreeze_weight()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arg.html">Arg</a></li>
 <li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a></li>
@@ -118,7 +128,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -153,20 +162,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
       <li>Trainer</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/trainer.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -181,28 +188,28 @@
            <div itemprop="articleBody">
             
   <section id="module-trainer">
-<span id="trainer"></span><h1>Trainer<a class="headerlink" href="#module-trainer" title="Permalink to this headline">¶</a></h1>
+<span id="trainer"></span><h1>Trainer<a class="headerlink" href="#module-trainer" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
-<dt id="trainer.Trainer">
-<em class="property">class </em><code class="sig-prename descclassname">trainer.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">problem: neuromancer.problem.Problem</em>, <em class="sig-param">train_data: torch.utils.data.dataloader.DataLoader</em>, <em class="sig-param">dev_data: torch.utils.data.dataloader.DataLoader</em>, <em class="sig-param">test_data: torch.utils.data.dataloader.DataLoader</em>, <em class="sig-param">optimizer: torch.optim.optimizer.Optimizer</em>, <em class="sig-param">logger: Optional[neuromancer.loggers.BasicLogger] = None</em>, <em class="sig-param">callback=&lt;neuromancer.callbacks.Callback object&gt;</em>, <em class="sig-param">lr_scheduler=None</em>, <em class="sig-param">epochs=1000</em>, <em class="sig-param">patience=5</em>, <em class="sig-param">warmup=0</em>, <em class="sig-param">train_metric='nstep_train_loss'</em>, <em class="sig-param">dev_metric='nstep_dev_loss'</em>, <em class="sig-param">test_metric='nstep_test_loss'</em>, <em class="sig-param">eval_metric='loop_dev_loss'</em>, <em class="sig-param">eval_mode='min'</em>, <em class="sig-param">clip=100.0</em>, <em class="sig-param">device='cpu'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trainer.Trainer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="trainer.Trainer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">trainer.</span></span><span class="sig-name descname"><span class="pre">Trainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem:</span> <span class="pre">~neuromancer.problem.Problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_data:</span> <span class="pre">~torch.utils.data.dataloader.DataLoader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_data:</span> <span class="pre">~torch.utils.data.dataloader.DataLoader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_data:</span> <span class="pre">~torch.utils.data.dataloader.DataLoader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer:</span> <span class="pre">~torch.optim.optimizer.Optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger:</span> <span class="pre">~typing.Optional[~neuromancer.loggers.BasicLogger]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback=&lt;neuromancer.callbacks.Callback</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr_scheduler=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs=1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patience=5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warmup=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_metric='train_loss'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_metric='dev_loss'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_metric='test_loss'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_metric='dev_loss'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_mode='min'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip=100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device='cpu'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#Trainer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#trainer.Trainer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class encapsulating boilerplate PyTorch training code. Training procedure is somewhat
 extensible through methods in Callback objects associated with training and evaluation
 waypoints.</p>
 <dl class="py method">
-<dt id="trainer.Trainer.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">best_model</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#Trainer.evaluate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trainer.Trainer.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="trainer.Trainer.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">best_model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#Trainer.evaluate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#trainer.Trainer.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is deprecated. Use self.test instead.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="trainer.Trainer.test">
-<code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">best_model</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#Trainer.test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trainer.Trainer.test" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="trainer.Trainer.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">best_model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#Trainer.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#trainer.Trainer.test" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the model on all data splits.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="trainer.Trainer.train">
-<code class="sig-name descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#Trainer.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trainer.Trainer.train" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="trainer.Trainer.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#Trainer.train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#trainer.Trainer.train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optimize model according to train_metric and validate per-epoch according to eval_metric.
 Trains for self.epochs and terminates early if self.patience threshold is exceeded.</p>
 </dd></dl>
@@ -210,8 +217,8 @@ Trains for self.epochs and terminates early if self.patience threshold is exceed
 </dd></dl>
 
 <dl class="py function">
-<dt id="trainer.freeze_weight">
-<code class="sig-prename descclassname">trainer.</code><code class="sig-name descname">freeze_weight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">problem</span></em>, <em class="sig-param"><span class="n">module_names</span><span class="o">=</span><span class="default_value">['']</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#freeze_weight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trainer.freeze_weight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="trainer.freeze_weight">
+<span class="sig-prename descclassname"><span class="pre">trainer.</span></span><span class="sig-name descname"><span class="pre">freeze_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['']</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#freeze_weight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#trainer.freeze_weight" title="Permalink to this definition">¶</a></dt>
 <dd><p>[‘parent-&gt;child-&gt;child’]
 :param component:
 :param module_names:
@@ -219,13 +226,13 @@ Trains for self.epochs and terminates early if self.patience threshold is exceed
 </dd></dl>
 
 <dl class="py function">
-<dt id="trainer.move_batch_to_device">
-<code class="sig-prename descclassname">trainer.</code><code class="sig-name descname">move_batch_to_device</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch</span></em>, <em class="sig-param"><span class="n">device</span><span class="o">=</span><span class="default_value">'cpu'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#move_batch_to_device"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trainer.move_batch_to_device" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="trainer.move_batch_to_device">
+<span class="sig-prename descclassname"><span class="pre">trainer.</span></span><span class="sig-name descname"><span class="pre">move_batch_to_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#move_batch_to_device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#trainer.move_batch_to_device" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="trainer.unfreeze_weight">
-<code class="sig-prename descclassname">trainer.</code><code class="sig-name descname">unfreeze_weight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">problem</span></em>, <em class="sig-param"><span class="n">module_names</span><span class="o">=</span><span class="default_value">['']</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#unfreeze_weight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trainer.unfreeze_weight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="trainer.unfreeze_weight">
+<span class="sig-prename descclassname"><span class="pre">trainer.</span></span><span class="sig-name descname"><span class="pre">unfreeze_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['']</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trainer.html#unfreeze_weight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#trainer.unfreeze_weight" title="Permalink to this definition">¶</a></dt>
 <dd><p>[‘parent-&gt;child-&gt;child’]
 :param component:
 :param module_names:
@@ -239,29 +246,29 @@ Trains for self.epochs and terminates early if self.patience threshold is exceed
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="visuals.html" class="btn btn-neutral float-right" title="Visuals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="simulators.html" class="btn btn-neutral float-left" title="Simulators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="visuals.html" class="btn btn-neutral float-right" title="Visuals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="simulators.html" class="btn btn-neutral float-left" title="Simulators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -269,6 +276,7 @@ Trains for self.epochs and terminates early if self.patience threshold is exceed
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

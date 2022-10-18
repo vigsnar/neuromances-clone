@@ -1,46 +1,46 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>NeuroMANCER &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Dynamics" href="dynamics.html" /> 
@@ -83,7 +83,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,11 +90,12 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -103,7 +103,6 @@
 <li class="toctree-l1"><a class="reference internal" href="plot.html">Plot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problem.html">Problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rnn.html">RNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="signals.html">Signals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trainer.html">Trainer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
@@ -112,12 +111,21 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">gnn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 </ul>
 
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -152,20 +160,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="#">Docs</a> &raquo;</li>
         
       <li>NeuroMANCER</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -180,32 +186,296 @@
            <div itemprop="articleBody">
             
   <section id="neuromancer">
-<h1>NeuroMANCER<a class="headerlink" href="#neuromancer" title="Permalink to this headline">¶</a></h1>
+<h1>NeuroMANCER<a class="headerlink" href="#neuromancer" title="Permalink to this heading">¶</a></h1>
 <img alt="_images/class_diagram.png" src="_images/class_diagram.png" />
 <div class="toctree-wrapper compound">
-<p><span class="caption-text">Modules:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">Operators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plot.html">Plot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="problem.html">Problem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rnn.html">RNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="signals.html">Signals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trainer.html">Trainer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="arg.html">Arg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#dynamics.BlackSSM"><code class="docutils literal notranslate"><span class="pre">BlackSSM</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#dynamics.BlockSSM"><code class="docutils literal notranslate"><span class="pre">BlockSSM</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#dynamics.ODEAuto"><code class="docutils literal notranslate"><span class="pre">ODEAuto</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#dynamics.ODENonAuto"><code class="docutils literal notranslate"><span class="pre">ODENonAuto</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#dynamics.SSM"><code class="docutils literal notranslate"><span class="pre">SSM</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#dynamics.blackbox_model"><code class="docutils literal notranslate"><span class="pre">blackbox_model()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#dynamics.block_model"><code class="docutils literal notranslate"><span class="pre">block_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="activations.html#activations.APLU"><code class="docutils literal notranslate"><span class="pre">APLU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="activations.html#activations.BLU"><code class="docutils literal notranslate"><span class="pre">BLU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="activations.html#activations.PELU"><code class="docutils literal notranslate"><span class="pre">PELU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="activations.html#activations.PReLU"><code class="docutils literal notranslate"><span class="pre">PReLU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="activations.html#activations.RectifiedSoftExp"><code class="docutils literal notranslate"><span class="pre">RectifiedSoftExp</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="activations.html#activations.SmoothedReLU"><code class="docutils literal notranslate"><span class="pre">SmoothedReLU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="activations.html#activations.SoftExponential"><code class="docutils literal notranslate"><span class="pre">SoftExponential</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="activations.html#activations.soft_exp"><code class="docutils literal notranslate"><span class="pre">soft_exp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.BasisLinear"><code class="docutils literal notranslate"><span class="pre">BasisLinear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.BilinearTorch"><code class="docutils literal notranslate"><span class="pre">BilinearTorch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.Dropout"><code class="docutils literal notranslate"><span class="pre">Dropout</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.InputConvexNN"><code class="docutils literal notranslate"><span class="pre">InputConvexNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.InteractionEmbeddingMLP"><code class="docutils literal notranslate"><span class="pre">InteractionEmbeddingMLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.Linear"><code class="docutils literal notranslate"><span class="pre">Linear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.MLP"><code class="docutils literal notranslate"><span class="pre">MLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.MLPDropout"><code class="docutils literal notranslate"><span class="pre">MLPDropout</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.Poly2"><code class="docutils literal notranslate"><span class="pre">Poly2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.PosDef"><code class="docutils literal notranslate"><span class="pre">PosDef</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.PytorchRNN"><code class="docutils literal notranslate"><span class="pre">PytorchRNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.RNN"><code class="docutils literal notranslate"><span class="pre">RNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.ResMLP"><code class="docutils literal notranslate"><span class="pre">ResMLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.set_model_dropout_mode"><code class="docutils literal notranslate"><span class="pre">set_model_dropout_mode()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.BasisLinear"><code class="docutils literal notranslate"><span class="pre">BasisLinear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.BilinearTorch"><code class="docutils literal notranslate"><span class="pre">BilinearTorch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Dropout"><code class="docutils literal notranslate"><span class="pre">Dropout</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.InputConvexNN"><code class="docutils literal notranslate"><span class="pre">InputConvexNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.InteractionEmbeddingMLP"><code class="docutils literal notranslate"><span class="pre">InteractionEmbeddingMLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Linear"><code class="docutils literal notranslate"><span class="pre">Linear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.MLP"><code class="docutils literal notranslate"><span class="pre">MLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.MLPDropout"><code class="docutils literal notranslate"><span class="pre">MLPDropout</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Poly2"><code class="docutils literal notranslate"><span class="pre">Poly2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.PosDef"><code class="docutils literal notranslate"><span class="pre">PosDef</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.PytorchRNN"><code class="docutils literal notranslate"><span class="pre">PytorchRNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.RNN"><code class="docutils literal notranslate"><span class="pre">RNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.ResMLP"><code class="docutils literal notranslate"><span class="pre">ResMLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.set_model_dropout_mode"><code class="docutils literal notranslate"><span class="pre">set_model_dropout_mode()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.DictDataset"><code class="docutils literal notranslate"><span class="pre">DictDataset</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.GraphDataset"><code class="docutils literal notranslate"><span class="pre">GraphDataset</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.SequenceDataset"><code class="docutils literal notranslate"><span class="pre">SequenceDataset</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.StaticDataset"><code class="docutils literal notranslate"><span class="pre">StaticDataset</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.batch_tensor"><code class="docutils literal notranslate"><span class="pre">batch_tensor()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.denormalize_01"><code class="docutils literal notranslate"><span class="pre">denormalize_01()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.denormalize_11"><code class="docutils literal notranslate"><span class="pre">denormalize_11()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.destandardize"><code class="docutils literal notranslate"><span class="pre">destandardize()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.get_sequence_dataloaders"><code class="docutils literal notranslate"><span class="pre">get_sequence_dataloaders()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.get_static_dataloaders"><code class="docutils literal notranslate"><span class="pre">get_static_dataloaders()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.normalize_01"><code class="docutils literal notranslate"><span class="pre">normalize_01()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.normalize_11"><code class="docutils literal notranslate"><span class="pre">normalize_11()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.normalize_data"><code class="docutils literal notranslate"><span class="pre">normalize_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.read_file"><code class="docutils literal notranslate"><span class="pre">read_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.split_sequence_data"><code class="docutils literal notranslate"><span class="pre">split_sequence_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.split_static_data"><code class="docutils literal notranslate"><span class="pre">split_static_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.standardize"><code class="docutils literal notranslate"><span class="pre">standardize()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset.html#dataset.unbatch_tensor"><code class="docutils literal notranslate"><span class="pre">unbatch_tensor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#estimators.FullyObservable"><code class="docutils literal notranslate"><span class="pre">FullyObservable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#estimators.FullyObservableAugmented"><code class="docutils literal notranslate"><span class="pre">FullyObservableAugmented</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#estimators.LinearEstimator"><code class="docutils literal notranslate"><span class="pre">LinearEstimator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#estimators.MLPEstimator"><code class="docutils literal notranslate"><span class="pre">MLPEstimator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#estimators.RNNEstimator"><code class="docutils literal notranslate"><span class="pre">RNNEstimator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#estimators.ResMLPEstimator"><code class="docutils literal notranslate"><span class="pre">ResMLPEstimator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html#estimators.TimeDelayEstimator"><code class="docutils literal notranslate"><span class="pre">TimeDelayEstimator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loggers.html#loggers.BasicLogger"><code class="docutils literal notranslate"><span class="pre">BasicLogger</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggers.html#loggers.MLFlowLogger"><code class="docutils literal notranslate"><span class="pre">MLFlowLogger</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">Operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operators.html#operators.InterpolateAddMultiply"><code class="docutils literal notranslate"><span class="pre">InterpolateAddMultiply</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plot.html">Plot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.Animator"><code class="docutils literal notranslate"><span class="pre">Animator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.cl_simulate"><code class="docutils literal notranslate"><span class="pre">cl_simulate()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.get_colors"><code class="docutils literal notranslate"><span class="pre">get_colors()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.lpv_batched"><code class="docutils literal notranslate"><span class="pre">lpv_batched()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_cl"><code class="docutils literal notranslate"><span class="pre">plot_cl()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_cl_train"><code class="docutils literal notranslate"><span class="pre">plot_cl_train()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_loss_DPC"><code class="docutils literal notranslate"><span class="pre">plot_loss_DPC()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_loss_mpp"><code class="docutils literal notranslate"><span class="pre">plot_loss_mpp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_matrices"><code class="docutils literal notranslate"><span class="pre">plot_matrices()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_model_graph"><code class="docutils literal notranslate"><span class="pre">plot_model_graph()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_policy"><code class="docutils literal notranslate"><span class="pre">plot_policy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_policy_train"><code class="docutils literal notranslate"><span class="pre">plot_policy_train()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_solution_mpp"><code class="docutils literal notranslate"><span class="pre">plot_solution_mpp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_traj"><code class="docutils literal notranslate"><span class="pre">plot_traj()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.plot_trajectories"><code class="docutils literal notranslate"><span class="pre">plot_trajectories()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.pltCL"><code class="docutils literal notranslate"><span class="pre">pltCL()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.pltCorrelate"><code class="docutils literal notranslate"><span class="pre">pltCorrelate()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.pltOL"><code class="docutils literal notranslate"><span class="pre">pltOL()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.pltPhase"><code class="docutils literal notranslate"><span class="pre">pltPhase()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.pltRecurrence"><code class="docutils literal notranslate"><span class="pre">pltRecurrence()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html#plot.trajectory_movie"><code class="docutils literal notranslate"><span class="pre">trajectory_movie()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="problem.html">Problem</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="problem.html#problem.Problem"><code class="docutils literal notranslate"><span class="pre">Problem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rnn.html">RNN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rnn.html#rnn.RNN"><code class="docutils literal notranslate"><span class="pre">RNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rnn.html#rnn.RNNCell"><code class="docutils literal notranslate"><span class="pre">RNNCell</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulators.html">Simulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulators.html#simulators.ClosedLoopSimulator"><code class="docutils literal notranslate"><span class="pre">ClosedLoopSimulator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulators.html#simulators.MHOpenLoopSimulator"><code class="docutils literal notranslate"><span class="pre">MHOpenLoopSimulator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulators.html#simulators.MultiSequenceOpenLoopSimulator"><code class="docutils literal notranslate"><span class="pre">MultiSequenceOpenLoopSimulator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulators.html#simulators.OpenLoopSimulator"><code class="docutils literal notranslate"><span class="pre">OpenLoopSimulator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulators.html#simulators.Simulator"><code class="docutils literal notranslate"><span class="pre">Simulator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trainer.html">Trainer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trainer.html#trainer.Trainer"><code class="docutils literal notranslate"><span class="pre">Trainer</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="trainer.html#trainer.freeze_weight"><code class="docutils literal notranslate"><span class="pre">freeze_weight()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="trainer.html#trainer.move_batch_to_device"><code class="docutils literal notranslate"><span class="pre">move_batch_to_device()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="trainer.html#trainer.unfreeze_weight"><code class="docutils literal notranslate"><span class="pre">unfreeze_weight()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visuals.html#visuals.Visualizer"><code class="docutils literal notranslate"><span class="pre">Visualizer</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visuals.html#visuals.VisualizerClosedLoop"><code class="docutils literal notranslate"><span class="pre">VisualizerClosedLoop</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visuals.html#visuals.VisualizerDobleIntegrator"><code class="docutils literal notranslate"><span class="pre">VisualizerDobleIntegrator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visuals.html#visuals.VisualizerOpen"><code class="docutils literal notranslate"><span class="pre">VisualizerOpen</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visuals.html#visuals.VisualizerTrajectories"><code class="docutils literal notranslate"><span class="pre">VisualizerTrajectories</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visuals.html#visuals.VisualizerUncertaintyOpen"><code class="docutils literal notranslate"><span class="pre">VisualizerUncertaintyOpen</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arg.html">Arg</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.ArgParser"><code class="docutils literal notranslate"><span class="pre">ArgParser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.add"><code class="docutils literal notranslate"><span class="pre">add()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.ctrl_loss"><code class="docutils literal notranslate"><span class="pre">ctrl_loss()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.data"><code class="docutils literal notranslate"><span class="pre">data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.freeze"><code class="docutils literal notranslate"><span class="pre">freeze()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.lin"><code class="docutils literal notranslate"><span class="pre">lin()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.loss"><code class="docutils literal notranslate"><span class="pre">loss()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.opt"><code class="docutils literal notranslate"><span class="pre">opt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.policy"><code class="docutils literal notranslate"><span class="pre">policy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="arg.html#arg.ssm"><code class="docutils literal notranslate"><span class="pre">ssm()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="callbacks.html#callbacks.Callback"><code class="docutils literal notranslate"><span class="pre">Callback</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callbacks.html#callbacks.ControlCallback"><code class="docutils literal notranslate"><span class="pre">ControlCallback</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callbacks.html#callbacks.DoubleIntegratorCallback"><code class="docutils literal notranslate"><span class="pre">DoubleIntegratorCallback</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callbacks.html#callbacks.SysIDCallback"><code class="docutils literal notranslate"><span class="pre">SysIDCallback</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="component.html">Component</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="component.html#component.Component"><code class="docutils literal notranslate"><span class="pre">Component</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="component.html#component.check_key_subset"><code class="docutils literal notranslate"><span class="pre">check_key_subset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html#constraint.Constraint"><code class="docutils literal notranslate"><span class="pre">Constraint</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html#constraint.Eq"><code class="docutils literal notranslate"><span class="pre">Eq</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html#constraint.GT"><code class="docutils literal notranslate"><span class="pre">GT</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html#constraint.LT"><code class="docutils literal notranslate"><span class="pre">LT</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html#constraint.Loss"><code class="docutils literal notranslate"><span class="pre">Loss</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html#constraint.Objective"><code class="docutils literal notranslate"><span class="pre">Objective</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html#constraint.Variable"><code class="docutils literal notranslate"><span class="pre">Variable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint.html#constraint.variable"><code class="docutils literal notranslate"><span class="pre">variable()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gradients.html#gradients.Gradient"><code class="docutils literal notranslate"><span class="pre">Gradient</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gradients.html#gradients.gradient"><code class="docutils literal notranslate"><span class="pre">gradient()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gradients.html#gradients.jacobian"><code class="docutils literal notranslate"><span class="pre">jacobian()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.BasisLinear"><code class="docutils literal notranslate"><span class="pre">BasisLinear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.BilinearTorch"><code class="docutils literal notranslate"><span class="pre">BilinearTorch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Dropout"><code class="docutils literal notranslate"><span class="pre">Dropout</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.InputConvexNN"><code class="docutils literal notranslate"><span class="pre">InputConvexNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.InteractionEmbeddingMLP"><code class="docutils literal notranslate"><span class="pre">InteractionEmbeddingMLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Linear"><code class="docutils literal notranslate"><span class="pre">Linear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.MLP"><code class="docutils literal notranslate"><span class="pre">MLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.MLPDropout"><code class="docutils literal notranslate"><span class="pre">MLPDropout</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Poly2"><code class="docutils literal notranslate"><span class="pre">Poly2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.PosDef"><code class="docutils literal notranslate"><span class="pre">PosDef</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.PytorchRNN"><code class="docutils literal notranslate"><span class="pre">PytorchRNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.RNN"><code class="docutils literal notranslate"><span class="pre">RNN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.ResMLP"><code class="docutils literal notranslate"><span class="pre">ResMLP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.set_model_dropout_mode"><code class="docutils literal notranslate"><span class="pre">set_model_dropout_mode()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">gnn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.ArgSequential"><code class="docutils literal notranslate"><span class="pre">ArgSequential</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.GraphFeatureUpdate"><code class="docutils literal notranslate"><span class="pre">GraphFeatureUpdate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.GraphFeatures"><code class="docutils literal notranslate"><span class="pre">GraphFeatures</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.Replace"><code class="docutils literal notranslate"><span class="pre">Replace</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.graph_interp_u"><code class="docutils literal notranslate"><span class="pre">graph_interp_u()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.nnLambda"><code class="docutils literal notranslate"><span class="pre">nnLambda</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="graph_dynamics.html#graph_dynamics.GraphTimestepper"><code class="docutils literal notranslate"><span class="pre">GraphTimestepper</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.Euler"><code class="docutils literal notranslate"><span class="pre">Euler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.Euler_Trap"><code class="docutils literal notranslate"><span class="pre">Euler_Trap</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.Integrator"><code class="docutils literal notranslate"><span class="pre">Integrator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.LeapFrog"><code class="docutils literal notranslate"><span class="pre">LeapFrog</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.Luther"><code class="docutils literal notranslate"><span class="pre">Luther</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.MultiStep_PredictorCorrector"><code class="docutils literal notranslate"><span class="pre">MultiStep_PredictorCorrector</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.RK2"><code class="docutils literal notranslate"><span class="pre">RK2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.RK4"><code class="docutils literal notranslate"><span class="pre">RK4</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.RK4_Trap"><code class="docutils literal notranslate"><span class="pre">RK4_Trap</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.Runge_Kutta_Fehlberg"><code class="docutils literal notranslate"><span class="pre">Runge_Kutta_Fehlberg</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrators.html#integrators.Yoshida4"><code class="docutils literal notranslate"><span class="pre">Yoshida4</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html#interpolation.Interpolation"><code class="docutils literal notranslate"><span class="pre">Interpolation</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html#interpolation.LinInterp_Offline"><code class="docutils literal notranslate"><span class="pre">LinInterp_Offline</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html#interpolation.LinInterp_Online"><code class="docutils literal notranslate"><span class="pre">LinInterp_Online</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">loss</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loss.html#loss.AggregateLoss"><code class="docutils literal notranslate"><span class="pre">AggregateLoss</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="loss.html#loss.AugmentedLagrangeLoss"><code class="docutils literal notranslate"><span class="pre">AugmentedLagrangeLoss</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="loss.html#loss.BarrierLoss"><code class="docutils literal notranslate"><span class="pre">BarrierLoss</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="loss.html#loss.PenaltyLoss"><code class="docutils literal notranslate"><span class="pre">PenaltyLoss</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="loss.html#loss.get_loss"><code class="docutils literal notranslate"><span class="pre">get_loss()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="maps.html#maps.ManyToMany"><code class="docutils literal notranslate"><span class="pre">ManyToMany</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html#maps.Map"><code class="docutils literal notranslate"><span class="pre">Map</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html#maps.Map2Dto3D"><code class="docutils literal notranslate"><span class="pre">Map2Dto3D</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html#maps.OneToOne"><code class="docutils literal notranslate"><span class="pre">OneToOne</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html#maps.Transform"><code class="docutils literal notranslate"><span class="pre">Transform</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ode.html#ode.BrusselatorHybrid"><code class="docutils literal notranslate"><span class="pre">BrusselatorHybrid</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ode.html#ode.BrusselatorParam"><code class="docutils literal notranslate"><span class="pre">BrusselatorParam</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ode.html#ode.DuffingParam"><code class="docutils literal notranslate"><span class="pre">DuffingParam</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ode.html#ode.LorenzParam"><code class="docutils literal notranslate"><span class="pre">LorenzParam</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ode.html#ode.LotkaVolterraHybrid"><code class="docutils literal notranslate"><span class="pre">LotkaVolterraHybrid</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ode.html#ode.LotkaVolterraParam"><code class="docutils literal notranslate"><span class="pre">LotkaVolterraParam</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ode.html#ode.ODESystem"><code class="docutils literal notranslate"><span class="pre">ODESystem</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ode.html#ode.TwoTankParam"><code class="docutils literal notranslate"><span class="pre">TwoTankParam</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pwa_maps.html#pwa_maps.lpv_batched"><code class="docutils literal notranslate"><span class="pre">lpv_batched()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pwa_maps.html#pwa_maps.pwa_batched"><code class="docutils literal notranslate"><span class="pre">pwa_batched()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="solvers.html#solvers.GradientProjection"><code class="docutils literal notranslate"><span class="pre">GradientProjection</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="solvers.html#solvers.IterativeSolver"><code class="docutils literal notranslate"><span class="pre">IterativeSolver</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
+<p>Authors: Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Draguna Vrabie</p>
 </section>
 
 
@@ -213,28 +483,27 @@
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="dynamics.html" class="btn btn-neutral float-right" title="Dynamics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+      
+        <a href="dynamics.html" class="btn btn-neutral float-right" title="Dynamics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -242,6 +511,7 @@
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

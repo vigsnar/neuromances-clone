@@ -1,46 +1,46 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Signals &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Simulators" href="simulators.html" />
@@ -84,7 +84,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -92,7 +91,7 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
@@ -118,7 +117,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -153,20 +151,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
       <li>Signals</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/signals.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -180,162 +176,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="module-signals">
-<span id="signals"></span><h1>Signals<a class="headerlink" href="#module-signals" title="Permalink to this headline">¶</a></h1>
-<p>signal generator components which allow you to generate dynamic data for training nm.problem
-or add noise to existing data</p>
-<p>TODO: normalize to be mode general thant normalize_01</p>
-<dl class="py class">
-<dt id="signals.AddGenerator">
-<em class="property">class </em><code class="sig-prename descclassname">signals.</code><code class="sig-name descname">AddGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">SG1</span></em>, <em class="sig-param"><span class="n">SG2</span></em>, <em class="sig-param"><span class="n">nsteps</span></em>, <em class="sig-param"><span class="n">nx</span></em>, <em class="sig-param"><span class="n">xmax</span></em>, <em class="sig-param"><span class="n">xmin</span></em>, <em class="sig-param"><span class="n">output_keys</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'period'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#AddGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.AddGenerator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generates a sequence as a sum of two other SequenceGenerators SG1 and SG2</p>
-<dl class="py attribute">
-<dt id="signals.AddGenerator.DEFAULT_INPUT_KEYS">
-<code class="sig-name descname">DEFAULT_INPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.AddGenerator.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="signals.AddGenerator.DEFAULT_OUTPUT_KEYS">
-<code class="sig-name descname">DEFAULT_OUTPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.AddGenerator.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="signals.DataNoiseGenerator">
-<em class="property">class </em><code class="sig-prename descclassname">signals.</code><code class="sig-name descname">DataNoiseGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ratio</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">input_keys</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'noise'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#DataNoiseGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.DataNoiseGenerator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generates random signal to be added to variables the dataset labeled by input_keys</p>
-<dl class="py attribute">
-<dt id="signals.DataNoiseGenerator.DEFAULT_INPUT_KEYS">
-<code class="sig-name descname">DEFAULT_INPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.DataNoiseGenerator.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="signals.DataNoiseGenerator.DEFAULT_OUTPUT_KEYS">
-<code class="sig-name descname">DEFAULT_OUTPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.DataNoiseGenerator.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="signals.DataNoiseGenerator.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#DataNoiseGenerator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.DataNoiseGenerator.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="signals.PeriodicGenerator">
-<em class="property">class </em><code class="sig-prename descclassname">signals.</code><code class="sig-name descname">PeriodicGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nsteps</span></em>, <em class="sig-param"><span class="n">nx</span></em>, <em class="sig-param"><span class="n">xmax</span></em>, <em class="sig-param"><span class="n">xmin</span></em>, <em class="sig-param"><span class="n">min_period</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">max_period</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">output_keys</span><span class="o">=</span><span class="default_value">['Yp', 'Yf']</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'period'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#PeriodicGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.PeriodicGenerator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generates periodic signal with random number of periods within: min_period &lt;= nr periods &lt;= max_period</p>
-<dl class="py attribute">
-<dt id="signals.PeriodicGenerator.DEFAULT_INPUT_KEYS">
-<code class="sig-name descname">DEFAULT_INPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.PeriodicGenerator.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="signals.PeriodicGenerator.DEFAULT_OUTPUT_KEYS">
-<code class="sig-name descname">DEFAULT_OUTPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.PeriodicGenerator.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="signals.SequenceGenerator">
-<em class="property">class </em><code class="sig-prename descclassname">signals.</code><code class="sig-name descname">SequenceGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nsteps</span></em>, <em class="sig-param"><span class="n">nx</span></em>, <em class="sig-param"><span class="n">xmax</span></em>, <em class="sig-param"><span class="n">xmin</span></em>, <em class="sig-param"><span class="n">output_keys</span><span class="o">=</span><span class="default_value">['Yp', 'Yf']</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'signal'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#SequenceGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.SequenceGenerator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Component object for generating nsteps long sequence signal for nx variables
-Can be used as a source for generating dynamic sequences in the training data</p>
-<dl class="py attribute">
-<dt id="signals.SequenceGenerator.DEFAULT_INPUT_KEYS">
-<code class="sig-name descname">DEFAULT_INPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.SequenceGenerator.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="signals.SequenceGenerator.DEFAULT_OUTPUT_KEYS">
-<code class="sig-name descname">DEFAULT_OUTPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.SequenceGenerator.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="signals.SequenceGenerator.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#SequenceGenerator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.SequenceGenerator.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt id="signals.SequenceGenerator.get_xmax">
-<code class="sig-name descname">get_xmax</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#SequenceGenerator.get_xmax"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.SequenceGenerator.get_xmax" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="signals.SequenceGenerator.get_xmin">
-<code class="sig-name descname">get_xmin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#SequenceGenerator.get_xmin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.SequenceGenerator.get_xmin" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="signals.WhiteNoiseGenerator">
-<em class="property">class </em><code class="sig-prename descclassname">signals.</code><code class="sig-name descname">WhiteNoiseGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nsteps</span></em>, <em class="sig-param"><span class="n">nx</span></em>, <em class="sig-param"><span class="n">xmax</span></em>, <em class="sig-param"><span class="n">xmin</span></em>, <em class="sig-param"><span class="n">output_keys</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'period'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#WhiteNoiseGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.WhiteNoiseGenerator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generates white noise nsteps long for nx variables</p>
-<dl class="py attribute">
-<dt id="signals.WhiteNoiseGenerator.DEFAULT_INPUT_KEYS">
-<code class="sig-name descname">DEFAULT_INPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.WhiteNoiseGenerator.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="signals.WhiteNoiseGenerator.DEFAULT_OUTPUT_KEYS">
-<code class="sig-name descname">DEFAULT_OUTPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.WhiteNoiseGenerator.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="signals.WhiteNoiseGenerator.training">
-<code class="sig-name descname">training</code><em class="property">: bool</em><a class="headerlink" href="#signals.WhiteNoiseGenerator.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="signals.WhiteNoisePeriodicGenerator">
-<em class="property">class </em><code class="sig-prename descclassname">signals.</code><code class="sig-name descname">WhiteNoisePeriodicGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nsteps</span></em>, <em class="sig-param"><span class="n">nx</span></em>, <em class="sig-param"><span class="n">xmax</span><span class="o">=</span><span class="default_value">(0.1, 0.5)</span></em>, <em class="sig-param"><span class="n">xmin</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">min_period</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">max_period</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">output_keys</span><span class="o">=</span><span class="default_value">['Yp', 'Yf']</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'period'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#WhiteNoisePeriodicGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.WhiteNoisePeriodicGenerator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sum of wite noise with periodic signal
-Periodic signal with random number of periods within: min_period &lt;= nr periods &lt;= max_period</p>
-<dl class="py attribute">
-<dt id="signals.WhiteNoisePeriodicGenerator.DEFAULT_INPUT_KEYS">
-<code class="sig-name descname">DEFAULT_INPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.WhiteNoisePeriodicGenerator.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="signals.WhiteNoisePeriodicGenerator.DEFAULT_OUTPUT_KEYS">
-<code class="sig-name descname">DEFAULT_OUTPUT_KEYS</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#signals.WhiteNoisePeriodicGenerator.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="signals.WhiteNoisePeriodicGenerator.get_xmax">
-<code class="sig-name descname">get_xmax</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/signals.html#WhiteNoisePeriodicGenerator.get_xmax"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#signals.WhiteNoisePeriodicGenerator.get_xmax" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="signals.WhiteNoisePeriodicGenerator.training">
-<code class="sig-name descname">training</code><em class="property">: bool</em><a class="headerlink" href="#signals.WhiteNoisePeriodicGenerator.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+  <section id="signals">
+<h1>Signals<a class="headerlink" href="#signals" title="Permalink to this heading">¶</a></h1>
 </section>
 
 
@@ -343,29 +185,29 @@ Periodic signal with random number of periods within: min_period &lt;= nr period
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="simulators.html" class="btn btn-neutral float-right" title="Simulators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="rnn.html" class="btn btn-neutral float-left" title="RNN" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="simulators.html" class="btn btn-neutral float-right" title="Simulators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rnn.html" class="btn btn-neutral float-left" title="RNN" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -373,6 +215,7 @@ Periodic signal with random number of periods within: min_period &lt;= nr period
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {
