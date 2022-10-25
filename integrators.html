@@ -42,7 +42,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Interpolation" href="interpolation.html" />
+    <link rel="prev" title="Graph Dynamics" href="graph_dynamics.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,11 +92,11 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -110,6 +112,64 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Integrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.Euler"><code class="docutils literal notranslate"><span class="pre">Euler</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.Euler.integrate"><code class="docutils literal notranslate"><span class="pre">Euler.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.Euler_Trap"><code class="docutils literal notranslate"><span class="pre">Euler_Trap</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.Euler_Trap.integrate"><code class="docutils literal notranslate"><span class="pre">Euler_Trap.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.Integrator"><code class="docutils literal notranslate"><span class="pre">Integrator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.Integrator.forward"><code class="docutils literal notranslate"><span class="pre">Integrator.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.Integrator.integrate"><code class="docutils literal notranslate"><span class="pre">Integrator.integrate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.Integrator.reg_error"><code class="docutils literal notranslate"><span class="pre">Integrator.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.LeapFrog"><code class="docutils literal notranslate"><span class="pre">LeapFrog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.LeapFrog.integrate"><code class="docutils literal notranslate"><span class="pre">LeapFrog.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.Luther"><code class="docutils literal notranslate"><span class="pre">Luther</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.Luther.integrate"><code class="docutils literal notranslate"><span class="pre">Luther.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.MultiStep_PredictorCorrector"><code class="docutils literal notranslate"><span class="pre">MultiStep_PredictorCorrector</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.MultiStep_PredictorCorrector.integrate"><code class="docutils literal notranslate"><span class="pre">MultiStep_PredictorCorrector.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.RK2"><code class="docutils literal notranslate"><span class="pre">RK2</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.RK2.integrate"><code class="docutils literal notranslate"><span class="pre">RK2.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.RK4"><code class="docutils literal notranslate"><span class="pre">RK4</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.RK4.integrate"><code class="docutils literal notranslate"><span class="pre">RK4.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.RK4_Trap"><code class="docutils literal notranslate"><span class="pre">RK4_Trap</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.RK4_Trap.integrate"><code class="docutils literal notranslate"><span class="pre">RK4_Trap.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.Runge_Kutta_Fehlberg"><code class="docutils literal notranslate"><span class="pre">Runge_Kutta_Fehlberg</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.Runge_Kutta_Fehlberg.integrate"><code class="docutils literal notranslate"><span class="pre">Runge_Kutta_Fehlberg.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integrators.Yoshida4"><code class="docutils literal notranslate"><span class="pre">Yoshida4</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integrators.Yoshida4.integrate"><code class="docutils literal notranslate"><span class="pre">Yoshida4.integrate()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 </ul>
 
             
@@ -210,7 +270,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">integrators.</span></span><span class="sig-name descname"><span class="pre">Integrator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp_u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/integrators.html#Integrator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#integrators.Integrator" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="integrators.Integrator.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">tensor([[1.7418e+28]])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">tensor([[4.2964e+24]])</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/integrators.html#Integrator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#integrators.Integrator.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">tensor([[2.0704e-19]])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">tensor([[3.5006e+16]])</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/integrators.html#Integrator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#integrators.Integrator.forward" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function needs x only for autonomous systems. x is 2D.
 It needs both x and t for nonautonomous system w/ offline interpolation. Both x and t are 2D.
 It needs all x, t and u for nonautonomous system w/ online interpolation. x is 2D while both t and u are 3D.</p>
@@ -360,6 +420,15 @@ determine if current time step size is suitable or not.
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interpolation.html" class="btn btn-neutral float-right" title="Interpolation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="graph_dynamics.html" class="btn btn-neutral float-left" title="Graph Dynamics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

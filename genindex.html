@@ -93,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -109,12 +109,12 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gnn.html">gnn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loss.html">loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a></li>
 <li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
@@ -269,7 +269,7 @@
 </li>
       <li><a href="loggers.html#loggers.BasicLogger">BasicLogger (class in loggers)</a>
 </li>
-      <li><a href="blocks.html#blocks.BasisLinear">BasisLinear (class in blocks)</a>, <a href="bounds.html#blocks.BasisLinear">[1]</a>
+      <li><a href="blocks.html#blocks.BasisLinear">BasisLinear (class in blocks)</a>
 </li>
       <li><a href="dataset.html#dataset.batch_tensor">batch_tensor() (in module dataset)</a>
 </li>
@@ -289,12 +289,12 @@
       </ul></li>
       <li><a href="callbacks.html#callbacks.Callback.begin_train">begin_train() (callbacks.Callback method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blocks.html#blocks.BilinearTorch">BilinearTorch (class in blocks)</a>, <a href="bounds.html#blocks.BilinearTorch">[1]</a>
+      <li><a href="blocks.html#blocks.BilinearTorch">BilinearTorch (class in blocks)</a>
 </li>
       <li><a href="dynamics.html#dynamics.blackbox_model">blackbox_model() (in module dynamics)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dynamics.html#dynamics.BlackSSM">BlackSSM (class in dynamics)</a>
 </li>
       <li><a href="dynamics.html#dynamics.block_model">block_model() (in module dynamics)</a>
@@ -303,12 +303,21 @@
     blocks
 
       <ul>
-        <li><a href="blocks.html#module-blocks">module</a>, <a href="bounds.html#module-blocks">[1]</a>
+        <li><a href="blocks.html#module-blocks">module</a>
 </li>
       </ul></li>
       <li><a href="dynamics.html#dynamics.BlockSSM">BlockSSM (class in dynamics)</a>
 </li>
       <li><a href="activations.html#activations.BLU">BLU (class in activations)</a>
+</li>
+      <li>
+    bounds
+
+      <ul>
+        <li><a href="bounds.html#module-bounds">module</a>
+</li>
+      </ul></li>
+      <li><a href="bounds.html#bounds.Bounds">Bounds (class in bounds)</a>
 </li>
       <li><a href="ode.html#ode.BrusselatorHybrid">BrusselatorHybrid (class in ode)</a>
 </li>
@@ -414,9 +423,19 @@
       </ul></li>
       <li><a href="graph_dynamics.html#graph_dynamics.GraphTimestepper.decode">decode() (graph_dynamics.GraphTimestepper method)</a>
 </li>
-      <li><a href="dynamics.html#dynamics.BlackSSM.DEFAULT_INPUT_KEYS">DEFAULT_INPUT_KEYS (dynamics.BlackSSM attribute)</a>
+      <li><a href="bounds.html#bounds.Bounds.DEFAULT_INPUT_KEYS">DEFAULT_INPUT_KEYS (bounds.Bounds attribute)</a>
 
       <ul>
+        <li><a href="bounds.html#bounds.HardMaxBound.DEFAULT_INPUT_KEYS">(bounds.HardMaxBound attribute)</a>
+</li>
+        <li><a href="bounds.html#bounds.HardMinBound.DEFAULT_INPUT_KEYS">(bounds.HardMinBound attribute)</a>
+</li>
+        <li><a href="bounds.html#bounds.HardMinMaxBound.DEFAULT_INPUT_KEYS">(bounds.HardMinMaxBound attribute)</a>
+</li>
+        <li><a href="bounds.html#bounds.HardMinMaxScale.DEFAULT_INPUT_KEYS">(bounds.HardMinMaxScale attribute)</a>
+</li>
+        <li><a href="dynamics.html#dynamics.BlackSSM.DEFAULT_INPUT_KEYS">(dynamics.BlackSSM attribute)</a>
+</li>
         <li><a href="dynamics.html#dynamics.BlockSSM.DEFAULT_INPUT_KEYS">(dynamics.BlockSSM attribute)</a>
 </li>
         <li><a href="dynamics.html#dynamics.ODEAuto.DEFAULT_INPUT_KEYS">(dynamics.ODEAuto attribute)</a>
@@ -468,7 +487,7 @@
 </li>
       <li><a href="constraint.html#constraint.Variable.draw">draw() (constraint.Variable method)</a>
 </li>
-      <li><a href="blocks.html#blocks.Dropout">Dropout (class in blocks)</a>, <a href="bounds.html#blocks.Dropout">[1]</a>
+      <li><a href="blocks.html#blocks.Dropout">Dropout (class in blocks)</a>
 </li>
       <li><a href="ode.html#ode.DuffingParam">DuffingParam (class in ode)</a>
 </li>
@@ -581,31 +600,41 @@
 </li>
         <li><a href="activations.html#activations.SoftExponential.forward">(activations.SoftExponential method)</a>
 </li>
-        <li><a href="blocks.html#blocks.BasisLinear.forward">(blocks.BasisLinear method)</a>, <a href="bounds.html#blocks.BasisLinear.forward">[1]</a>
+        <li><a href="blocks.html#blocks.BasisLinear.forward">(blocks.BasisLinear method)</a>
 </li>
-        <li><a href="blocks.html#blocks.BilinearTorch.forward">(blocks.BilinearTorch method)</a>, <a href="bounds.html#blocks.BilinearTorch.forward">[1]</a>
+        <li><a href="blocks.html#blocks.BilinearTorch.forward">(blocks.BilinearTorch method)</a>
 </li>
-        <li><a href="blocks.html#blocks.Dropout.forward">(blocks.Dropout method)</a>, <a href="bounds.html#blocks.Dropout.forward">[1]</a>
+        <li><a href="blocks.html#blocks.Dropout.forward">(blocks.Dropout method)</a>
 </li>
-        <li><a href="blocks.html#blocks.InputConvexNN.forward">(blocks.InputConvexNN method)</a>, <a href="bounds.html#blocks.InputConvexNN.forward">[1]</a>
+        <li><a href="blocks.html#blocks.InputConvexNN.forward">(blocks.InputConvexNN method)</a>
 </li>
-        <li><a href="blocks.html#blocks.InteractionEmbeddingMLP.forward">(blocks.InteractionEmbeddingMLP method)</a>, <a href="bounds.html#blocks.InteractionEmbeddingMLP.forward">[1]</a>
+        <li><a href="blocks.html#blocks.InteractionEmbeddingMLP.forward">(blocks.InteractionEmbeddingMLP method)</a>
 </li>
-        <li><a href="blocks.html#blocks.Linear.forward">(blocks.Linear method)</a>, <a href="bounds.html#blocks.Linear.forward">[1]</a>
+        <li><a href="blocks.html#blocks.Linear.forward">(blocks.Linear method)</a>
 </li>
-        <li><a href="blocks.html#blocks.MLP.forward">(blocks.MLP method)</a>, <a href="bounds.html#blocks.MLP.forward">[1]</a>
+        <li><a href="blocks.html#blocks.MLP.forward">(blocks.MLP method)</a>
 </li>
-        <li><a href="blocks.html#blocks.MLPDropout.forward">(blocks.MLPDropout method)</a>, <a href="bounds.html#blocks.MLPDropout.forward">[1]</a>
+        <li><a href="blocks.html#blocks.MLPDropout.forward">(blocks.MLPDropout method)</a>
 </li>
-        <li><a href="blocks.html#blocks.Poly2.forward">(blocks.Poly2 method)</a>, <a href="bounds.html#blocks.Poly2.forward">[1]</a>
+        <li><a href="blocks.html#blocks.Poly2.forward">(blocks.Poly2 method)</a>
 </li>
-        <li><a href="blocks.html#blocks.PosDef.forward">(blocks.PosDef method)</a>, <a href="bounds.html#blocks.PosDef.forward">[1]</a>
+        <li><a href="blocks.html#blocks.PosDef.forward">(blocks.PosDef method)</a>
 </li>
-        <li><a href="blocks.html#blocks.PytorchRNN.forward">(blocks.PytorchRNN method)</a>, <a href="bounds.html#blocks.PytorchRNN.forward">[1]</a>
+        <li><a href="blocks.html#blocks.PytorchRNN.forward">(blocks.PytorchRNN method)</a>
 </li>
-        <li><a href="blocks.html#blocks.ResMLP.forward">(blocks.ResMLP method)</a>, <a href="bounds.html#blocks.ResMLP.forward">[1]</a>
+        <li><a href="blocks.html#blocks.ResMLP.forward">(blocks.ResMLP method)</a>
 </li>
-        <li><a href="blocks.html#blocks.RNN.forward">(blocks.RNN method)</a>, <a href="bounds.html#blocks.RNN.forward">[1]</a>
+        <li><a href="blocks.html#blocks.RNN.forward">(blocks.RNN method)</a>
+</li>
+        <li><a href="bounds.html#bounds.Bounds.forward">(bounds.Bounds method)</a>
+</li>
+        <li><a href="bounds.html#bounds.HardMaxBound.forward">(bounds.HardMaxBound method)</a>
+</li>
+        <li><a href="bounds.html#bounds.HardMinBound.forward">(bounds.HardMinBound method)</a>
+</li>
+        <li><a href="bounds.html#bounds.HardMinMaxBound.forward">(bounds.HardMinMaxBound method)</a>
+</li>
+        <li><a href="bounds.html#bounds.HardMinMaxScale.forward">(bounds.HardMinMaxScale method)</a>
 </li>
         <li><a href="constraint.html#constraint.Constraint.forward">(constraint.Constraint method)</a>
 </li>
@@ -771,6 +800,16 @@
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="bounds.html#bounds.HardMaxBound">HardMaxBound (class in bounds)</a>
+</li>
+      <li><a href="bounds.html#bounds.HardMinBound">HardMinBound (class in bounds)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="bounds.html#bounds.HardMinMaxBound">HardMinMaxBound (class in bounds)</a>
+</li>
+      <li><a href="bounds.html#bounds.HardMinMaxScale">HardMinMaxScale (class in bounds)</a>
+</li>
       <li><a href="simulators.html#simulators.MHOpenLoopSimulator.horizon_data">horizon_data() (simulators.MHOpenLoopSimulator method)</a>
 </li>
   </ul></td>
@@ -779,7 +818,7 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blocks.html#blocks.InputConvexNN">InputConvexNN (class in blocks)</a>, <a href="bounds.html#blocks.InputConvexNN">[1]</a>
+      <li><a href="blocks.html#blocks.InputConvexNN">InputConvexNN (class in blocks)</a>
 </li>
       <li><a href="gnn.html#gnn.Replace.integrate">integrate() (gnn.Replace method)</a>
 
@@ -818,7 +857,7 @@
         <li><a href="integrators.html#module-integrators">module</a>
 </li>
       </ul></li>
-      <li><a href="blocks.html#blocks.InteractionEmbeddingMLP">InteractionEmbeddingMLP (class in blocks)</a>, <a href="bounds.html#blocks.InteractionEmbeddingMLP">[1]</a>
+      <li><a href="blocks.html#blocks.InteractionEmbeddingMLP">InteractionEmbeddingMLP (class in blocks)</a>
 </li>
       <li><a href="operators.html#operators.InterpolateAddMultiply">InterpolateAddMultiply (class in operators)</a>
 </li>
@@ -871,7 +910,7 @@
 </li>
       <li><a href="arg.html#arg.lin">lin() (in module arg)</a>
 </li>
-      <li><a href="blocks.html#blocks.Linear">Linear (class in blocks)</a>, <a href="bounds.html#blocks.Linear">[1]</a>
+      <li><a href="blocks.html#blocks.Linear">Linear (class in blocks)</a>
 </li>
       <li><a href="estimators.html#estimators.LinearEstimator">LinearEstimator (class in estimators)</a>
 </li>
@@ -972,9 +1011,9 @@
 </li>
       <li><a href="loggers.html#loggers.MLFlowLogger">MLFlowLogger (class in loggers)</a>
 </li>
-      <li><a href="blocks.html#blocks.MLP">MLP (class in blocks)</a>, <a href="bounds.html#blocks.MLP">[1]</a>
+      <li><a href="blocks.html#blocks.MLP">MLP (class in blocks)</a>
 </li>
-      <li><a href="blocks.html#blocks.MLPDropout">MLPDropout (class in blocks)</a>, <a href="bounds.html#blocks.MLPDropout">[1]</a>
+      <li><a href="blocks.html#blocks.MLPDropout">MLPDropout (class in blocks)</a>
 </li>
       <li><a href="estimators.html#estimators.MLPEstimator">MLPEstimator (class in estimators)</a>
 </li>
@@ -986,7 +1025,9 @@
 </li>
         <li><a href="arg.html#module-arg">arg</a>
 </li>
-        <li><a href="blocks.html#module-blocks">blocks</a>, <a href="bounds.html#module-blocks">[1]</a>
+        <li><a href="blocks.html#module-blocks">blocks</a>
+</li>
+        <li><a href="bounds.html#module-bounds">bounds</a>
 </li>
         <li><a href="callbacks.html#module-callbacks">callbacks</a>
 </li>
@@ -1194,9 +1235,9 @@
 </li>
       <li><a href="arg.html#arg.policy">policy() (in module arg)</a>
 </li>
-      <li><a href="blocks.html#blocks.Poly2">Poly2 (class in blocks)</a>, <a href="bounds.html#blocks.Poly2">[1]</a>
+      <li><a href="blocks.html#blocks.Poly2">Poly2 (class in blocks)</a>
 </li>
-      <li><a href="blocks.html#blocks.PosDef">PosDef (class in blocks)</a>, <a href="bounds.html#blocks.PosDef">[1]</a>
+      <li><a href="blocks.html#blocks.PosDef">PosDef (class in blocks)</a>
 </li>
       <li><a href="activations.html#activations.PReLU">PReLU (class in activations)</a>
 </li>
@@ -1220,7 +1261,7 @@
         <li><a href="pwa_maps.html#module-pwa_maps">module</a>
 </li>
       </ul></li>
-      <li><a href="blocks.html#blocks.PytorchRNN">PytorchRNN (class in blocks)</a>, <a href="bounds.html#blocks.PytorchRNN">[1]</a>
+      <li><a href="blocks.html#blocks.PytorchRNN">PytorchRNN (class in blocks)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1235,21 +1276,21 @@
       <li><a href="activations.html#activations.APLU.reg_error">reg_error() (activations.APLU method)</a>
 
       <ul>
-        <li><a href="blocks.html#blocks.BasisLinear.reg_error">(blocks.BasisLinear method)</a>, <a href="bounds.html#blocks.BasisLinear.reg_error">[1]</a>
+        <li><a href="blocks.html#blocks.BasisLinear.reg_error">(blocks.BasisLinear method)</a>
 </li>
-        <li><a href="blocks.html#blocks.BilinearTorch.reg_error">(blocks.BilinearTorch method)</a>, <a href="bounds.html#blocks.BilinearTorch.reg_error">[1]</a>
+        <li><a href="blocks.html#blocks.BilinearTorch.reg_error">(blocks.BilinearTorch method)</a>
 </li>
-        <li><a href="blocks.html#blocks.InteractionEmbeddingMLP.reg_error">(blocks.InteractionEmbeddingMLP method)</a>, <a href="bounds.html#blocks.InteractionEmbeddingMLP.reg_error">[1]</a>
+        <li><a href="blocks.html#blocks.InteractionEmbeddingMLP.reg_error">(blocks.InteractionEmbeddingMLP method)</a>
 </li>
-        <li><a href="blocks.html#blocks.Linear.reg_error">(blocks.Linear method)</a>, <a href="bounds.html#blocks.Linear.reg_error">[1]</a>
+        <li><a href="blocks.html#blocks.Linear.reg_error">(blocks.Linear method)</a>
 </li>
-        <li><a href="blocks.html#blocks.MLP.reg_error">(blocks.MLP method)</a>, <a href="bounds.html#blocks.MLP.reg_error">[1]</a>
+        <li><a href="blocks.html#blocks.MLP.reg_error">(blocks.MLP method)</a>
 </li>
-        <li><a href="blocks.html#blocks.MLPDropout.reg_error">(blocks.MLPDropout method)</a>, <a href="bounds.html#blocks.MLPDropout.reg_error">[1]</a>
+        <li><a href="blocks.html#blocks.MLPDropout.reg_error">(blocks.MLPDropout method)</a>
 </li>
-        <li><a href="blocks.html#blocks.PytorchRNN.reg_error">(blocks.PytorchRNN method)</a>, <a href="bounds.html#blocks.PytorchRNN.reg_error">[1]</a>
+        <li><a href="blocks.html#blocks.PytorchRNN.reg_error">(blocks.PytorchRNN method)</a>
 </li>
-        <li><a href="blocks.html#blocks.RNN.reg_error">(blocks.RNN method)</a>, <a href="bounds.html#blocks.RNN.reg_error">[1]</a>
+        <li><a href="blocks.html#blocks.RNN.reg_error">(blocks.RNN method)</a>
 </li>
         <li><a href="dynamics.html#dynamics.BlackSSM.reg_error">(dynamics.BlackSSM method)</a>
 </li>
@@ -1280,9 +1321,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="gnn.html#gnn.Replace">Replace (class in gnn)</a>
 </li>
-      <li><a href="blocks.html#blocks.RNN.reset">reset() (blocks.RNN method)</a>, <a href="bounds.html#blocks.RNN.reset">[1]</a>
+      <li><a href="blocks.html#blocks.RNN.reset">reset() (blocks.RNN method)</a>
 </li>
-      <li><a href="blocks.html#blocks.ResMLP">ResMLP (class in blocks)</a>, <a href="bounds.html#blocks.ResMLP">[1]</a>
+      <li><a href="blocks.html#blocks.ResMLP">ResMLP (class in blocks)</a>
 </li>
       <li><a href="estimators.html#estimators.ResMLPEstimator">ResMLPEstimator (class in estimators)</a>
 </li>
@@ -1301,7 +1342,7 @@
         <li><a href="rnn.html#module-rnn">module</a>
 </li>
       </ul></li>
-      <li><a href="blocks.html#blocks.RNN">RNN (class in blocks)</a>, <a href="bounds.html#blocks.RNN">[1]</a>
+      <li><a href="blocks.html#blocks.RNN">RNN (class in blocks)</a>
 
       <ul>
         <li><a href="rnn.html#rnn.RNN">(class in rnn)</a>
@@ -1321,7 +1362,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dataset.html#dataset.SequenceDataset">SequenceDataset (class in dataset)</a>
 </li>
-      <li><a href="blocks.html#blocks.set_model_dropout_mode">set_model_dropout_mode() (in module blocks)</a>, <a href="bounds.html#blocks.set_model_dropout_mode">[1]</a>
+      <li><a href="blocks.html#blocks.set_model_dropout_mode">set_model_dropout_mode() (in module blocks)</a>
 </li>
       <li><a href="constraint.html#constraint.Variable.show">show() (constraint.Variable method)</a>
 </li>

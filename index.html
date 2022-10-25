@@ -95,7 +95,7 @@
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -111,12 +111,12 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gnn.html">gnn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loss.html">loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a></li>
 <li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
@@ -229,21 +229,12 @@
 <li class="toctree-l2"><a class="reference internal" href="blocks.html#blocks.set_model_dropout_mode"><code class="docutils literal notranslate"><span class="pre">set_model_dropout_mode()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.BasisLinear"><code class="docutils literal notranslate"><span class="pre">BasisLinear</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.BilinearTorch"><code class="docutils literal notranslate"><span class="pre">BilinearTorch</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Dropout"><code class="docutils literal notranslate"><span class="pre">Dropout</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.InputConvexNN"><code class="docutils literal notranslate"><span class="pre">InputConvexNN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.InteractionEmbeddingMLP"><code class="docutils literal notranslate"><span class="pre">InteractionEmbeddingMLP</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Linear"><code class="docutils literal notranslate"><span class="pre">Linear</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.MLP"><code class="docutils literal notranslate"><span class="pre">MLP</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.MLPDropout"><code class="docutils literal notranslate"><span class="pre">MLPDropout</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Poly2"><code class="docutils literal notranslate"><span class="pre">Poly2</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.PosDef"><code class="docutils literal notranslate"><span class="pre">PosDef</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.PytorchRNN"><code class="docutils literal notranslate"><span class="pre">PytorchRNN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.RNN"><code class="docutils literal notranslate"><span class="pre">RNN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.ResMLP"><code class="docutils literal notranslate"><span class="pre">ResMLP</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.set_model_dropout_mode"><code class="docutils literal notranslate"><span class="pre">set_model_dropout_mode()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.Bounds"><code class="docutils literal notranslate"><span class="pre">Bounds</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.HardMaxBound"><code class="docutils literal notranslate"><span class="pre">HardMaxBound</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.HardMinBound"><code class="docutils literal notranslate"><span class="pre">HardMinBound</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.HardMinMaxBound"><code class="docutils literal notranslate"><span class="pre">HardMinMaxBound</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.HardMinMaxScale"><code class="docutils literal notranslate"><span class="pre">HardMinMaxScale</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a><ul>
@@ -386,24 +377,15 @@
 <li class="toctree-l2"><a class="reference internal" href="gradients.html#gradients.jacobian"><code class="docutils literal notranslate"><span class="pre">jacobian()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.BasisLinear"><code class="docutils literal notranslate"><span class="pre">BasisLinear</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.BilinearTorch"><code class="docutils literal notranslate"><span class="pre">BilinearTorch</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Dropout"><code class="docutils literal notranslate"><span class="pre">Dropout</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.InputConvexNN"><code class="docutils literal notranslate"><span class="pre">InputConvexNN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.InteractionEmbeddingMLP"><code class="docutils literal notranslate"><span class="pre">InteractionEmbeddingMLP</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Linear"><code class="docutils literal notranslate"><span class="pre">Linear</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.MLP"><code class="docutils literal notranslate"><span class="pre">MLP</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.MLPDropout"><code class="docutils literal notranslate"><span class="pre">MLPDropout</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.Poly2"><code class="docutils literal notranslate"><span class="pre">Poly2</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.PosDef"><code class="docutils literal notranslate"><span class="pre">PosDef</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.PytorchRNN"><code class="docutils literal notranslate"><span class="pre">PytorchRNN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.RNN"><code class="docutils literal notranslate"><span class="pre">RNN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.ResMLP"><code class="docutils literal notranslate"><span class="pre">ResMLP</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="bounds.html#blocks.set_model_dropout_mode"><code class="docutils literal notranslate"><span class="pre">set_model_dropout_mode()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.Bounds"><code class="docutils literal notranslate"><span class="pre">Bounds</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.HardMaxBound"><code class="docutils literal notranslate"><span class="pre">HardMaxBound</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.HardMinBound"><code class="docutils literal notranslate"><span class="pre">HardMinBound</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.HardMinMaxBound"><code class="docutils literal notranslate"><span class="pre">HardMinMaxBound</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bounds.html#bounds.HardMinMaxScale"><code class="docutils literal notranslate"><span class="pre">HardMinMaxScale</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="gnn.html">gnn</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.ArgSequential"><code class="docutils literal notranslate"><span class="pre">ArgSequential</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.GraphFeatureUpdate"><code class="docutils literal notranslate"><span class="pre">GraphFeatureUpdate</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="gnn.html#gnn.GraphFeatures"><code class="docutils literal notranslate"><span class="pre">GraphFeatures</span></code></a></li>
@@ -436,7 +418,7 @@
 <li class="toctree-l2"><a class="reference internal" href="interpolation.html#interpolation.LinInterp_Online"><code class="docutils literal notranslate"><span class="pre">LinInterp_Online</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="loss.html">loss</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="loss.html#loss.AggregateLoss"><code class="docutils literal notranslate"><span class="pre">AggregateLoss</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="loss.html#loss.AugmentedLagrangeLoss"><code class="docutils literal notranslate"><span class="pre">AugmentedLagrangeLoss</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="loss.html#loss.BarrierLoss"><code class="docutils literal notranslate"><span class="pre">BarrierLoss</span></code></a></li>

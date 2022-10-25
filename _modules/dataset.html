@@ -1,45 +1,45 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>dataset &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -81,7 +81,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -89,11 +88,12 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../loggers.html">Loggers</a></li>
@@ -101,7 +101,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../plot.html">Plot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem.html">Problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnn.html">RNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../signals.html">Signals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../trainer.html">Trainer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../visuals.html">Visuals</a></li>
@@ -110,12 +109,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
 </ul>
 
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -150,13 +158,11 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
           <li><a href="index.html">Module code</a> &raquo;</li>
         
@@ -178,6 +184,7 @@
   <h1>Source code for dataset</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Optional</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -186,6 +193,42 @@
 <span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataLoader</span>
 <span class="kn">from</span> <span class="nn">torch.utils.data.dataloader</span> <span class="kn">import</span> <span class="n">default_collate</span>
+
+
+<div class="viewcode-block" id="DictDataset"><a class="viewcode-back" href="../dataset.html#dataset.DictDataset">[docs]</a><span class="k">class</span> <span class="nc">DictDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Basic dataset compatible with neuromancer Trainer</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datadict</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :rtype: object</span>
+<span class="sd">        :param datadict: (dict {str: Tensor})</span>
+<span class="sd">        :param name: (str) Name of dataset</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span> <span class="o">=</span> <span class="n">datadict</span>
+        <span class="n">lens</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">datadict</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">lens</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Mismatched number of samples in dataset tensors&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">lens</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Fetch a single item from the dataset.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
+
+<div class="viewcode-block" id="DictDataset.collate_fn"><a class="viewcode-back" href="../dataset.html#dataset.DictDataset.collate_fn">[docs]</a>    <span class="k">def</span> <span class="nf">collate_fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Wraps the default PyTorch batch collation function and adds a name field.</span>
+
+<span class="sd">        :param batch: (dict str: torch.Tensor) dataset sample.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">batch</span> <span class="o">=</span> <span class="n">default_collate</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+        <span class="n">batch</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="n">batch</span></div></div>
 
 
 <span class="k">def</span> <span class="nf">_is_multisequence_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -313,11 +356,6 @@
 
 <span class="sd">        .. warning:: This dataset class requires the use of a special collate function that must be</span>
 <span class="sd">            provided to PyTorch&#39;s DataLoader class; see the `collate_fn` method of this class.</span>
-
-<span class="sd">        .. todo:: Add support for categorical features.</span>
-<span class="sd">        .. todo:: Add support for memory-mapped and/or streaming data.</span>
-<span class="sd">        .. todo:: Add support for data augmentation?</span>
-<span class="sd">        .. todo:: Clean up data validation code.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -374,7 +412,7 @@
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Fetch a single N-step sequence from the dataset.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span>
+        <span class="n">datapoint</span> <span class="o">=</span> <span class="p">{</span>
             <span class="o">**</span><span class="p">{</span>
                 <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">batched_data</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span>
@@ -384,6 +422,8 @@
                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span>
             <span class="p">},</span>
         <span class="p">}</span>
+        <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">return</span> <span class="n">datapoint</span>
 
     <span class="k">def</span> <span class="nf">_get_full_sequence_impl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the full sequence of data as a dictionary. Useful for open-loop evaluation.</span>
@@ -395,11 +435,11 @@
 
         <span class="k">return</span> <span class="p">{</span>
             <span class="o">**</span><span class="p">{</span>
-                <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_data</span><span class="p">[</span><span class="n">start</span> <span class="p">:</span> <span class="n">end</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_data</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span>
             <span class="p">},</span>
             <span class="o">**</span><span class="p">{</span>
-                <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_data</span><span class="p">[</span><span class="n">start</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span> <span class="p">:</span> <span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_data</span><span class="p">[</span><span class="n">start</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">:</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span>
             <span class="p">},</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;loop_&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -415,11 +455,11 @@
 <div class="viewcode-block" id="SequenceDataset.get_full_batch"><a class="viewcode-back" href="../dataset.html#dataset.SequenceDataset.get_full_batch">[docs]</a>    <span class="k">def</span> <span class="nf">get_full_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="o">**</span><span class="p">{</span>
-                <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">batched_data</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">batched_data</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span>
             <span class="p">},</span>
             <span class="o">**</span><span class="p">{</span>
-                <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">batched_data</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;f&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">batched_data</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span>
             <span class="p">},</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;nstep_&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -433,10 +473,8 @@
 <span class="sd">        :param batch: (dict str: torch.Tensor) dataset sample.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">batch</span> <span class="o">=</span> <span class="n">default_collate</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">batch</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
-            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;nstep_&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-        <span class="p">}</span></div>
+        <span class="n">batch</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;nstep_&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="n">batch</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">varinfo</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">    &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dims</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="s2">&quot;nsim&quot;</span><span class="p">}])</span>
@@ -449,7 +487,7 @@
             <span class="sa">f</span><span class="s2">&quot;    </span><span class="si">{</span><span class="n">varinfo</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
             <span class="sa">f</span><span class="s2">&quot;  nsim: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nsim</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
             <span class="sa">f</span><span class="s2">&quot;  nsteps: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
-            <span class="sa">f</span><span class="s2">&quot;  batches: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;  nsamples: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="p">)</span></div>
 
 
@@ -469,10 +507,6 @@
 <span class="sd">        .. warning:: This dataset class requires the use of a special collate function that must be</span>
 <span class="sd">            provided to PyTorch&#39;s DataLoader class; see the `collate_fn` method of this class.</span>
 
-<span class="sd">        .. todo:: Add support for categorical features.</span>
-<span class="sd">        .. todo:: Add support for memory-mapped and/or streaming data.</span>
-<span class="sd">        .. todo:: Add support for data augmentation?</span>
-<span class="sd">        .. todo:: Clean up data validation code.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -502,10 +536,12 @@
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Fetch a single sample from the dataset.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span>
+        <span class="n">datapoint</span> <span class="o">=</span> <span class="p">{</span>
             <span class="n">k</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_data</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vslices</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
             <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span>
         <span class="p">}</span>
+        <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">return</span> <span class="n">datapoint</span>
 
 <div class="viewcode-block" id="StaticDataset.get_full_batch"><a class="viewcode-back" href="../dataset.html#dataset.StaticDataset.get_full_batch">[docs]</a>    <span class="k">def</span> <span class="nf">get_full_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">batch</span> <span class="o">=</span> <span class="p">{</span>
@@ -533,6 +569,189 @@
             <span class="sa">f</span><span class="s2">&quot;    </span><span class="si">{</span><span class="n">varinfo</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
             <span class="sa">f</span><span class="s2">&quot;  nsamples: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nsamples</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="GraphDataset"><a class="viewcode-back" href="../dataset.html#dataset.GraphDataset">[docs]</a><span class="k">class</span> <span class="nc">GraphDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">node_attr</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="p">{},</span>
+        <span class="n">edge_attr</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="p">{},</span>
+        <span class="n">graph_attr</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="p">{},</span>
+        <span class="n">metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="p">{},</span>
+        <span class="n">seq_len</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="n">seq_horizon</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">seq_stride</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">graphs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">build_graphs</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">connectivity_radius</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.015</span><span class="p">,</span>
+        <span class="n">graph_self_loops</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;data&quot;</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;[A Neuromancer Dataset to handle graph data.]</span>
+
+<span class="sd">        :param node_attr: [dict str : list tensor], Categorical or Sequential Node Features. Tensor shapes: (nodes, (opt) steps, feature_dim)</span>
+<span class="sd">        :param edge_attr: [dict str : list tensor], Categorical or Sequential edge data. Tensor shapes: (edges, (opt) steps, feature_dim)</span>
+<span class="sd">        :param graph_attr: [dict str : list tensor], Catagorical or Sequential graph data. Tensor shapes: (1, (opt) steps, feature_dim)</span>
+<span class="sd">        :param metadata: [dict str : tensor], Parameters/Features of the experiment as a whole</span>
+<span class="sd">        :param seq_len: [int], Length sequential data. Defaults to 6</span>
+<span class="sd">        :param seq_horizon: [int], Number of timesteps to predict. Defaults to 1.</span>
+<span class="sd">        :param seq_stride: [int], Timesteps between sequences. Defaults to 1</span>
+<span class="sd">        :param graphs: [dict int/(int, int) : tensor], Optional dictionary of graphs where the key is the experiment index (and timestep). Graphs are stored in adj tensor form: (2, edges)</span>
+<span class="sd">        :param build_graphs: [str], Name of feature to use for building graphs. Defaults to None/Doesn&#39;t build grpahs. Requires torch_geometric</span>
+<span class="sd">        :param connectivity_radius: Maximum distance to connect nodes when building graphs.</span>
+<span class="sd">        :param graph_self_loops: [bool], If True, include self loops when building graphs.</span>
+<span class="sd">        :param name: [str], Name of dataset. Defaults to &quot;data&quot;</span>
+<span class="sd">        :param **kwargs, Torch Dataset kwargs</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">GraphDataset</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">node_attr</span> <span class="o">=</span> <span class="n">node_attr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edge_attr</span> <span class="o">=</span> <span class="n">edge_attr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph_attr</span> <span class="o">=</span> <span class="n">graph_attr</span>
+
+        <span class="n">exp</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">node_attr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">edge_attr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_attr</span><span class="p">,</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="p">[]})))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experiments</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq_len</span> <span class="o">=</span> <span class="n">seq_len</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq_horizon</span> <span class="o">=</span> <span class="n">seq_horizon</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq_stride</span> <span class="o">=</span> <span class="n">seq_stride</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connectivity_radius</span> <span class="o">=</span> <span class="n">connectivity_radius</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span> <span class="o">=</span> <span class="n">graphs</span> <span class="k">if</span> <span class="p">(</span><span class="n">graphs</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">build_graphs</span><span class="p">)</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">build_graphs</span><span class="p">(</span>
+            <span class="n">build_graphs</span><span class="p">,</span>
+            <span class="n">self_loops</span><span class="o">=</span><span class="n">graph_self_loops</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">make_map</span><span class="p">()</span>
+
+<div class="viewcode-block" id="GraphDataset.build_graphs"><a class="viewcode-back" href="../dataset.html#dataset.GraphDataset.build_graphs">[docs]</a>    <span class="k">def</span> <span class="nf">build_graphs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">,</span> <span class="n">self_loops</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        try:</span>
+<span class="sd">            from torch_geometric.nn import radius_graph</span>
+<span class="sd">        except:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">radius_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">loop</span><span class="p">):</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cdist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">links</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">d</span><span class="o">&lt;</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dist</span><span class="p">]</span>
+            <span class="n">edges</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">links</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">links</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">!=</span><span class="n">j</span> <span class="ow">or</span> <span class="n">loop</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">edges</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">)</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_attr</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Feature to build graphs not found in node_attr.&quot;</span>
+
+        <span class="n">graphs</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1">#If building graph based on catagorical feature</span>
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+                <span class="n">edge_index</span> <span class="o">=</span> <span class="n">radius_graph</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">connectivity_radius</span><span class="p">,</span>
+                                                <span class="n">loop</span><span class="o">=</span><span class="n">self_loops</span><span class="p">)</span>
+                <span class="n">graphs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">edge_index</span>
+        <span class="c1">#If building graph based on sequential feature</span>
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+                <span class="n">timesteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">inds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq_len</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq_stride</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">inds</span><span class="p">:</span>
+                    <span class="n">edge_index</span> <span class="o">=</span> <span class="n">radius_graph</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="n">pos</span><span class="p">],</span>
+                                                    <span class="bp">self</span><span class="o">.</span><span class="n">connectivity_radius</span><span class="p">,</span>
+                                                    <span class="n">loop</span><span class="o">=</span><span class="n">self_loops</span><span class="p">)</span>
+                    <span class="n">graphs</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">pos</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="n">edge_index</span>
+        <span class="k">return</span> <span class="n">graphs</span></div>
+
+<div class="viewcode-block" id="GraphDataset.shuffle"><a class="viewcode-back" href="../dataset.html#dataset.GraphDataset.shuffle">[docs]</a>    <span class="k">def</span> <span class="nf">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Randomizes the order of sample sequences&quot;&quot;&quot;</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GraphDataset.make_map"><a class="viewcode-back" href="../dataset.html#dataset.GraphDataset.make_map">[docs]</a>    <span class="k">def</span> <span class="nf">make_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Order the sample sequences&quot;&quot;&quot;</span>
+        <span class="c1">#Check if there is temporal data</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">node_attr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">edge_attr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span> <span class="n">graph_attr</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">attr</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+                <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="n">endpoint</span> <span class="o">=</span> <span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">seq_horizon</span> <span class="o">+</span> <span class="mi">1</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">experiments</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">seq_len</span> <span class="p">:</span> <span class="n">endpoint</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq_stride</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+                    <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">experiments</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">T</span></div>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a sample at idx</span>
+
+<span class="sd">        :param idx: [int] Index of Sample</span>
+<span class="sd">        :return: [DataDict] Sample containing positions Tensor and next_position Tensor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">s</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+        <span class="n">sample</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">edge_attr</span><span class="p">:</span>
+            <span class="n">attr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">edge_attr</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">s</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">attr</span> <span class="o">=</span> <span class="n">attr</span><span class="p">[:,</span> <span class="n">t</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq_len</span><span class="p">:</span> <span class="n">t</span><span class="p">]</span>
+                <span class="n">sample</span><span class="p">[</span><span class="s2">&quot;y_&quot;</span><span class="o">+</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr</span><span class="p">[:,</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq_horizon</span><span class="p">]</span>
+            <span class="n">sample</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_attr</span><span class="p">:</span>
+            <span class="n">attr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_attr</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">s</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">sample</span><span class="p">[</span><span class="s2">&quot;y_&quot;</span><span class="o">+</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr</span><span class="p">[:,</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq_horizon</span><span class="p">]</span>
+                <span class="n">attr</span> <span class="o">=</span> <span class="n">attr</span><span class="p">[:,</span> <span class="n">t</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq_len</span><span class="p">:</span> <span class="n">t</span><span class="p">]</span>
+            <span class="n">sample</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr</span>
+            <span class="n">sample</span><span class="p">[</span><span class="s1">&#39;num_nodes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_attr</span><span class="p">:</span>
+            <span class="n">attr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_attr</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">s</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">attr</span> <span class="o">=</span> <span class="n">attr</span><span class="p">[:,</span> <span class="n">t</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">seq_len</span><span class="p">:</span> <span class="n">t</span><span class="p">]</span>
+                <span class="n">sample</span><span class="p">[</span><span class="s2">&quot;y_&quot;</span><span class="o">+</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr</span><span class="p">[:,</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq_horizon</span><span class="p">]</span>
+            <span class="n">sample</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="p">:</span>
+            <span class="n">sample</span><span class="p">[</span><span class="s1">&#39;edge_index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">)))</span>
+            <span class="n">sample</span><span class="p">[</span><span class="s1">&#39;num_edges&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample</span><span class="p">[</span><span class="s1">&#39;edge_index&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="s2">&quot;num_nodes&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sample</span><span class="p">:</span>
+                <span class="n">sample</span><span class="p">[</span><span class="s2">&quot;num_nodes&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span>
+                    <span class="n">sample</span><span class="p">[</span><span class="s1">&#39;edge_index&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">sample</span><span class="p">[</span><span class="s1">&#39;batch&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">sample</span><span class="p">[</span><span class="s2">&quot;num_nodes&quot;</span><span class="p">],),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">)</span>
+        <span class="n">sample</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="n">sample</span>
+
+<div class="viewcode-block" id="GraphDataset.collate_fn"><a class="viewcode-back" href="../dataset.html#dataset.GraphDataset.collate_fn">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">collate_fn</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Batch collation for dictionaries of samples generated by this dataset. This wraps the</span>
+<span class="sd">        default PyTorch batch collation function and does some light post-processing to transpose</span>
+<span class="sd">        the data for NeuroMANCER models and add a &quot;name&quot; field.</span>
+
+<span class="sd">        :param batch: (list of dict str: torch.Tensor) dataset sample. Requires key &#39;edge_index&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;edge_index&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;batch&#39;</span><span class="p">,</span> <span class="s1">&#39;num_nodes&#39;</span><span class="p">,</span> <span class="s1">&#39;num_edges&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+                <span class="n">keys</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+            <span class="n">out</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">y</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1">#Handle node and batch index incrementing</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="s1">&#39;num_nodes&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+        <span class="n">batches</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="s1">&#39;batch&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">batches</span><span class="p">)):</span>
+            <span class="n">batches</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">out</span><span class="p">[</span><span class="s1">&#39;batch&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">batches</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;edge_index&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">edges</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+                <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;edge_index&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">offset</span><span class="p">)</span>
+                <span class="n">offset</span> <span class="o">+=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">out</span><span class="p">[</span><span class="s1">&#39;edge_index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">out</span><span class="p">[</span><span class="s1">&#39;num_edges&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="s1">&#39;edge_index&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">out</span><span class="p">[</span><span class="s1">&#39;num_nodes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+        <span class="n">out</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">out</span></div></div>
 
 
 <div class="viewcode-block" id="normalize_data"><a class="viewcode-back" href="../dataset.html#dataset.normalize_data">[docs]</a><span class="k">def</span> <span class="nf">normalize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">norm_type</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -575,13 +794,15 @@
     <span class="k">return</span> <span class="n">data</span> <span class="k">if</span> <span class="n">multisequence</span> <span class="k">else</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stats</span></div>
 
 
-<div class="viewcode-block" id="split_sequence_data"><a class="viewcode-back" href="../dataset.html#dataset.split_sequence_data">[docs]</a><span class="k">def</span> <span class="nf">split_sequence_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">,</span> <span class="n">split_ratio</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="split_sequence_data"><a class="viewcode-back" href="../dataset.html#dataset.split_sequence_data">[docs]</a><span class="k">def</span> <span class="nf">split_sequence_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">,</span> <span class="n">moving_horizon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">split_ratio</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Split a data dictionary into train, development, and test sets. Splits data into thirds by</span>
 <span class="sd">    default, but arbitrary split ratios for train and development can be provided.</span>
 
 <span class="sd">    :param data: (dict str: np.array or list[str: np.array]) data dictionary.</span>
 <span class="sd">    :param nsteps: (int) N-step prediction horizon for batching data; used here to ensure split</span>
 <span class="sd">        lengths are evenly divisible by N.</span>
+<span class="sd">    :param moving_horizon: (bool) whether batches use a sliding window with stride 1; else stride of</span>
+<span class="sd">        N is assumed.</span>
 <span class="sd">    :param split_ratio: (list float) Two numbers indicating percentage of data included in train and</span>
 <span class="sd">        development sets (out of 100.0). Default is None, which splits data into thirds.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -723,31 +944,148 @@
     <span class="s2">&quot;zero-one&quot;</span><span class="p">:</span> <span class="n">denormalize_01</span><span class="p">,</span>
     <span class="s2">&quot;one-one&quot;</span><span class="p">:</span> <span class="n">denormalize_11</span><span class="p">,</span>
 <span class="p">}</span>
+
+
+<div class="viewcode-block" id="get_static_dataloaders"><a class="viewcode-back" href="../dataset.html#dataset.get_static_dataloaders">[docs]</a><span class="k">def</span> <span class="nf">get_static_dataloaders</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">norm_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">split_ratio</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This will generate dataloaders for a given dictionary of data.</span>
+<span class="sd">    Dataloaders are hard-coded for full-batch training to match NeuroMANCER&#39;s training setup.</span>
+
+<span class="sd">    :param data: (dict str: np.array or list[dict str: np.array]) data dictionary or list of data</span>
+<span class="sd">        dictionaries; if latter is provided, multi-sequence datasets are created and splits are</span>
+<span class="sd">        computed over the number of sequences rather than their lengths.</span>
+<span class="sd">    :param norm_type: (str) type of normalization; see function `normalize_data` for more info.</span>
+<span class="sd">    :param split_ratio: (list float) percentage of data in train and development splits; see</span>
+<span class="sd">        function `split_sequence_data` for more info.get_static_dataloaders</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">norm_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">normalize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">norm_type</span><span class="p">)</span>
+    <span class="n">train_data</span><span class="p">,</span> <span class="n">dev_data</span><span class="p">,</span> <span class="n">test_data</span> <span class="o">=</span> <span class="n">split_static_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">split_ratio</span><span class="p">)</span>
+
+    <span class="n">train_data</span> <span class="o">=</span> <span class="n">StaticDataset</span><span class="p">(</span>
+        <span class="n">train_data</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">dev_data</span> <span class="o">=</span> <span class="n">StaticDataset</span><span class="p">(</span>
+        <span class="n">dev_data</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">test_data</span> <span class="o">=</span> <span class="n">StaticDataset</span><span class="p">(</span>
+        <span class="n">test_data</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">train_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">train_data</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+        <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">collate_fn</span><span class="o">=</span><span class="n">train_data</span><span class="o">.</span><span class="n">collate_fn</span><span class="p">,</span>
+        <span class="n">num_workers</span><span class="o">=</span><span class="n">num_workers</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">dev_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">dev_data</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+        <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">collate_fn</span><span class="o">=</span><span class="n">dev_data</span><span class="o">.</span><span class="n">collate_fn</span><span class="p">,</span>
+        <span class="n">num_workers</span><span class="o">=</span><span class="n">num_workers</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">test_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">test_data</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+        <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">collate_fn</span><span class="o">=</span><span class="n">test_data</span><span class="o">.</span><span class="n">collate_fn</span><span class="p">,</span>
+        <span class="n">num_workers</span><span class="o">=</span><span class="n">num_workers</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">dev_data</span><span class="p">,</span> <span class="n">test_data</span><span class="p">),</span> <span class="n">train_data</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">dims</span></div>
+
+
+<div class="viewcode-block" id="get_sequence_dataloaders"><a class="viewcode-back" href="../dataset.html#dataset.get_sequence_dataloaders">[docs]</a><span class="k">def</span> <span class="nf">get_sequence_dataloaders</span><span class="p">(</span>
+    <span class="n">data</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">,</span> <span class="n">moving_horizon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">norm_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">split_ratio</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This will generate dataloaders and open-loop sequence dictionaries for a given dictionary of</span>
+<span class="sd">    data. Dataloaders are hard-coded for full-batch training to match NeuroMANCER&#39;s original</span>
+<span class="sd">    training setup.</span>
+
+<span class="sd">    :param data: (dict str: np.array or list[dict str: np.array]) data dictionary or list of data</span>
+<span class="sd">        dictionaries; if latter is provided, multi-sequence datasets are created and splits are</span>
+<span class="sd">        computed over the number of sequences rather than their lengths.</span>
+<span class="sd">    :param nsteps: (int) length of windowed subsequences for N-step training.</span>
+<span class="sd">    :param moving_horizon: (bool) whether to use moving horizon batching.</span>
+<span class="sd">    :param norm_type: (str) type of normalization; see function `normalize_data` for more info.</span>
+<span class="sd">    :param split_ratio: (list float) percentage of data in train and development splits; see</span>
+<span class="sd">        function `split_sequence_data` for more info.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">norm_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">normalize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">norm_type</span><span class="p">)</span>
+    <span class="n">train_data</span><span class="p">,</span> <span class="n">dev_data</span><span class="p">,</span> <span class="n">test_data</span> <span class="o">=</span> <span class="n">split_sequence_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">,</span> <span class="n">moving_horizon</span><span class="p">,</span> <span class="n">split_ratio</span><span class="p">)</span>
+
+    <span class="n">train_data</span> <span class="o">=</span> <span class="n">SequenceDataset</span><span class="p">(</span>
+        <span class="n">train_data</span><span class="p">,</span>
+        <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span>
+        <span class="n">moving_horizon</span><span class="o">=</span><span class="n">moving_horizon</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">dev_data</span> <span class="o">=</span> <span class="n">SequenceDataset</span><span class="p">(</span>
+        <span class="n">dev_data</span><span class="p">,</span>
+        <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span>
+        <span class="n">moving_horizon</span><span class="o">=</span><span class="n">moving_horizon</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">test_data</span> <span class="o">=</span> <span class="n">SequenceDataset</span><span class="p">(</span>
+        <span class="n">test_data</span><span class="p">,</span>
+        <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span>
+        <span class="n">moving_horizon</span><span class="o">=</span><span class="n">moving_horizon</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">train_loop</span> <span class="o">=</span> <span class="n">train_data</span><span class="o">.</span><span class="n">get_full_sequence</span><span class="p">()</span>
+    <span class="n">dev_loop</span> <span class="o">=</span> <span class="n">dev_data</span><span class="o">.</span><span class="n">get_full_sequence</span><span class="p">()</span>
+    <span class="n">test_loop</span> <span class="o">=</span> <span class="n">test_data</span><span class="o">.</span><span class="n">get_full_sequence</span><span class="p">()</span>
+
+    <span class="n">train_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">train_data</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">),</span>
+        <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">collate_fn</span><span class="o">=</span><span class="n">train_data</span><span class="o">.</span><span class="n">collate_fn</span><span class="p">,</span>
+        <span class="n">num_workers</span><span class="o">=</span><span class="n">num_workers</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">dev_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">dev_data</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">dev_data</span><span class="p">),</span>
+        <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">collate_fn</span><span class="o">=</span><span class="n">dev_data</span><span class="o">.</span><span class="n">collate_fn</span><span class="p">,</span>
+        <span class="n">num_workers</span><span class="o">=</span><span class="n">num_workers</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">test_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">test_data</span><span class="p">,</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">test_data</span><span class="p">),</span>
+        <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">collate_fn</span><span class="o">=</span><span class="n">test_data</span><span class="o">.</span><span class="n">collate_fn</span><span class="p">,</span>
+        <span class="n">num_workers</span><span class="o">=</span><span class="n">num_workers</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">dev_data</span><span class="p">,</span> <span class="n">test_data</span><span class="p">),</span> <span class="p">(</span><span class="n">train_loop</span><span class="p">,</span> <span class="n">dev_loop</span><span class="p">,</span> <span class="n">test_loop</span><span class="p">),</span> <span class="n">train_data</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">dims</span></div>
 </pre></div>
 
            </div>
            
           </div>
           <footer>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -755,6 +1093,7 @@
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

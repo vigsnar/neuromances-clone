@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>loss &mdash; NeuroMANCER 0.1 documentation</title>
+  <title>Loss &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
@@ -42,7 +42,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Maps" href="maps.html" />
+    <link rel="prev" title="Interpolation" href="interpolation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,11 +92,11 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -110,6 +112,37 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Loss</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loss.AggregateLoss"><code class="docutils literal notranslate"><span class="pre">AggregateLoss</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#loss.AggregateLoss.calculate_constraints"><code class="docutils literal notranslate"><span class="pre">AggregateLoss.calculate_constraints()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loss.AggregateLoss.calculate_objectives"><code class="docutils literal notranslate"><span class="pre">AggregateLoss.calculate_objectives()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loss.AggregateLoss.forward"><code class="docutils literal notranslate"><span class="pre">AggregateLoss.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#loss.AugmentedLagrangeLoss"><code class="docutils literal notranslate"><span class="pre">AugmentedLagrangeLoss</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#loss.AugmentedLagrangeLoss.forward"><code class="docutils literal notranslate"><span class="pre">AugmentedLagrangeLoss.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#loss.BarrierLoss"><code class="docutils literal notranslate"><span class="pre">BarrierLoss</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#loss.BarrierLoss.calculate_constraints"><code class="docutils literal notranslate"><span class="pre">BarrierLoss.calculate_constraints()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#loss.PenaltyLoss"><code class="docutils literal notranslate"><span class="pre">PenaltyLoss</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#loss.PenaltyLoss.forward"><code class="docutils literal notranslate"><span class="pre">PenaltyLoss.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#loss.get_loss"><code class="docutils literal notranslate"><span class="pre">get_loss()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 </ul>
 
             
@@ -155,7 +188,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>loss</li>
+      <li>Loss</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,7 +208,7 @@
            <div itemprop="articleBody">
             
   <section id="module-loss">
-<span id="loss"></span><h1>loss<a class="headerlink" href="#module-loss" title="Permalink to this heading">¶</a></h1>
+<span id="loss"></span><h1>Loss<a class="headerlink" href="#module-loss" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="loss.AggregateLoss">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">loss.</span></span><span class="sig-name descname"><span class="pre">AggregateLoss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objectives</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/loss.html#AggregateLoss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#loss.AggregateLoss" title="Permalink to this definition">¶</a></dt>
@@ -279,6 +312,15 @@ cviolation &lt;= 0 -&gt; barrier</p>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="maps.html" class="btn btn-neutral float-right" title="Maps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="interpolation.html" class="btn btn-neutral float-left" title="Interpolation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

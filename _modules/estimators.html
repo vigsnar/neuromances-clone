@@ -1,45 +1,45 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>estimators &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -81,7 +81,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -89,11 +88,12 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../loggers.html">Loggers</a></li>
@@ -101,7 +101,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../plot.html">Plot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem.html">Problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnn.html">RNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../signals.html">Signals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../trainer.html">Trainer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../visuals.html">Visuals</a></li>
@@ -110,12 +109,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
 </ul>
 
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -150,13 +158,11 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
           <li><a href="index.html">Module code</a> &raquo;</li>
         
@@ -195,13 +201,10 @@
 
 <span class="c1"># local imports</span>
 <span class="kn">import</span> <span class="nn">neuromancer.blocks</span> <span class="k">as</span> <span class="nn">blocks</span>
-<span class="kn">from</span> <span class="nn">neuromancer.dynamics</span> <span class="kn">import</span> <span class="n">BlockSSM</span>
 <span class="kn">from</span> <span class="nn">neuromancer.component</span> <span class="kn">import</span> <span class="n">Component</span><span class="p">,</span> <span class="n">check_key_subset</span>
 
 
 <div class="viewcode-block" id="TimeDelayEstimator"><a class="viewcode-back" href="../estimators.html#estimators.TimeDelayEstimator">[docs]</a><span class="k">class</span> <span class="nc">TimeDelayEstimator</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Yp&quot;</span><span class="p">]</span>
-    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;reg_error&quot;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;estimator&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -212,8 +215,8 @@
 <span class="sd">        :param input_keys: (List of str) List of input variable names</span>
 <span class="sd">        :param name: (str) Name for tracking output of module.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="n">input_keys</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">output_keys</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;reg_error&quot;</span><span class="p">]]</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">output_keys</span><span class="o">=</span><span class="n">output_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 
         <span class="k">assert</span> <span class="n">window_size</span> <span class="o">&lt;=</span> <span class="n">nsteps</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Window size </span><span class="si">{</span><span class="n">window_size</span><span class="si">}</span><span class="s1"> longer than sequence length </span><span class="si">{</span><span class="n">nsteps</span><span class="si">}</span><span class="s1">.&#39;</span>
         <span class="n">check_key_subset</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">input_keys</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">data_dims</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
@@ -251,13 +254,13 @@
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
                 <span class="n">featlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
             <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">,</span> \
+                <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">,</span> \
                     <span class="sa">f</span><span class="s1">&#39;Sequence too short for estimator calculation. Should be at least </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="si">}</span><span class="s1">&#39;</span>
-                <span class="n">featlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                    <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">step</span> <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">window_size</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">]],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+                <span class="n">featlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">][:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">window_size</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Input </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> has </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="si">}</span><span class="s1"> dimensions. Should have 2 or 3 dimensions&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">featlist</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">featlist</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">features</span></div>
 
 <div class="viewcode-block" id="TimeDelayEstimator.forward"><a class="viewcode-back" href="../estimators.html#estimators.TimeDelayEstimator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -266,39 +269,9 @@
 <span class="sd">        :return: (dict {str: torch.tensor)}</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="s1">&#39;x0&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="n">features</span><span class="p">),</span>
-            <span class="s1">&#39;reg_error&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
-        <span class="p">}</span></div></div>
-
-
-<div class="viewcode-block" id="seq2seqTimeDelayEstimator"><a class="viewcode-back" href="../estimators.html#estimators.seq2seqTimeDelayEstimator">[docs]</a><span class="k">class</span> <span class="nc">seq2seqTimeDelayEstimator</span><span class="p">(</span><span class="n">TimeDelayEstimator</span><span class="p">):</span>
-    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Xtd&quot;</span><span class="p">,</span> <span class="s2">&quot;reg_error&quot;</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">],</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;estimator&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">        :param data_dims: dict {str: tuple of ints) Data structure describing dimensions of input variables</span>
-<span class="sd">        :param nsteps: (int) Prediction horizon</span>
-<span class="sd">        :param window_size: (int) Size of sequence history to use as input to the state estimator.</span>
-<span class="sd">        :param input_keys: (List of str) List of input variable names</span>
-<span class="sd">        :param name: (str) Name for tracking output of module.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nx</span> <span class="o">=</span> <span class="n">data_dims</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span> <span class="o">=</span> <span class="n">timedelay</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nx_td</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nx</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nx_td</span>
-
-<div class="viewcode-block" id="seq2seqTimeDelayEstimator.forward"><a class="viewcode-back" href="../estimators.html#estimators.seq2seqTimeDelayEstimator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">        :param data: (dict {str: torch.tensor)}</span>
-<span class="sd">        :return: (dict {str: torch.tensor)}</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-        <span class="n">Xtd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="n">features</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;Xtd&#39;</span><span class="p">:</span> <span class="n">Xtd</span><span class="p">,</span> <span class="s1">&#39;reg_error&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()}</span></div></div>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">tensor</span> <span class="k">for</span> <span class="n">tensor</span><span class="p">,</span> <span class="n">name</span>
+                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="n">features</span><span class="p">),</span>  <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()],</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">)}</span>
+        <span class="k">return</span> <span class="n">output</span></div></div>
 
 
 <div class="viewcode-block" id="FullyObservable"><a class="viewcode-back" href="../estimators.html#estimators.FullyObservable">[docs]</a><span class="k">class</span> <span class="nc">FullyObservable</span><span class="p">(</span><span class="n">TimeDelayEstimator</span><span class="p">):</span>
@@ -308,11 +281,12 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Dummmy estimator to use consistent API for fully and partially observable systems</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span>
+                         <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Identity</span><span class="p">()</span>
 
 <div class="viewcode-block" id="FullyObservable.features"><a class="viewcode-back" href="../estimators.html#estimators.FullyObservable.features">[docs]</a>    <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+        <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]][:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:]</span></div>
 
 <div class="viewcode-block" id="FullyObservable.reg_error"><a class="viewcode-back" href="../estimators.html#estimators.FullyObservable.reg_error">[docs]</a>    <span class="k">def</span> <span class="nf">reg_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span></div></div>
@@ -325,14 +299,15 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Dummmy estimator to use consistent API for fully observable systems with augmented state space with disturbaces</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span>
+                         <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Identity</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nd</span> <span class="o">=</span> <span class="n">nd</span>   <span class="c1"># dimensions of the augmented states</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">d0</span> <span class="o">=</span> <span class="n">d0</span>   <span class="c1"># fixed initial conditions of the augmented state</span>
 
 <div class="viewcode-block" id="FullyObservableAugmented.features"><a class="viewcode-back" href="../estimators.html#estimators.FullyObservableAugmented.features">[docs]</a>    <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="n">augmented_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d0</span><span class="o">*</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">nd</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">augmented_state</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span></div></div>
+        <span class="n">augmented_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d0</span><span class="o">*</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">nd</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">][:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="p">:],</span> <span class="n">augmented_state</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="LinearEstimator"><a class="viewcode-back" href="../estimators.html#estimators.LinearEstimator">[docs]</a><span class="k">class</span> <span class="nc">LinearEstimator</span><span class="p">(</span><span class="n">TimeDelayEstimator</span><span class="p">):</span>
@@ -347,19 +322,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">linear_map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="o">**</span><span class="n">linargs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="seq2seqLinearEstimator"><a class="viewcode-back" href="../estimators.html#estimators.seq2seqLinearEstimator">[docs]</a><span class="k">class</span> <span class="nc">seq2seqLinearEstimator</span><span class="p">(</span><span class="n">seq2seqTimeDelayEstimator</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                 <span class="n">linear_map</span><span class="o">=</span><span class="n">slim</span><span class="o">.</span><span class="n">Linear</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">Identity</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="p">[],</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                 <span class="n">input_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">],</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;linear_estim&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">        See base class for arguments</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span>
-                         <span class="n">timedelay</span><span class="o">=</span><span class="n">timedelay</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">linear_map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="o">**</span><span class="n">linargs</span><span class="p">)</span></div>
-
-
 <div class="viewcode-block" id="MLPEstimator"><a class="viewcode-back" href="../estimators.html#estimators.MLPEstimator">[docs]</a><span class="k">class</span> <span class="nc">MLPEstimator</span><span class="p">(</span><span class="n">TimeDelayEstimator</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 
@@ -371,22 +333,6 @@
 <span class="sd">        See base class for arguments</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">blocks</span><span class="o">.</span><span class="n">MLP</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span>
-                              <span class="n">linear_map</span><span class="o">=</span><span class="n">linear_map</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nonlin</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span></div>
-
-
-<div class="viewcode-block" id="seq2seqMLPEstimator"><a class="viewcode-back" href="../estimators.html#estimators.seq2seqMLPEstimator">[docs]</a><span class="k">class</span> <span class="nc">seq2seqMLPEstimator</span><span class="p">(</span><span class="n">seq2seqTimeDelayEstimator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                 <span class="n">linear_map</span><span class="o">=</span><span class="n">slim</span><span class="o">.</span><span class="n">Linear</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="p">[</span><span class="mi">64</span><span class="p">],</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                 <span class="n">input_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">],</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;MLP_estim&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        See base class for arguments</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span>
-                         <span class="n">timedelay</span><span class="o">=</span><span class="n">timedelay</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">blocks</span><span class="o">.</span><span class="n">MLP</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span>
                               <span class="n">linear_map</span><span class="o">=</span><span class="n">linear_map</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nonlin</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span></div>
 
@@ -406,22 +352,6 @@
                                  <span class="n">linear_map</span><span class="o">=</span><span class="n">linear_map</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nonlin</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="seq2seqResMLPEstimator"><a class="viewcode-back" href="../estimators.html#estimators.seq2seqResMLPEstimator">[docs]</a><span class="k">class</span> <span class="nc">seq2seqResMLPEstimator</span><span class="p">(</span><span class="n">seq2seqTimeDelayEstimator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                 <span class="n">linear_map</span><span class="o">=</span><span class="n">slim</span><span class="o">.</span><span class="n">Linear</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="p">[</span><span class="mi">64</span><span class="p">],</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                 <span class="n">input_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">],</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;ResMLP_estim&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        see base class for arguments</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span>
-                         <span class="n">timedelay</span><span class="o">=</span><span class="n">timedelay</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">blocks</span><span class="o">.</span><span class="n">ResMLP</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span>
-                                 <span class="n">linear_map</span><span class="o">=</span><span class="n">linear_map</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nonlin</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span></div>
-
-
 <div class="viewcode-block" id="RNNEstimator"><a class="viewcode-back" href="../estimators.html#estimators.RNNEstimator">[docs]</a><span class="k">class</span> <span class="nc">RNNEstimator</span><span class="p">(</span><span class="n">TimeDelayEstimator</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                  <span class="n">linear_map</span><span class="o">=</span><span class="n">slim</span><span class="o">.</span><span class="n">Linear</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="p">[</span><span class="mi">64</span><span class="p">],</span>
@@ -435,80 +365,10 @@
                               <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nonlin</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linear_map</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="RNNEstimator.forward"><a class="viewcode-back" href="../estimators.html#estimators.RNNEstimator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="n">features</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">window_size</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;x0&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="n">features</span><span class="p">),</span> <span class="s1">&#39;reg_error&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()}</span></div></div>
-
-
-<div class="viewcode-block" id="seq2seqRNNEstimator"><a class="viewcode-back" href="../estimators.html#estimators.seq2seqRNNEstimator">[docs]</a><span class="k">class</span> <span class="nc">seq2seqRNNEstimator</span><span class="p">(</span><span class="n">seq2seqTimeDelayEstimator</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                 <span class="n">linear_map</span><span class="o">=</span><span class="n">slim</span><span class="o">.</span><span class="n">Linear</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="p">[</span><span class="mi">64</span><span class="p">],</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                 <span class="n">input_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">],</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;RNN_estim&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        see base class for arguments</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data_dims</span><span class="p">,</span> <span class="n">nsteps</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span> <span class="n">input_keys</span><span class="o">=</span><span class="n">input_keys</span><span class="p">,</span>
-                         <span class="n">timedelay</span><span class="o">=</span><span class="n">timedelay</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">in_features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sequence_dims_sum</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">net</span> <span class="o">=</span> <span class="n">blocks</span><span class="o">.</span><span class="n">RNN</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span>
-                              <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">nonlin</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linear_map</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
-
-<div class="viewcode-block" id="seq2seqRNNEstimator.forward"><a class="viewcode-back" href="../estimators.html#estimators.seq2seqRNNEstimator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="n">features</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">window_size</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-        <span class="n">Xtd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="n">features</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;Xtd&#39;</span><span class="p">:</span> <span class="n">Xtd</span><span class="p">,</span> <span class="s1">&#39;reg_error&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()}</span></div></div>
-
-
-<div class="viewcode-block" id="LinearKalmanFilter"><a class="viewcode-back" href="../estimators.html#estimators.LinearKalmanFilter">[docs]</a><span class="k">class</span> <span class="nc">LinearKalmanFilter</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Yp&quot;</span><span class="p">,</span> <span class="s2">&quot;Up&quot;</span><span class="p">,</span> <span class="s2">&quot;Dp&quot;</span><span class="p">]</span>
-    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;reg_error&quot;</span><span class="p">]</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Time-Varying Linear Kalman Filter</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;kalman_estim&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">        :param model: Dynamics model. Should be a block dynamics model with potential input non-linearity.</span>
-<span class="sd">        :param name: Identifier for tracking output.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="k">assert</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">BlockSSM</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">fx</span><span class="p">,</span> <span class="n">slim</span><span class="o">.</span><span class="n">LinearBase</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">fy</span><span class="p">,</span> <span class="n">slim</span><span class="o">.</span><span class="n">LinearBase</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Q_init</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">nx</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">R_init</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">ny</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">P_init</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">nx</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">L_init</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">nx</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">ny</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x0_estim</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">nx</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<div class="viewcode-block" id="LinearKalmanFilter.reg_error"><a class="viewcode-back" href="../estimators.html#estimators.LinearKalmanFilter.reg_error">[docs]</a>    <span class="k">def</span> <span class="nf">reg_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span></div>
-
-<div class="viewcode-block" id="LinearKalmanFilter.forward"><a class="viewcode-back" href="../estimators.html#estimators.LinearKalmanFilter.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x0_estim</span>
-        <span class="n">Q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Q_init</span>
-        <span class="n">R</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">R_init</span>
-        <span class="n">P</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">P_init</span>
-        <span class="n">L</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">L_init</span>  <span class="c1"># KF gain</span>
-        <span class="n">eye</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">nx</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
-
-        <span class="c1"># State estimation loop on past data</span>
-        <span class="n">Yp</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Yp&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Up&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Dp&#39;</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">ym</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">Yp</span><span class="p">,</span> <span class="n">U</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">Yp</span><span class="p">)],</span> <span class="n">D</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">Yp</span><span class="p">)]):</span>
-            <span class="c1"># PREDICT STEP:</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fu</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-            <span class="c1"># estimation error covariance</span>
-            <span class="n">P</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">effective_W</span><span class="p">(),</span> <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">effective_W</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">))</span> <span class="o">+</span> <span class="n">Q</span>
-            <span class="c1"># UPDATE STEP:</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">((</span><span class="n">ym</span> <span class="o">-</span> <span class="n">y</span><span class="p">),</span> <span class="n">L</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-            <span class="n">L_inverse_part</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">inverse</span><span class="p">(</span><span class="n">R</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">effective_W</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
-                                                        <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">effective_W</span><span class="p">())))</span>
-            <span class="n">L</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">effective_W</span><span class="p">()),</span> <span class="n">L_inverse_part</span><span class="p">)</span>
-            <span class="n">P</span> <span class="o">=</span> <span class="n">eye</span> <span class="o">-</span> <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">effective_W</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">P</span><span class="p">))</span>
-        <span class="k">return</span> <span class="p">{</span><span class="sa">f</span><span class="s1">&#39;x0&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;reg_error&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()}</span></div></div>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">][:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">window_size</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">nsteps</span><span class="p">,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">tensor</span> <span class="k">for</span> <span class="n">tensor</span><span class="p">,</span> <span class="n">name</span>
+                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="n">features</span><span class="p">),</span>  <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()],</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">)}</span>
+        <span class="k">return</span> <span class="n">output</span></div></div>
 
 
 <span class="n">estimators</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fullobservable&#39;</span><span class="p">:</span> <span class="n">FullyObservable</span><span class="p">,</span>
@@ -516,36 +376,26 @@
               <span class="s1">&#39;mlp&#39;</span><span class="p">:</span> <span class="n">MLPEstimator</span><span class="p">,</span>
               <span class="s1">&#39;rnn&#39;</span><span class="p">:</span> <span class="n">RNNEstimator</span><span class="p">,</span>
               <span class="s1">&#39;residual_mlp&#39;</span><span class="p">:</span> <span class="n">ResMLPEstimator</span><span class="p">}</span>
-
-<span class="n">seq2seq_estimators</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;seq2seq_linear&#39;</span><span class="p">:</span> <span class="n">seq2seqLinearEstimator</span><span class="p">,</span>
-                      <span class="s1">&#39;seq2seq_mlp&#39;</span><span class="p">:</span> <span class="n">seq2seqMLPEstimator</span><span class="p">,</span>
-                      <span class="s1">&#39;seq2seq_rnn&#39;</span><span class="p">:</span> <span class="n">seq2seqRNNEstimator</span><span class="p">,</span>
-                      <span class="s1">&#39;seq2seq_residual_mlp&#39;</span><span class="p">:</span> <span class="n">seq2seqResMLPEstimator</span><span class="p">}</span>
 </pre></div>
 
            </div>
            
           </div>
           <footer>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -553,6 +403,7 @@
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

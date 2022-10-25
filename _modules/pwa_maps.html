@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pwa_maps &mdash; NeuroMANCER 0.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
+            <img src="../_static/dadaist.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../estimators.html">Estimators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loggers.html">Loggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operators.html">Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot.html">Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem.html">Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rnn.html">RNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simulators.html">Simulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trainer.html">Trainer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visuals.html">Visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arg.html">Arg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../callbacks.html">Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constraint.html">Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeuroMANCER</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>pwa_maps</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for pwa_maps</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Functions for obtaining local affine maps of fully connected neural networks</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">slim</span>
+<span class="kn">from</span> <span class="nn">neuromancer</span> <span class="kn">import</span> <span class="n">blocks</span>
+
+
+<div class="viewcode-block" id="pwa_batched"><a class="viewcode-back" href="../pwa_maps.html#pwa_maps.pwa_batched">[docs]</a><span class="k">def</span> <span class="nf">pwa_batched</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">use_bias</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    function returning parameters of a local affine map of a fully connected neural network</span>
+<span class="sd">    for a given input x, where the following holds:</span>
+<span class="sd">    y = fx(x) = Astar*x + bstar</span>
+
+<span class="sd">    :param fx: (nn.Module) fully connected neural network</span>
+<span class="sd">    :param x: (torch.Tensor, shape=[batchsize, in_features])</span>
+<span class="sd">    :param use_bias: flag for turning bias on and off</span>
+<span class="sd">    :return: Astar, bstar of a local affine map of the network fx: y = Astar*x + bstar</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x_layer</span> <span class="o">=</span> <span class="n">x</span>
+
+    <span class="n">Aprime_mats</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">Lambdas</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">bprimes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">biases</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="nb">iter</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">nlin</span><span class="p">,</span> <span class="n">lin</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">fx</span><span class="o">.</span><span class="n">nonlin</span><span class="p">,</span> <span class="n">fx</span><span class="o">.</span><span class="n">linear</span><span class="p">):</span>
+
+        <span class="c1"># z = A*x + b</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">lin</span><span class="o">.</span><span class="n">effective_W</span><span class="p">()</span>  <span class="c1"># layer weight</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">lin</span><span class="o">.</span><span class="n">bias</span> <span class="k">if</span> <span class="n">use_bias</span> <span class="ow">and</span> <span class="n">lin</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x_layer</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>  <span class="c1"># affine transform</span>
+        <span class="n">weights</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="n">biases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+        <span class="c1"># sigma(z) = Lambda*z + sigma(0)</span>
+        <span class="n">sigma_null_space</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>     <span class="c1"># sigma(0)</span>
+        <span class="n">lambda_vec</span> <span class="o">=</span> <span class="p">(</span><span class="n">nlin</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">-</span> <span class="n">sigma_null_space</span><span class="p">)</span> <span class="o">/</span> <span class="n">z</span>  <span class="c1"># activation scaling vector</span>
+        <span class="n">lambda_vec</span><span class="p">[</span><span class="n">z</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>                     <span class="c1"># fixing division by zero</span>
+        <span class="n">Lambda</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">lambda_vec</span><span class="p">])</span>  <span class="c1"># activation scaling matrix Lambda</span>
+        <span class="n">Lambdas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Lambda</span><span class="p">)</span>
+
+        <span class="c1"># layer transform:  Lambda*(A*x + b) + sigma(0)</span>
+        <span class="n">x_layer</span> <span class="o">=</span> <span class="n">z</span> <span class="o">*</span> <span class="n">lambda_vec</span> <span class="o">+</span> <span class="n">sigma_null_space</span>
+
+        <span class="c1"># A&#39; = Lambda*A</span>
+        <span class="n">Aprime</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">Lambda</span><span class="p">)</span>
+        <span class="n">Aprime_mats</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Aprime</span><span class="p">]</span>
+
+        <span class="c1"># b&#39; = Lambda*b + sigma(0)</span>
+        <span class="n">bprime</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">Lambda</span><span class="p">)</span> <span class="o">+</span> <span class="n">sigma_null_space</span>
+        <span class="n">bprimes</span> <span class="o">+=</span> <span class="p">[</span><span class="n">bprime</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">iter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">bstar</span> <span class="o">=</span> <span class="n">bprime</span>
+            <span class="n">Astar</span> <span class="o">=</span> <span class="n">Aprime</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># network-wise local bias</span>
+            <span class="c1"># b*_l+1 = Lambda_l+1 * A_l+1 * (Lambda_l * b_l + sigma(0)_l) + Lambda_l+1 * b_l+1 + sigma(0)_l+1</span>
+            <span class="c1"># b*_l+1 = A&#39;_l+1 * b&#39;_l + b&#39;_l+1</span>
+            <span class="n">Aprime_bstar</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">Aprime</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">bstar</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+            <span class="n">bstar</span> <span class="o">=</span> <span class="n">Aprime_bstar</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bprime</span>
+
+            <span class="c1"># network-wise local linear map</span>
+            <span class="c1"># A* = A&#39;_L ... A&#39;_1</span>
+            <span class="n">Astar</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">Astar</span><span class="p">,</span> <span class="n">Aprime</span><span class="p">)</span>
+        <span class="nb">iter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">Astar</span><span class="p">,</span> <span class="n">bstar</span><span class="p">,</span> <span class="n">Aprime_mats</span><span class="p">,</span> <span class="n">bprimes</span><span class="p">,</span> <span class="n">Lambdas</span></div>
+
+
+<div class="viewcode-block" id="lpv_batched"><a class="viewcode-back" href="../pwa_maps.html#pwa_maps.lpv_batched">[docs]</a><span class="k">def</span> <span class="nf">lpv_batched</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">use_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">x_layer</span> <span class="o">=</span> <span class="n">x</span>
+
+    <span class="n">Aprime_mats</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">activation_mats</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">bprimes</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">nlin</span><span class="p">,</span> <span class="n">lin</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">fx</span><span class="o">.</span><span class="n">nonlin</span><span class="p">,</span> <span class="n">fx</span><span class="o">.</span><span class="n">linear</span><span class="p">):</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">lin</span><span class="o">.</span><span class="n">effective_W</span><span class="p">()</span>  <span class="c1"># layer weight</span>
+
+        <span class="n">b</span> <span class="o">=</span> <span class="n">lin</span><span class="o">.</span><span class="n">bias</span> <span class="k">if</span> <span class="n">use_bias</span> <span class="ow">and</span> <span class="n">lin</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">Ax</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x_layer</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>  <span class="c1"># affine transform</span>
+
+        <span class="n">zeros</span> <span class="o">=</span> <span class="n">Ax</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">lambda_h</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">Ax</span><span class="p">)</span> <span class="o">/</span> <span class="n">Ax</span>  <span class="c1"># activation scaling</span>
+        <span class="n">lambda_h</span><span class="p">[</span><span class="n">zeros</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>
+
+        <span class="n">lambda_h_mats</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">lambda_h</span><span class="p">]</span>
+        <span class="n">activation_mats</span> <span class="o">+=</span> <span class="n">lambda_h_mats</span>
+        <span class="n">lambda_h_mats</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">lambda_h_mats</span><span class="p">)</span>
+
+        <span class="n">x_layer</span> <span class="o">=</span> <span class="n">Ax</span> <span class="o">*</span> <span class="n">lambda_h</span>
+
+        <span class="n">Aprime</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">lambda_h_mats</span><span class="p">)</span>
+        <span class="c1"># Aprime = A * lambda_h</span>
+        <span class="n">Aprime_mats</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Aprime</span><span class="p">]</span>
+
+        <span class="n">bprime</span> <span class="o">=</span> <span class="n">lambda_h</span> <span class="o">*</span> <span class="n">b</span>
+        <span class="n">bprimes</span> <span class="o">+=</span> <span class="p">[</span><span class="n">bprime</span><span class="p">]</span>
+
+    <span class="c1"># network-wise parameter varying linear map:  A* = A&#39;_L ... A&#39;_1</span>
+    <span class="n">Astar</span> <span class="o">=</span> <span class="n">Aprime_mats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">bstar</span> <span class="o">=</span> <span class="n">bprimes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># b x nx</span>
+    <span class="k">for</span> <span class="n">Aprime</span><span class="p">,</span> <span class="n">bprime</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">Aprime_mats</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">bprimes</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+        <span class="n">Astar</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">Astar</span><span class="p">,</span> <span class="n">Aprime</span><span class="p">)</span>
+        <span class="n">bstar</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">bstar</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">Aprime</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bprime</span>
+
+    <span class="k">return</span> <span class="n">Astar</span><span class="p">,</span> <span class="n">bstar</span><span class="p">,</span> <span class="n">Aprime_mats</span><span class="p">,</span> <span class="n">bprimes</span><span class="p">,</span> <span class="n">activation_mats</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">nx</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">test_bias</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">batches</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="c1"># random feature point</span>
+    <span class="n">x_z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">batches</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+
+    <span class="c1"># verify different activations</span>
+    <span class="n">activations</span> <span class="o">=</span> <span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU6</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">LeakyReLU</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">PReLU</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">CELU</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">,</span>
+                <span class="n">nn</span><span class="o">.</span><span class="n">LogSigmoid</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sigmoid</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">activations</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> current activation </span><span class="si">{</span><span class="n">act</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">fx_a</span> <span class="o">=</span> <span class="n">blocks</span><span class="o">.</span><span class="n">MLP</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">act</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="p">[</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">],</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">slim</span><span class="o">.</span><span class="n">Linear</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">test_bias</span><span class="p">)</span>
+        <span class="n">mlp_out</span> <span class="o">=</span> <span class="n">fx_a</span><span class="p">(</span><span class="n">x_z</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;MLP: </span><span class="si">{</span><span class="n">mlp_out</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">Astar</span><span class="p">,</span> <span class="n">bstar</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="n">pwa_batched</span><span class="p">(</span><span class="n">fx_a</span><span class="p">,</span> <span class="n">x_z</span><span class="p">)</span>
+        <span class="c1"># unbatched and batched evaluation</span>
+        <span class="k">if</span> <span class="n">batches</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">x_pwa_batched</span> <span class="o">=</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x_z</span><span class="p">,</span> <span class="n">Astar</span><span class="p">))</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">bstar</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_pwa_batched</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">Astar</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">x_z</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bstar</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;pwa_batched: </span><span class="si">{</span><span class="n">x_pwa_batched</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">difference</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">mlp_out</span> <span class="o">-</span> <span class="n">x_pwa_batched</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">difference</span> <span class="o">&lt;</span> <span class="mf">1e-6</span><span class="p">)</span>
+
+        <span class="c1"># lpv_batched is depreciated</span>
+        <span class="n">Astar</span><span class="p">,</span> <span class="n">bstar</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="n">lpv_batched</span><span class="p">(</span><span class="n">fx_a</span><span class="p">,</span> <span class="n">x_z</span><span class="p">)</span>
+        <span class="n">x_lpv_batched</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x_z</span><span class="p">,</span> <span class="n">Astar</span><span class="p">)</span> <span class="o">+</span> <span class="n">bstar</span> <span class="k">if</span> <span class="n">test_bias</span> <span class="k">else</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x_z</span><span class="p">,</span> <span class="n">Astar</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;lpv_batched: </span><span class="si">{</span><span class="n">x_lpv_batched</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -42,7 +42,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="PWA Maps" href="pwa_maps.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,11 +91,11 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -110,6 +111,30 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Solvers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#solvers.GradientProjection"><code class="docutils literal notranslate"><span class="pre">GradientProjection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#solvers.GradientProjection.con_viol_energy"><code class="docutils literal notranslate"><span class="pre">GradientProjection.con_viol_energy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solvers.GradientProjection.forward"><code class="docutils literal notranslate"><span class="pre">GradientProjection.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solvers.GradientProjection.num_steps"><code class="docutils literal notranslate"><span class="pre">GradientProjection.num_steps</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#solvers.IterativeSolver"><code class="docutils literal notranslate"><span class="pre">IterativeSolver</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#solvers.IterativeSolver.forward"><code class="docutils literal notranslate"><span class="pre">IterativeSolver.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solvers.IterativeSolver.newton_step"><code class="docutils literal notranslate"><span class="pre">IterativeSolver.newton_step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solvers.IterativeSolver.num_steps"><code class="docutils literal notranslate"><span class="pre">IterativeSolver.num_steps</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -266,6 +291,13 @@ registered hooks while the latter silently ignores them.</p>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="pwa_maps.html" class="btn btn-neutral float-left" title="PWA Maps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

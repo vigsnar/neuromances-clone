@@ -1,45 +1,45 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>dynamics &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
   
     <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
   
-
   
   
 
   
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -81,7 +81,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -89,11 +88,12 @@
               
             
             
-              <p><span class="caption-text">Modules:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../loggers.html">Loggers</a></li>
@@ -101,7 +101,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../plot.html">Plot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem.html">Problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnn.html">RNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../signals.html">Signals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../trainer.html">Trainer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../visuals.html">Visuals</a></li>
@@ -110,12 +109,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
 </ul>
 
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -150,13 +158,11 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
           <li><a href="index.html">Module code</a> &raquo;</li>
         
@@ -187,12 +193,12 @@
 <span class="sd">    + d: uncontrolled inputs (measured disturbances)</span>
 
 <span class="sd">Unstructured (blackbox) dynamical models:</span>
-<span class="sd">    + :math:`x_{t+1} = f(x_t,u_t,d_t) \odot f_e(x_t)`</span>
+<span class="sd">    + :math:`x_{t+1} = f(x_t,u_t,d_t) odot f_e(x_t)`</span>
 <span class="sd">    + :math:`y_{t} =  f_y(x_t)`</span>
 <span class="sd">    + :math:`odot` is some operator acting on elements, e.g. + or *</span>
 
 <span class="sd">Block-structured dynamical models:</span>
-<span class="sd">    + :math:`x_{t+1} = f_x(x_t) \\odot f_u(u_t) \\odot f_d(d_t) \\odot f_e(x_t)`</span>
+<span class="sd">    + :math:`x_{t+1} = f_x(x_t) odot f_u(u_t) odot f_d(d_t) odot f_e(x_t)`</span>
 <span class="sd">    + :math:`y_t =  f_y(x_t)`</span>
 
 <span class="sd">Block components:</span>
@@ -207,14 +213,59 @@
 
 <span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
 
 <span class="kn">from</span> <span class="nn">neuromancer.component</span> <span class="kn">import</span> <span class="n">Component</span>
 
 
-<div class="viewcode-block" id="BlockSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.BlockSSM">[docs]</a><span class="k">class</span> <span class="nc">BlockSSM</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
+<div class="viewcode-block" id="SSM"><a class="viewcode-back" href="../dynamics.html#dynamics.SSM">[docs]</a><span class="k">class</span> <span class="nc">SSM</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">DEFAULT_OUTPUT_KEYS</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Base State Space Model (SSM) class</span>
+
+<span class="sd">        This class is used to manage naming of component input and output variables as they flow</span>
+<span class="sd">        through the computational graph, as well as handle potential remapping of input and output keys</span>
+<span class="sd">        to different names. It additionally provides a useful reference for users to see how components</span>
+<span class="sd">        can be connected together in the overall computational graph.</span>
+
+<span class="sd">        Components that inherit from this class should specify the class attributes DEFAULT_INPUT_KEYS</span>
+<span class="sd">        and DEFAULT_OUTPUT_KEYS; these are used as the &quot;canonical&quot; names for input and output variables,</span>
+<span class="sd">        respectively. These can be used to compare different components&#39; output and input keys to see</span>
+<span class="sd">        whether one component can accept another&#39;s output by default.</span>
+
+<span class="sd">        By default, components have a `name` argument which is used to tag the output variables they</span>
+<span class="sd">        generate; for instance, for a component called &quot;estim&quot;, the canonical output &quot;x0&quot; is renamed to</span>
+<span class="sd">        &quot;x0_estim&quot;.</span>
+
+<span class="sd">        &gt;&gt;&gt; estim = LinearEstimator(..., name=&quot;estim&quot;)  # output &quot;x0&quot; remapped to &quot;x0_estim&quot;</span>
+<span class="sd">        &gt;&gt;&gt; ssm = BlockSSM(..., input_key_map={f&quot;x0_{estim.name}&quot;: &quot;x0&quot;})  # input_keys used to remap to canonical name</span>
+
+<span class="sd">        :param input_key_map: (dict {str: str}) For renaming canonical input keys to state space model</span>
+<span class="sd">        :param name: (str) Name will be appended to output keys.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_input_keys</span><span class="p">(</span><span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">)</span>
+        <span class="n">output_keys</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span><span class="p">]</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_keys</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">output_keys</span><span class="o">=</span><span class="n">output_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SSM.update_input_keys"><a class="viewcode-back" href="../dynamics.html#dynamics.SSM.update_input_keys">[docs]</a>    <span class="k">def</span> <span class="nf">update_input_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_key_map</span><span class="p">,</span> <span class="nb">dict</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> input_key_map must be dict for remapping input variable names; &quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">input_key_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()},</span>
+            <span class="o">**</span><span class="n">input_key_map</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span><span class="p">),</span> \
+            <span class="s2">&quot;Length of given input keys must equal the length of default input keys&quot;</span></div></div>
+
+
+<div class="viewcode-block" id="BlockSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.BlockSSM">[docs]</a><span class="k">class</span> <span class="nc">BlockSSM</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
 
     <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
-    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;reg_error&quot;</span><span class="p">]</span>
+    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">xou</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;block_ssm&#39;</span><span class="p">,</span>
@@ -237,13 +288,13 @@
 <span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys to alternate names</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">fu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Uf&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fU&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Uf&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;fU&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Df&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fD&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Df&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;fD&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fE&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;fE&#39;</span><span class="p">]</span>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
@@ -280,18 +331,18 @@
 <span class="sd">        :param data: (dict: {str: Tensor})</span>
 <span class="sd">        :return: output (dict: {str: Tensor})</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FD</span><span class="p">,</span> <span class="n">FU</span><span class="p">,</span> <span class="n">FE</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
             <span class="n">x_prev</span> <span class="o">=</span> <span class="n">x</span>
             <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">fu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Uf&#39;</span><span class="p">]][</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">fu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Uf&#39;</span><span class="p">]][:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:])</span>
                 <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xou</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fu</span><span class="p">)</span>
                 <span class="n">FU</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fu</span><span class="p">)</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">fd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Df&#39;</span><span class="p">]][</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">fd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Df&#39;</span><span class="p">]][:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:])</span>
                 <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fd</span><span class="p">)</span>
                 <span class="n">FD</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -302,24 +353,25 @@
                 <span class="n">x</span> <span class="o">+=</span> <span class="n">x_prev</span>
             <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fyu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">fyu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fyu</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Uf&#39;</span><span class="p">]][</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">fyu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fyu</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Uf&#39;</span><span class="p">]][:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:])</span>
                 <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xoyu</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">fyu</span><span class="p">)</span>
             <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="n">Y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">)</span> <span class="k">for</span> <span class="n">tensor_list</span><span class="p">,</span> <span class="n">name</span>
-                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FU</span><span class="p">,</span> <span class="n">FD</span><span class="p">,</span> <span class="n">FE</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X_pred&#39;</span><span class="p">,</span> <span class="s1">&#39;Y_pred&#39;</span><span class="p">,</span> <span class="s1">&#39;fU&#39;</span><span class="p">,</span> <span class="s1">&#39;fD&#39;</span><span class="p">,</span> <span class="s1">&#39;fE&#39;</span><span class="p">])</span>
+        <span class="n">tensor_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FU</span><span class="p">,</span> <span class="n">FD</span><span class="p">,</span> <span class="n">FE</span><span class="p">]</span>
+        <span class="n">tensor_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tensor_lists</span> <span class="k">if</span> <span class="n">t</span><span class="p">]</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">tensor_list</span><span class="p">,</span> <span class="n">name</span>
+                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">tensor_lists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
                   <span class="k">if</span> <span class="n">tensor_list</span><span class="p">}</span>
-        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;reg_error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
+        <span class="n">output</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">output</span></div>
 
 <div class="viewcode-block" id="BlockSSM.reg_error"><a class="viewcode-back" href="../dynamics.html#dynamics.BlockSSM.reg_error">[docs]</a>    <span class="k">def</span> <span class="nf">reg_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">k</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s1">&#39;reg_error&#39;</span><span class="p">)])</span></div></div>
 
 
-<div class="viewcode-block" id="BlackSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.BlackSSM">[docs]</a><span class="k">class</span> <span class="nc">BlackSSM</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
+<div class="viewcode-block" id="BlackSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.BlackSSM">[docs]</a><span class="k">class</span> <span class="nc">BlackSSM</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
     <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
-    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;reg_error&quot;</span><span class="p">]</span>
+    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;black_ssm&#39;</span><span class="p">,</span>
                  <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="p">[]):</span>
@@ -340,7 +392,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">+</span> <span class="n">extra_inputs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span> <span class="o">=</span> <span class="n">extra_inputs</span>
         <span class="k">if</span> <span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fE&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;fE&#39;</span><span class="p">]</span>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
@@ -352,13 +404,13 @@
 <div class="viewcode-block" id="BlackSSM.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.BlackSSM.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FE</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
 
         <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
             <span class="n">x_prev</span> <span class="o">=</span> <span class="n">x</span>
-            <span class="n">xplus</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">xplus</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">][:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
             <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">xplus</span><span class="p">)</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">fe</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span><span class="p">(</span><span class="n">x_prev</span><span class="p">)</span>
@@ -370,11 +422,12 @@
                 <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xoyu</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">fyu</span><span class="p">)</span>
             <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="n">Y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">)</span> <span class="k">for</span> <span class="n">tensor_list</span><span class="p">,</span> <span class="n">name</span>
-                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FE</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X_pred&#39;</span><span class="p">,</span> <span class="s1">&#39;Y_pred&#39;</span><span class="p">,</span> <span class="s1">&#39;fE&#39;</span><span class="p">])</span>
+        <span class="n">tensor_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FE</span><span class="p">]</span>
+        <span class="n">tensor_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tensor_lists</span> <span class="k">if</span> <span class="n">t</span><span class="p">]</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">tensor_list</span><span class="p">,</span> <span class="n">name</span>
+                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">tensor_lists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
                   <span class="k">if</span> <span class="n">tensor_list</span><span class="p">}</span>
-        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;reg_error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
+        <span class="n">output</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">output</span></div>
 
 <div class="viewcode-block" id="BlackSSM.reg_error"><a class="viewcode-back" href="../dynamics.html#dynamics.BlackSSM.reg_error">[docs]</a>    <span class="k">def</span> <span class="nf">reg_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -389,186 +442,119 @@
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">out_features</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="s1">&#39;Output map must have same input size as output size of state transition&#39;</span></div></div>
 
 
-<div class="viewcode-block" id="TimeDelayBlockSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.TimeDelayBlockSSM">[docs]</a><span class="k">class</span> <span class="nc">TimeDelayBlockSSM</span><span class="p">(</span><span class="n">BlockSSM</span><span class="p">):</span>
-    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Xtd&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
-    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;reg_error&quot;</span><span class="p">]</span>
+<div class="viewcode-block" id="ODEAuto"><a class="viewcode-back" href="../dynamics.html#dynamics.ODEAuto">[docs]</a><span class="k">class</span> <span class="nc">ODEAuto</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
+    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">xou</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;block_ssm&#39;</span><span class="p">,</span>
-                 <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dynamics&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        generic structured time delayed system dynamics:</span>
-<span class="sd">        T &lt; nsteps</span>
-
-<span class="sd">        Option 1 - fixed time delays - IMPLEMENTED</span>
-<span class="sd">        x_k+1 = fx(x_k, ..., x_k-T) o fu(u_k, ..., u_k-T) o fd(d_k, ..., d_k-T) o fe(x_k, ..., x_k-T)</span>
-<span class="sd">        y_k =  fy(x_k, ..., x_k-T)</span>
-
-<span class="sd">        Option 2 - potentially learnable time delays - TO IMPLEMENT</span>
-<span class="sd">        x_k+1 = a_1 fx_k(x_k) o ... o a_T fx_k-T(x_k-T) o b_a fu_k(u_k) o ... o b_T fu_k-T(u_k-T)</span>
-<span class="sd">                o c_1 fd_k(d_k) o ... o c_T fd_k-T(d_k-T) o h_1 fe_k(x_k) o ... o h_T fe_k-T(x_k-T)</span>
-<span class="sd">        y_k = j_1 fy_k(x_k) o ... o j_T fy_k-T(x_k-T)</span>
-
-<span class="sd">        :param fx: (nn.Module) State transition function</span>
-<span class="sd">        :param fy: (nn.Module) Observation function</span>
-<span class="sd">        :param fu: (nn.Module) Input function</span>
-<span class="sd">        :param fd: (nn.Module) Disturbance function</span>
-<span class="sd">        :param fe: (nn.Module) Error term via state augmentation</span>
-<span class="sd">        :param xou: (callable) Elementwise tensor op</span>
-<span class="sd">        :param xod: (callable) Elementwise tensor op</span>
-<span class="sd">        :param residual: (bool) Whether to make recurrence in state space model residual</span>
-<span class="sd">        :param name: (str) Name for tracking output</span>
-<span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys to alternate names</span>
-<span class="sd">        :param timedelay: (int) Number of time delays</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">fu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Up&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span>
-        <span class="k">if</span> <span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dp&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="n">fu</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">xou</span><span class="o">=</span><span class="n">xou</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">xod</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">xoe</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="n">residual</span><span class="p">,</span>
-                         <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nx_td</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ny</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">out_features</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">check_features</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span> <span class="o">=</span> <span class="n">timedelay</span>
-
-<div class="viewcode-block" id="TimeDelayBlockSSM.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.TimeDelayBlockSSM.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">        :param data: (dict: {str: Tensor})</span>
-<span class="sd">        :return: output (dict: {str: Tensor})</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FD</span><span class="p">,</span> <span class="n">FU</span><span class="p">,</span> <span class="n">FE</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
-
-        <span class="k">if</span> <span class="s1">&#39;Uf&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span> <span class="ow">and</span> <span class="s1">&#39;Up&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">:</span>
-            <span class="n">Utd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Up&#39;</span><span class="p">]][</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span><span class="p">:],</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Uf&#39;</span><span class="p">]]])</span>  <span class="c1"># shape=(T+nsteps, bs, nu)</span>
-        <span class="k">if</span> <span class="s1">&#39;Df&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span> <span class="ow">and</span> <span class="s1">&#39;Dp&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">:</span>
-            <span class="n">Dtd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Dp&#39;</span><span class="p">]][</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span><span class="p">:],</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Df&#39;</span><span class="p">]]])</span>  <span class="c1"># shape=(T+nsteps, bs, nd)</span>
-        <span class="n">Xtd</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Xtd&#39;</span><span class="p">]]</span>                                                     <span class="c1"># shape=(T+1, bs, nx)</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
-            <span class="n">x_prev</span> <span class="o">=</span> <span class="n">Xtd</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-            <span class="n">x_delayed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Xtd</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Xtd</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># shape=(bs, T*nx)</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">x_delayed</span><span class="p">)</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">Utd_i</span> <span class="o">=</span> <span class="n">Utd</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-                <span class="n">u_delayed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Utd_i</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Utd_i</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># shape=(bs, T*nu)</span>
-                <span class="n">fu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span><span class="p">(</span><span class="n">u_delayed</span><span class="p">)</span>
-                <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xou</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fu</span><span class="p">)</span>
-                <span class="n">FU</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fu</span><span class="p">)</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">Dtd_i</span> <span class="o">=</span> <span class="n">Dtd</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-                <span class="n">d_delayed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Dtd_i</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Dtd_i</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># shape=(bs, T*nu)</span>
-                <span class="n">fd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="n">d_delayed</span><span class="p">)</span>
-                <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fd</span><span class="p">)</span>
-                <span class="n">FD</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">fe</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span><span class="p">(</span><span class="n">x_delayed</span><span class="p">)</span>
-                <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xoe</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fe</span><span class="p">)</span>
-                <span class="n">FE</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fe</span><span class="p">)</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">residual</span><span class="p">:</span>
-                <span class="n">x</span> <span class="o">+=</span> <span class="n">x_prev</span>
-            <span class="n">Xtd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Xtd</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)])[</span><span class="mi">1</span><span class="p">:]</span>
-            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="p">(</span><span class="n">x_delayed</span><span class="p">)</span>
-            <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-            <span class="n">Y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">)</span> <span class="k">for</span> <span class="n">tensor_list</span><span class="p">,</span> <span class="n">name</span>
-                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FU</span><span class="p">,</span> <span class="n">FD</span><span class="p">,</span> <span class="n">FE</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X_pred&#39;</span><span class="p">,</span> <span class="s1">&#39;Y_pred&#39;</span><span class="p">,</span> <span class="s1">&#39;fU&#39;</span><span class="p">,</span> <span class="s1">&#39;fD&#39;</span><span class="p">,</span> <span class="s1">&#39;fE&#39;</span><span class="p">])</span>
-                  <span class="k">if</span> <span class="n">tensor_list</span><span class="p">}</span>
-        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;reg_error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">output</span></div>
-
-<div class="viewcode-block" id="TimeDelayBlockSSM.check_features"><a class="viewcode-back" href="../dynamics.html#dynamics.TimeDelayBlockSSM.check_features">[docs]</a>    <span class="k">def</span> <span class="nf">check_features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nx_td</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ny</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">out_features</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nu_td</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span><span class="o">.</span><span class="n">in_features</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nd_td</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span><span class="o">.</span><span class="n">in_features</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">fu</span><span class="o">.</span><span class="n">out_features</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="s1">&#39;Dimension mismatch between input and state transition&#39;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">fd</span><span class="o">.</span><span class="n">out_features</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="s1">&#39;Dimension mismatch between disturbance and state transition&#39;</span></div></div>
-
-
-<div class="viewcode-block" id="TimeDelayBlackSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.TimeDelayBlackSSM">[docs]</a><span class="k">class</span> <span class="nc">TimeDelayBlackSSM</span><span class="p">(</span><span class="n">BlackSSM</span><span class="p">):</span>
-    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Xtd&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
-    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;reg_error&quot;</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;black_ssm&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="p">[]):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        black box state space with generic unstructured time delayed system dynamics:</span>
-<span class="sd">        x_k+1 = fx(x_k, ..., x_k-T, u_k, ..., u_k-T, d_k, ..., d_k-T) o fe(x_k, ..., x_k-T)</span>
-<span class="sd">        y_k =  fy(x_k, ..., x_k-T)</span>
+<span class="sd">        State space model for solving autonomous ODEs w/ single-step integrators:</span>
 
 <span class="sd">        :param fx: (nn.Module) State transition function depending on previous state, inputs and disturbances</span>
 <span class="sd">        :param fy: (nn.Module) Observation function</span>
-<span class="sd">        :param fe: (nn.Module) Error term via state augmentation</span>
 <span class="sd">        :param name: (str) Name for tracking output</span>
-<span class="sd">        :param input_keys: (dict {str: str}) Mapping canonical expected input keys to alternate names</span>
-<span class="sd">        :param timedelay: (int) Number of time delays</span>
-<span class="sd">        :param extra_inputs: (list of str) Input keys to be added to canonical input.</span>
-
+<span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys to alternate names</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">xoe</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="n">extra_inputs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span> <span class="o">=</span> <span class="n">timedelay</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span>
 
-<div class="viewcode-block" id="TimeDelayBlackSSM.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.TimeDelayBlackSSM.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FE</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="s1">&#39;Uf&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span> <span class="ow">and</span> <span class="s1">&#39;Up&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">:</span>
-            <span class="n">Utd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Up&#39;</span><span class="p">]][</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span><span class="p">:],</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Uf&#39;</span><span class="p">]]])</span>  <span class="c1"># shape=(T+nsteps, bs, nu)</span>
-        <span class="k">if</span> <span class="s1">&#39;Df&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span> <span class="ow">and</span> <span class="s1">&#39;Dp&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">:</span>
-            <span class="n">Dtd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Dp&#39;</span><span class="p">]][</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span><span class="p">:],</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Df&#39;</span><span class="p">]]])</span>  <span class="c1"># shape=(T+nsteps, bs, nd)</span>
-        <span class="n">Xtd</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Xtd&#39;</span><span class="p">]]</span>                                                     <span class="c1"># shape=(T+1, bs, nx)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span> <span class="o">=</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ny</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">out_features</span>
+
+<div class="viewcode-block" id="ODEAuto.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.ODEAuto.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]]</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
-            <span class="n">x_prev</span> <span class="o">=</span> <span class="n">Xtd</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-            <span class="n">x_delayed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Xtd</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Xtd</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># shape=(bs, T*nx)</span>
-            <span class="n">features_delayed</span> <span class="o">=</span> <span class="n">x_delayed</span>
-            <span class="k">if</span> <span class="s1">&#39;Uf&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span> <span class="ow">and</span> <span class="s1">&#39;Up&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">:</span>
-                <span class="n">Utd_i</span> <span class="o">=</span> <span class="n">Utd</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-                <span class="n">u_delayed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Utd_i</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Utd_i</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># shape=(bs, T*nu)</span>
-                <span class="n">features_delayed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">features_delayed</span><span class="p">,</span> <span class="n">u_delayed</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-            <span class="k">if</span> <span class="s1">&#39;Df&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span> <span class="ow">and</span> <span class="s1">&#39;Dp&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">:</span>
-                <span class="n">Dtd_i</span> <span class="o">=</span> <span class="n">Dtd</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">timedelay</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-                <span class="n">d_delayed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Dtd_i</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Dtd_i</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># shape=(bs, T*nu)</span>
-                <span class="n">features_delayed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">features_delayed</span><span class="p">,</span> <span class="n">d_delayed</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">features_delayed</span><span class="p">)</span>
-            <span class="n">Xtd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Xtd</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)])[</span><span class="mi">1</span><span class="p">:]</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">fe</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span><span class="p">(</span><span class="n">x_delayed</span><span class="p">)</span>
-                <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xoe</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fe</span><span class="p">)</span>
-                <span class="n">FE</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fe</span><span class="p">)</span>
-            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="p">(</span><span class="n">x_delayed</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="n">Y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">)</span> <span class="k">for</span> <span class="n">tensor_list</span><span class="p">,</span> <span class="n">name</span>
-                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FE</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X_pred&#39;</span><span class="p">,</span> <span class="s1">&#39;Y_pred&#39;</span><span class="p">,</span> <span class="s1">&#39;fE&#39;</span><span class="p">])</span>
+        <span class="n">tensor_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]</span>
+        <span class="n">tensor_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tensor_lists</span> <span class="k">if</span> <span class="n">t</span><span class="p">]</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">tensor_list</span><span class="p">,</span> <span class="n">name</span>
+                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">tensor_lists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
                   <span class="k">if</span> <span class="n">tensor_list</span><span class="p">}</span>
-        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;reg_error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">output</span></div></div>
+        <span class="n">output</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">output</span></div>
+
+<div class="viewcode-block" id="ODEAuto.reg_error"><a class="viewcode-back" href="../dynamics.html#dynamics.ODEAuto.reg_error">[docs]</a>    <span class="k">def</span> <span class="nf">reg_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: 0-dimensional torch.Tensor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">k</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s1">&#39;reg_error&#39;</span><span class="p">)])</span></div></div>
 
 
-<span class="k">def</span> <span class="nf">_extract_dims</span><span class="p">(</span><span class="n">datadims</span><span class="p">,</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="ODENonAuto"><a class="viewcode-back" href="../dynamics.html#dynamics.ODENonAuto">[docs]</a><span class="k">class</span> <span class="nc">ODENonAuto</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">,</span> <span class="s2">&quot;Time&quot;</span><span class="p">]</span>
+    <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dynamics&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="p">[],</span> <span class="n">online_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        State space model for non-autonomous ODEs w/ single-step integrators:</span>
+
+<span class="sd">        :param fx: (nn.Module) State transition function depending on previous state, inputs and disturbances</span>
+<span class="sd">        :param fy: (nn.Module) Observation function</span>
+<span class="sd">        :param name: (str) Name for tracking output</span>
+<span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys to alternate names</span>
+<span class="sd">        :param extra_inputs: (list of str) Input keys to be added to canonical input.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">+</span> <span class="n">extra_inputs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span> <span class="o">=</span> <span class="n">extra_inputs</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span> <span class="o">=</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ny</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">out_features</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">online_flag</span> <span class="o">=</span> <span class="n">online_flag</span>
+
+<div class="viewcode-block" id="ODENonAuto.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.ODENonAuto.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]]</span>
+        <span class="n">Time</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]]</span>  <span class="c1"># (# of batches, nsteps, 1)</span>
+        <span class="n">inputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> \
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">Time</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">online_flag</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">nsteps</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="k">pass</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">inputs</span><span class="p">[:,</span> <span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="p">:],</span> <span class="n">Time</span><span class="p">[:,</span> <span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="p">:])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">inputs</span><span class="p">[:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:],</span> <span class="n">Time</span><span class="p">[:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:])</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">Y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">tensor_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]</span>
+        <span class="n">tensor_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tensor_lists</span> <span class="k">if</span> <span class="n">t</span><span class="p">]</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">tensor_list</span><span class="p">,</span> <span class="n">name</span>
+                  <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">tensor_lists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+                  <span class="k">if</span> <span class="n">tensor_list</span><span class="p">}</span>
+        <span class="n">output</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">output</span></div>
+
+<div class="viewcode-block" id="ODENonAuto.reg_error"><a class="viewcode-back" href="../dynamics.html#dynamics.ODENonAuto.reg_error">[docs]</a>    <span class="k">def</span> <span class="nf">reg_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :return: 0-dimensional torch.Tensor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">k</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s1">&#39;reg_error&#39;</span><span class="p">)])</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_extract_dims</span><span class="p">(</span><span class="n">datadims</span><span class="p">):</span>
     <span class="n">xkey</span><span class="p">,</span> <span class="n">ykey</span><span class="p">,</span> <span class="n">ukey</span><span class="p">,</span> <span class="n">dkey</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">,</span> <span class="s2">&quot;Uf&quot;</span><span class="p">,</span> <span class="s2">&quot;Df&quot;</span><span class="p">]</span>
     <span class="n">nx</span> <span class="o">=</span> <span class="n">datadims</span><span class="p">[</span><span class="n">xkey</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">ny</span> <span class="o">=</span> <span class="n">datadims</span><span class="p">[</span><span class="n">ykey</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">nu</span> <span class="o">=</span> <span class="n">datadims</span><span class="p">[</span><span class="n">ukey</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">ukey</span> <span class="ow">in</span> <span class="n">datadims</span> <span class="k">else</span> <span class="mi">0</span>
     <span class="n">nd</span> <span class="o">=</span> <span class="n">datadims</span><span class="p">[</span><span class="n">dkey</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">dkey</span> <span class="ow">in</span> <span class="n">datadims</span> <span class="k">else</span> <span class="mi">0</span>
 
-    <span class="n">nx_td</span> <span class="o">=</span> <span class="p">(</span><span class="n">timedelay</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">nx</span>
-    <span class="n">nu_td</span> <span class="o">=</span> <span class="p">(</span><span class="n">timedelay</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">nu</span>
-    <span class="n">nd_td</span> <span class="o">=</span> <span class="p">(</span><span class="n">timedelay</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">nd</span>
-
-    <span class="k">return</span> <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">nd</span><span class="p">,</span> <span class="n">nx_td</span><span class="p">,</span> <span class="n">nu_td</span><span class="p">,</span> <span class="n">nd_td</span>
+    <span class="k">return</span> <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">nd</span>
 
 
 <div class="viewcode-block" id="block_model"><a class="viewcode-back" href="../dynamics.html#dynamics.block_model">[docs]</a><span class="k">def</span> <span class="nf">block_model</span><span class="p">(</span><span class="n">kind</span><span class="p">,</span> <span class="n">datadims</span><span class="p">,</span> <span class="n">linmap</span><span class="p">,</span> <span class="n">nonlinmap</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">n_layers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-              <span class="n">activation</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+              <span class="n">activation</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span>
               <span class="n">xou</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;blockmodel&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a block-structured SSM with the same structure used across fx, fy, fu, and fd.</span>
@@ -576,7 +562,7 @@
     <span class="k">assert</span> <span class="n">kind</span> <span class="ow">in</span> <span class="n">_bssm_kinds</span><span class="p">,</span> \
         <span class="sa">f</span><span class="s2">&quot;Unrecognized model kind </span><span class="si">{</span><span class="n">kind</span><span class="si">}</span><span class="s2">; supported models are </span><span class="si">{</span><span class="n">_bssm_kinds</span><span class="si">}</span><span class="s2">&quot;</span>
 
-    <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">nd</span><span class="p">,</span> <span class="n">nx_td</span><span class="p">,</span> <span class="n">nu_td</span><span class="p">,</span> <span class="n">nd_td</span> <span class="o">=</span> <span class="n">_extract_dims</span><span class="p">(</span><span class="n">datadims</span><span class="p">,</span> <span class="n">timedelay</span><span class="p">)</span>
+    <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">nd</span> <span class="o">=</span> <span class="n">_extract_dims</span><span class="p">(</span><span class="n">datadims</span><span class="p">)</span>
     <span class="n">hsizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">nx</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_layers</span>
 
     <span class="n">lin</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">ni</span><span class="p">,</span> <span class="n">no</span><span class="p">:</span> <span class="p">(</span>
@@ -587,81 +573,72 @@
     <span class="p">)</span>
 
     <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;blocknlin&quot;</span><span class="p">:</span>
-        <span class="n">fx</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
-        <span class="n">fy</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
-        <span class="n">fu</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nu_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
-        <span class="n">fd</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nd_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fx</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+        <span class="n">fy</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
+        <span class="n">fu</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fd</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nd</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
     <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;linear&quot;</span><span class="p">:</span>
-        <span class="n">fx</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
-        <span class="n">fy</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
-        <span class="n">fu</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nu_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
-        <span class="n">fd</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nd_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fx</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+        <span class="n">fy</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
+        <span class="n">fu</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fd</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nd</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
     <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;hammerstein&quot;</span><span class="p">:</span>
-        <span class="n">fx</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
-        <span class="n">fy</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
-        <span class="n">fu</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nu_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
-        <span class="n">fd</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nd_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fx</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+        <span class="n">fy</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
+        <span class="n">fu</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fd</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nd</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
     <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;weiner&quot;</span><span class="p">:</span>
-        <span class="n">fx</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
-        <span class="n">fy</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
-        <span class="n">fu</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nu_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
-        <span class="n">fd</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nd_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fx</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+        <span class="n">fy</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
+        <span class="n">fu</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fd</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nd</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>   <span class="c1"># hw</span>
-        <span class="n">fx</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
-        <span class="n">fy</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
-        <span class="n">fu</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nu_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
-        <span class="n">fd</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nd_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fx</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+        <span class="n">fy</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
+        <span class="n">fu</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">fd</span> <span class="o">=</span> <span class="n">nlin</span><span class="p">(</span><span class="n">nd</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="k">if</span> <span class="n">nd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
 
     <span class="n">fe</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">fe</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linmap</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span>
+        <span class="n">fe</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linmap</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">kind</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;blocknlin&quot;</span><span class="p">,</span> <span class="s2">&quot;hammerstein&quot;</span><span class="p">,</span> <span class="s2">&quot;hw&quot;</span><span class="p">}</span>
-        <span class="k">else</span> <span class="n">fe</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
+        <span class="k">else</span> <span class="n">fe</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
     <span class="p">)</span> <span class="k">if</span> <span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
 
     <span class="n">fyu</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">fyu</span><span class="p">(</span><span class="n">nu_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linmap</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span>
+        <span class="n">fyu</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linmap</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">kind</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;blocknlin&quot;</span><span class="p">,</span> <span class="s2">&quot;hw&quot;</span><span class="p">}</span>
-        <span class="k">else</span> <span class="n">fyu</span><span class="p">(</span><span class="n">nu_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
+        <span class="k">else</span> <span class="n">fyu</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
     <span class="p">)</span> <span class="k">if</span> <span class="n">fyu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
 
-    <span class="n">model</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">BlockSSM</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="n">fu</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="n">fyu</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">xoyu</span><span class="p">,</span> <span class="n">xou</span><span class="o">=</span><span class="n">xou</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">xod</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">xoe</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="n">residual</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">timedelay</span> <span class="o">==</span> <span class="mi">0</span>
-        <span class="k">else</span> <span class="n">TimeDelayBlockSSM</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="n">fu</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">xou</span><span class="o">=</span><span class="n">xou</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">xod</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">xoe</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">timedelay</span><span class="o">=</span><span class="n">timedelay</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="n">residual</span><span class="p">)</span>
-    <span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">BlockSSM</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="n">fu</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="n">fyu</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">xoyu</span><span class="p">,</span> <span class="n">xou</span><span class="o">=</span><span class="n">xou</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">xod</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">xoe</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                 <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="n">residual</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">model</span></div>
 
 
 <div class="viewcode-block" id="blackbox_model"><a class="viewcode-back" href="../dynamics.html#dynamics.blackbox_model">[docs]</a><span class="k">def</span> <span class="nf">blackbox_model</span><span class="p">(</span><span class="n">datadims</span><span class="p">,</span> <span class="n">linmap</span><span class="p">,</span> <span class="n">nonlinmap</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">n_layers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-             <span class="n">activation</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">timedelay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span>
+             <span class="n">activation</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span>
              <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;blackbox_model&#39;</span><span class="p">,</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="p">[]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Black box state space model.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">nx_td</span><span class="p">,</span> <span class="n">nu_td</span><span class="p">,</span> <span class="n">nd_td</span> <span class="o">=</span> <span class="n">_extract_dims</span><span class="p">(</span><span class="n">datadims</span><span class="p">)</span>
+    <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">nd</span> <span class="o">=</span> <span class="n">_extract_dims</span><span class="p">(</span><span class="n">datadims</span><span class="p">)</span>
     <span class="n">hsizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">nx</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_layers</span>
 
-    <span class="n">fx</span> <span class="o">=</span> <span class="n">nonlinmap</span><span class="p">(</span><span class="n">nx_td</span> <span class="o">+</span> <span class="n">nu_td</span> <span class="o">+</span> <span class="n">nd_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span>
+    <span class="n">fx</span> <span class="o">=</span> <span class="n">nonlinmap</span><span class="p">(</span><span class="n">nx</span> <span class="o">+</span> <span class="n">nu</span> <span class="o">+</span> <span class="n">nd</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span>
                      <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linmap</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
-    <span class="n">fe</span> <span class="o">=</span> <span class="n">nonlinmap</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span>
+    <span class="n">fe</span> <span class="o">=</span> <span class="n">nonlinmap</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span>
                    <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linmap</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span> <span class="k">if</span> <span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
-    <span class="n">fyu</span> <span class="o">=</span> <span class="n">fyu</span><span class="p">(</span><span class="n">nu_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span>
+    <span class="n">fyu</span> <span class="o">=</span> <span class="n">fyu</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">hsizes</span><span class="o">=</span><span class="n">hsizes</span><span class="p">,</span>
                    <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linear_map</span><span class="o">=</span><span class="n">linmap</span><span class="p">,</span> <span class="n">nonlin</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span> <span class="k">if</span> <span class="n">fyu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
-    <span class="n">fy</span> <span class="o">=</span> <span class="n">linmap</span><span class="p">(</span><span class="n">nx_td</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
+    <span class="n">fy</span> <span class="o">=</span> <span class="n">linmap</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="n">linargs</span><span class="p">)</span>
 
-    <span class="n">model</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">BlackSSM</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="n">fyu</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">xoyu</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">xoe</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
-                 <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="n">extra_inputs</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">timedelay</span> <span class="o">==</span> <span class="mi">0</span>
-        <span class="k">else</span> <span class="n">TimeDelayBlackSSM</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">xoe</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">timedelay</span><span class="o">=</span><span class="n">timedelay</span><span class="p">,</span>
-                               <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="n">extra_inputs</span><span class="p">)</span>
-    <span class="p">)</span>
-
+    <span class="n">model</span> <span class="o">=</span> <span class="n">BlackSSM</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="n">fe</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="n">fyu</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">xoyu</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">xoe</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                     <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="n">extra_inputs</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">model</span></div>
 
 
-<span class="n">ssm_models_atoms</span> <span class="o">=</span> <span class="p">[</span><span class="n">BlockSSM</span><span class="p">,</span> <span class="n">BlackSSM</span><span class="p">,</span> <span class="n">TimeDelayBlockSSM</span><span class="p">,</span> <span class="n">TimeDelayBlackSSM</span><span class="p">]</span>
+<span class="n">ssm_models_atoms</span> <span class="o">=</span> <span class="p">[</span><span class="n">BlockSSM</span><span class="p">,</span> <span class="n">BlackSSM</span><span class="p">]</span>
 <span class="n">ssm_models_train</span> <span class="o">=</span> <span class="p">[</span><span class="n">block_model</span><span class="p">,</span> <span class="n">blackbox_model</span><span class="p">]</span>
 <span class="n">_bssm_kinds</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
@@ -676,25 +653,20 @@
            
           </div>
           <footer>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht.
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -702,6 +674,7 @@
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

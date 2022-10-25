@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>gnn &mdash; NeuroMANCER 0.1 documentation</title>
+  <title>GNN &mdash; NeuroMANCER 0.1 documentation</title>
   
 
   
@@ -42,7 +42,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Graph Dynamics" href="graph_dynamics.html" />
+    <link rel="prev" title="Gradients" href="gradients.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,11 +92,11 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -110,6 +112,41 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GNN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gnn.ArgSequential"><code class="docutils literal notranslate"><span class="pre">ArgSequential</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gnn.ArgSequential.forward"><code class="docutils literal notranslate"><span class="pre">ArgSequential.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gnn.ArgSequential.reg_error"><code class="docutils literal notranslate"><span class="pre">ArgSequential.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gnn.GraphFeatureUpdate"><code class="docutils literal notranslate"><span class="pre">GraphFeatureUpdate</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gnn.GraphFeatureUpdate.forward"><code class="docutils literal notranslate"><span class="pre">GraphFeatureUpdate.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gnn.GraphFeatureUpdate.reg_error"><code class="docutils literal notranslate"><span class="pre">GraphFeatureUpdate.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gnn.GraphFeatures"><code class="docutils literal notranslate"><span class="pre">GraphFeatures</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gnn.GraphFeatures.cat"><code class="docutils literal notranslate"><span class="pre">GraphFeatures.cat()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gnn.Replace"><code class="docutils literal notranslate"><span class="pre">Replace</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gnn.Replace.integrate"><code class="docutils literal notranslate"><span class="pre">Replace.integrate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gnn.graph_interp_u"><code class="docutils literal notranslate"><span class="pre">graph_interp_u()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gnn.nnLambda"><code class="docutils literal notranslate"><span class="pre">nnLambda</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gnn.nnLambda.forward"><code class="docutils literal notranslate"><span class="pre">nnLambda.forward()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 </ul>
 
             
@@ -155,7 +192,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>gnn</li>
+      <li>GNN</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,7 +212,7 @@
            <div itemprop="articleBody">
             
   <section id="module-gnn">
-<span id="gnn"></span><h1>gnn<a class="headerlink" href="#module-gnn" title="Permalink to this heading">¶</a></h1>
+<span id="gnn"></span><h1>GNN<a class="headerlink" href="#module-gnn" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="gnn.ArgSequential">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">ArgSequential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#ArgSequential"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.ArgSequential" title="Permalink to this definition">¶</a></dt>
@@ -290,6 +327,15 @@ registered hooks while the latter silently ignores them.</p>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="graph_dynamics.html" class="btn btn-neutral float-right" title="Graph Dynamics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gradients.html" class="btn btn-neutral float-left" title="Gradients" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

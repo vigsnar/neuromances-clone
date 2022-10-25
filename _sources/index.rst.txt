@@ -16,6 +16,7 @@ NeuroMANCER
    dynamics.rst
    activations.rst
    blocks.rst
+   bounds.rst
    dataset.rst
    estimators.rst
    loggers.rst
@@ -23,7 +24,6 @@ NeuroMANCER
    plot.rst
    problem.rst
    rnn.rst
-   signals.rst
    simulators.rst
    trainer.rst
    visuals.rst
@@ -32,7 +32,18 @@ NeuroMANCER
    component.rst
    constraint.rst
    gradients.rst
+   bounds.rst
+   gnn.rst
+   graph_dynamics.rst
+   integrators.rst
+   interpolation.rst
+   loss.rst
+   maps.rst
+   ode.rst
+   pwa_maps.rst
+   solvers.rst
 
+Authors: Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Draguna Vrabie
 
 
 

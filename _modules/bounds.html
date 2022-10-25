@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bounds &mdash; NeuroMANCER 0.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
+            <img src="../_static/dadaist.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../estimators.html">Estimators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loggers.html">Loggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operators.html">Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot.html">Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem.html">Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rnn.html">RNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simulators.html">Simulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trainer.html">Trainer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visuals.html">Visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arg.html">Arg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../callbacks.html">Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constraint.html">Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeuroMANCER</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>bounds</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for bounds</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Definition of neuromancer.Bound class as a neuromancer.Component to allow</span>
+<span class="sd">imposing hard bound constraints in the forms:</span>
+<span class="sd">xmin &lt;= x &lt;= xmax</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">abstractmethod</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">neuromancer.component</span> <span class="kn">import</span> <span class="n">Component</span>
+
+
+<div class="viewcode-block" id="Bounds"><a class="viewcode-back" href="../bounds.html#bounds.Bounds">[docs]</a><span class="k">class</span> <span class="nc">Bounds</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">output_keys</span><span class="o">=</span><span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Bounds is canonical Component class for imposing hard bound constraints on input variable</span>
+<span class="sd">        :param input_key_map: (dict {str: str}) mapping of canonical expected input keys to alternate keys</span>
+<span class="sd">        :param output_keys: [str] optional string to define new variable key at the output</span>
+<span class="sd">        :param name:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_input_keys</span><span class="p">(</span><span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_output_keys</span><span class="p">(</span><span class="n">output_keys</span><span class="o">=</span><span class="n">output_keys</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_keys</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">output_keys</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_update_input_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_key_map</span><span class="p">,</span> <span class="nb">dict</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> input_key_map must be dict for remapping input variable names; &quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">input_key_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()},</span>
+            <span class="o">**</span><span class="n">input_key_map</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span><span class="p">),</span> \
+            <span class="s2">&quot;Length of given input keys must equal the length of default input keys&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_update_output_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_keys</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">output_keys</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span> <span class="o">=</span> <span class="n">output_keys</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">output_keys</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="n">output_keys</span><span class="p">]</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">output_keys</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> \
+                <span class="sa">f</span><span class="s1">&#39;output_keys must have only one element but </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">output_keys</span><span class="p">)</span><span class="si">}</span><span class="s1"> were given&#39;</span>
+        <span class="k">elif</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span><span class="p">[</span><span class="mi">0</span><span class="p">]]]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+
+<div class="viewcode-block" id="Bounds.forward"><a class="viewcode-back" href="../bounds.html#bounds.Bounds.forward">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">pass</span></div></div>
+
+
+<div class="viewcode-block" id="HardMinMaxScale"><a class="viewcode-back" href="../bounds.html#bounds.HardMinMaxScale">[docs]</a><span class="k">class</span> <span class="nc">HardMinMaxScale</span><span class="p">(</span><span class="n">Bounds</span><span class="p">):</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;xmin&quot;</span><span class="p">,</span> <span class="s2">&quot;xmax&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">output_keys</span><span class="o">=</span><span class="p">[],</span> <span class="n">scaling</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        HardMinMaxScale imposes hard bound constraints on input variable of interest:</span>
+<span class="sd">             xmin &lt;= x_new &lt;= xmax</span>
+<span class="sd">             x_new = f(x)</span>
+<span class="sd">             cretes new variable x_new using sigmoid scaling of the original variable x</span>
+<span class="sd">             thus the original values of x are not preserved</span>
+<span class="sd">             use in situations where you care about the output variable x_new with smooth gradients</span>
+<span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys</span>
+<span class="sd">                [&quot;x&quot;, &quot;xmin&quot;, &quot;xmax&quot;] to alternate keys, e.g., [&quot;y&quot;, &quot;ymin&quot;, &quot;ymax&quot;]</span>
+<span class="sd">        :param output_keys: [str] optional string to define new variable key at the output,</span>
+<span class="sd">                by default input string &quot;x&quot; is being used</span>
+<span class="sd">        :param name:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">output_keys</span><span class="o">=</span><span class="n">output_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scaling</span> <span class="o">=</span> <span class="n">scaling</span>
+
+<div class="viewcode-block" id="HardMinMaxScale.forward"><a class="viewcode-back" href="../bounds.html#bounds.HardMinMaxScale.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]]</span>
+        <span class="n">xmin</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;xmin&#39;</span><span class="p">]]</span>
+        <span class="n">xmax</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;xmax&#39;</span><span class="p">]]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">xmax</span> <span class="o">-</span> <span class="n">xmin</span><span class="p">)</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scaling</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">xmin</span>
+        <span class="k">return</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">x</span><span class="p">}</span></div></div>
+
+
+<div class="viewcode-block" id="HardMinMaxBound"><a class="viewcode-back" href="../bounds.html#bounds.HardMinMaxBound">[docs]</a><span class="k">class</span> <span class="nc">HardMinMaxBound</span><span class="p">(</span><span class="n">Bounds</span><span class="p">):</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;xmin&quot;</span><span class="p">,</span> <span class="s2">&quot;xmax&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">output_keys</span><span class="o">=</span><span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        HardMinMaxBounds imposes hard bound constraints on input variable of interest:</span>
+<span class="sd">             xmin &lt;= x &lt;= xmax</span>
+<span class="sd">             by using projection onto feasible set, thus preserving the original values of x</span>
+<span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys</span>
+<span class="sd">                [&quot;x&quot;, &quot;xmin&quot;, &quot;xmax&quot;] to alternate keys, e.g., [&quot;y&quot;, &quot;ymin&quot;, &quot;ymax&quot;]</span>
+<span class="sd">        :param output_keys: [str] optional string to define new variable key at the output,</span>
+<span class="sd">                by default input string &quot;x&quot; is being used</span>
+<span class="sd">        :param name:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">output_keys</span><span class="o">=</span><span class="n">output_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+
+<div class="viewcode-block" id="HardMinMaxBound.forward"><a class="viewcode-back" href="../bounds.html#bounds.HardMinMaxBound.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]]</span>
+        <span class="n">xmin</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;xmin&#39;</span><span class="p">]]</span>
+        <span class="n">xmax</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;xmax&#39;</span><span class="p">]]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">+</span> <span class="n">xmin</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xmax</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">x</span><span class="p">}</span></div></div>
+
+
+<div class="viewcode-block" id="HardMinBound"><a class="viewcode-back" href="../bounds.html#bounds.HardMinBound">[docs]</a><span class="k">class</span> <span class="nc">HardMinBound</span><span class="p">(</span><span class="n">Bounds</span><span class="p">):</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;xmin&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">output_keys</span><span class="o">=</span><span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        HardMinBounds imposes hard minimum bound constraints on input variable of interest:</span>
+<span class="sd">             xmin &lt;= x</span>
+<span class="sd">             by using projection onto feasible set, thus preserving the original values of x</span>
+<span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys</span>
+<span class="sd">                [&quot;x&quot;, &quot;xmin&quot;] to alternate keys, e.g., [&quot;y&quot;, &quot;ymin&quot;]</span>
+<span class="sd">        :param output_keys: [str] optional string to define new variable key at the output,</span>
+<span class="sd">                by default input string &quot;x&quot; is being used</span>
+<span class="sd">        :param name:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">output_keys</span><span class="o">=</span><span class="n">output_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+
+<div class="viewcode-block" id="HardMinBound.forward"><a class="viewcode-back" href="../bounds.html#bounds.HardMinBound.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]]</span>
+        <span class="n">xmin</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;xmin&#39;</span><span class="p">]]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">+</span><span class="n">xmin</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">x</span><span class="p">}</span></div></div>
+
+
+<div class="viewcode-block" id="HardMaxBound"><a class="viewcode-back" href="../bounds.html#bounds.HardMaxBound">[docs]</a><span class="k">class</span> <span class="nc">HardMaxBound</span><span class="p">(</span><span class="n">Bounds</span><span class="p">):</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;xmax&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">output_keys</span><span class="o">=</span><span class="p">[],</span> <span class="n">scale</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        HardMaxBounds imposes hard maximum bound constraints on input variable of interest:</span>
+<span class="sd">             x &lt;= xmax</span>
+<span class="sd">             by using projection onto feasible set, thus preserving the original values of x</span>
+<span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys</span>
+<span class="sd">                [&quot;x&quot;, &quot;xmax&quot;] to alternate names, e.g., [&quot;y&quot;, &quot;ymax&quot;]</span>
+<span class="sd">        :param output_keys: [str] optional string to define new variable key at the output,</span>
+<span class="sd">                by default input string &quot;x&quot; is being used</span>
+<span class="sd">        :param scale: float scaling factor for input variable values, larger the value the tighter the binary approximation</span>
+<span class="sd">        :param name:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">output_keys</span><span class="o">=</span><span class="n">output_keys</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
+
+<div class="viewcode-block" id="HardMaxBound.forward"><a class="viewcode-back" href="../bounds.html#bounds.HardMaxBound.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]]</span>
+        <span class="n">xmax</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;xmax&#39;</span><span class="p">]]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xmax</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">x</span><span class="p">}</span></div></div>
+
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

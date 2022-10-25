@@ -96,6 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -103,7 +104,6 @@
 <li class="toctree-l1"><a class="reference internal" href="plot.html">Plot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problem.html">Problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rnn.html">RNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="signals.html">Signals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trainer.html">Trainer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
@@ -130,6 +130,16 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 </ul>
 
             
@@ -237,14 +247,11 @@ the name group_name it will be returned, otherwise a new argument group will be 
 <dl class="py method">
 <dt class="sig sig-object py" id="arg.ArgParser.parse_arg_groups">
 <span class="sig-name descname"><span class="pre">parse_arg_groups</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/arg.html#ArgParser.parse_arg_groups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#arg.ArgParser.parse_arg_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>In addition to returning a single Namespace of all arguments returns a dictionary of Namespaces for each argument group
-:return:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>args: (Namespace)</p></li>
-<li><p>groups: (dict, {str: Namespace})</p></li>
-</ul>
-</div></blockquote>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(Namespace, List(Namespace))</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
