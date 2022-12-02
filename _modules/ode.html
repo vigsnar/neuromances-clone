@@ -1,75 +1,34 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ode &mdash; NeuroMANCER 0.1 documentation</title>
-  
-
-  
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ode &mdash; NeuroMANCER 1.2.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> NeuroMANCER
-          
-
-          
-            
             <img src="../_static/dadaist.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,23 +36,12 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../loggers.html">Loggers</a></li>
@@ -119,68 +67,33 @@
 <li class="toctree-l1"><a class="reference internal" href="../ode.html">ODE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simulator.html">Simulator</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">NeuroMANCER</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Module code</a> &raquo;</li>
-        
-      <li>ode</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">ode</li>
       <li class="wy-breadcrumbs-aside">
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <h1>Source code for ode</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
@@ -206,6 +119,58 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ode_equations</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div></div>
 
 
+<div class="viewcode-block" id="ControlODE"><a class="viewcode-back" href="../ode.html#ode.ControlODE">[docs]</a><span class="k">class</span> <span class="nc">ControlODE</span><span class="p">(</span><span class="n">ODESystem</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for defining closed-loop dynamical system composed of ODEs and control policies,</span>
+<span class="sd">    can be mix-and-matched according to expert knowledge.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">ode</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">np</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">u_con</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param policy: (nn.Module) explicit control policy</span>
+<span class="sd">        :param ode: (ODESystem or nn.Module) RHS of an ODE system</span>
+<span class="sd">        :param nx: (int) number of state variables</span>
+<span class="sd">        :param nu: (int) number of control input variables</span>
+<span class="sd">        :param np: (int) number of control parameters</span>
+<span class="sd">        :param u_con:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">insize</span> <span class="o">=</span> <span class="n">nx</span> <span class="o">+</span> <span class="n">np</span>
+        <span class="n">outsize</span> <span class="o">=</span> <span class="n">nx</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">insize</span><span class="o">=</span><span class="n">insize</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="n">outsize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nu</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">np</span> <span class="o">=</span> <span class="n">nx</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">np</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">policy</span> <span class="o">=</span> <span class="n">policy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ode</span> <span class="o">=</span> <span class="n">ode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">u_con</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleList</span><span class="p">(</span><span class="n">u_con</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">policy</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s1">&#39;Control policy must be nn.Module, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">policy</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ode</span><span class="p">,</span> <span class="n">ODESystem</span><span class="p">)</span> <span class="ow">or</span> \
+               <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ode</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s1">&#39;ODE must be ODESystem or nn.Module, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ode</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<div class="viewcode-block" id="ControlODE.reg_error"><a class="viewcode-back" href="../ode.html#ode.ControlODE.reg_error">[docs]</a>    <span class="k">def</span> <span class="nf">reg_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">children_error</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">k</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s1">&#39;reg_error&#39;</span><span class="p">)])</span>
+        <span class="n">control_penalty</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">con</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">u_con</span><span class="p">:</span>
+            <span class="n">control_penalty</span> <span class="o">+=</span> <span class="n">con</span><span class="p">({</span><span class="s1">&#39;u&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">u</span><span class="p">})[</span><span class="n">con</span><span class="o">.</span><span class="n">output_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="k">return</span> <span class="n">children_error</span> <span class="o">+</span> <span class="n">control_penalty</span></div>
+
+<div class="viewcode-block" id="ControlODE.ode_equations"><a class="viewcode-back" href="../ode.html#ode.ControlODE.ode_equations">[docs]</a>    <span class="k">def</span> <span class="nf">ode_equations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xi</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">xi</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> \
+            <span class="sa">f</span><span class="s1">&#39;Features must have two dimensions got </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">xi</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="si">}</span><span class="s1"> dimensions&#39;</span>
+        <span class="k">assert</span> <span class="n">xi</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">nx</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">np</span><span class="p">,</span> \
+            <span class="sa">f</span><span class="s1">&#39;Second feature dimension must be equal to nx (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="si">}</span><span class="s1">) + np (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">np</span><span class="si">}</span><span class="s1">), &#39;</span> \
+            <span class="sa">f</span><span class="s1">&#39;got </span><span class="si">{</span><span class="n">xi</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">policy</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">u</span> <span class="o">=</span> <span class="n">u</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">xi</span><span class="p">[:,</span> <span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">]</span>
+        <span class="n">xu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">u</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ode</span><span class="p">,</span> <span class="n">ODESystem</span><span class="p">):</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ode</span><span class="o">.</span><span class="n">ode_equations</span><span class="p">(</span><span class="n">xu</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ode</span><span class="p">(</span><span class="n">xu</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dx</span></div></div>
+
+
 <div class="viewcode-block" id="TwoTankParam"><a class="viewcode-back" href="../ode.html#ode.TwoTankParam">[docs]</a><span class="k">class</span> <span class="nc">TwoTankParam</span><span class="p">(</span><span class="n">ODESystem</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">insize</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -227,6 +192,8 @@
         <span class="c1"># equations</span>
         <span class="n">dhdt1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c1</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">valve</span><span class="p">)</span> <span class="o">*</span> <span class="n">pump</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">c2</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span>
         <span class="n">dhdt2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c1</span> <span class="o">*</span> <span class="n">valve</span> <span class="o">*</span> <span class="n">pump</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">c2</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">c2</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>
+        <span class="n">dhdt1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="n">dhdt1</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">dhdt2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="n">dhdt2</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">dhdt1</span><span class="p">,</span> <span class="n">dhdt2</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span></div></div>
 
 
@@ -342,6 +309,26 @@
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span></div></div>
 
 
+<div class="viewcode-block" id="VanDerPolControl"><a class="viewcode-back" href="../ode.html#ode.VanDerPolControl">[docs]</a><span class="k">class</span> <span class="nc">VanDerPolControl</span><span class="p">(</span><span class="n">ODESystem</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">insize</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param insize:</span>
+<span class="sd">        :param outsize:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">insize</span><span class="o">=</span><span class="n">insize</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="n">outsize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mu</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1.0</span><span class="p">]),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<div class="viewcode-block" id="VanDerPolControl.ode_equations"><a class="viewcode-back" href="../ode.html#ode.VanDerPolControl.ode_equations">[docs]</a>    <span class="k">def</span> <span class="nf">ode_equations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+        <span class="n">dx1</span> <span class="o">=</span> <span class="n">x2</span>
+        <span class="n">dx2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">u</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span></div></div>
+
+
 <div class="viewcode-block" id="LorenzParam"><a class="viewcode-back" href="../ode.html#ode.LorenzParam">[docs]</a><span class="k">class</span> <span class="nc">LorenzParam</span><span class="p">(</span><span class="n">ODESystem</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">insize</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -364,54 +351,116 @@
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dx3</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span></div></div>
 
 
+<div class="viewcode-block" id="LorenzControl"><a class="viewcode-back" href="../ode.html#ode.LorenzControl">[docs]</a><span class="k">class</span> <span class="nc">LorenzControl</span><span class="p">(</span><span class="n">ODESystem</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">insize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param insize:</span>
+<span class="sd">        :param outsize:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">insize</span><span class="o">=</span><span class="n">insize</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="n">outsize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rho</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">28.0</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">10.0</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beta</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">2.66667</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+<div class="viewcode-block" id="LorenzControl.ode_equations"><a class="viewcode-back" href="../ode.html#ode.LorenzControl.ode_equations">[docs]</a>    <span class="k">def</span> <span class="nf">ode_equations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">x3</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+        <span class="n">u1</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">3</span><span class="p">]]</span>
+        <span class="n">u2</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">4</span><span class="p">]]</span>
+        <span class="n">dx1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span> <span class="o">*</span> <span class="p">(</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span> <span class="o">+</span> <span class="n">u1</span>
+        <span class="n">dx2</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rho</span> <span class="o">-</span> <span class="n">x3</span><span class="p">)</span> <span class="o">-</span> <span class="n">x2</span>
+        <span class="n">dx3</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">*</span> <span class="n">x2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">beta</span> <span class="o">*</span> <span class="n">x3</span> <span class="o">-</span> <span class="n">u2</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dx3</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="CSTR_Param"><a class="viewcode-back" href="../ode.html#ode.CSTR_Param">[docs]</a><span class="k">class</span> <span class="nc">CSTR_Param</span><span class="p">(</span><span class="n">ODESystem</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">insize</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param insize:</span>
+<span class="sd">        :param outsize:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">insize</span><span class="o">=</span><span class="n">insize</span><span class="p">,</span> <span class="n">outsize</span><span class="o">=</span><span class="n">outsize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nx</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="c1"># Volumetric Flowrate (m^3/sec)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">100.0</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="c1"># Volume of CSTR (m^3)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">100.0</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+        <span class="c1"># Density of A-B Mixture (kg/m^3)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rho</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1000.0</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="c1"># Heat capacity of A-B Mixture (J/kg-K)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Cp</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.239</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="c1"># Heat of reaction for A-&gt;B (J/mol)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mdelH</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">5e4</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+        <span class="c1"># E - Activation energy in the Arrhenius Equation (J/mol)</span>
+        <span class="c1"># R - Universal Gas Constant = 8.31451 J/mol-K</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">EoverR</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">8750.</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+        <span class="c1"># Pre-exponential factor (1/sec)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">k0</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">7.2e10</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+        <span class="c1"># U - Overall Heat Transfer Coefficient (W/m^2-K)</span>
+        <span class="c1"># A - Area - this value is specific for the U calculation (m^2)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">UA</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">5e4</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+        <span class="c1"># Disturbances: Tf - Feed Temperature (K), Caf - Feed Concentration (mol/m^3)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Tf</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">350.</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Caf</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1.</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<div class="viewcode-block" id="CSTR_Param.ode_equations"><a class="viewcode-back" href="../ode.html#ode.CSTR_Param.ode_equations">[docs]</a>    <span class="k">def</span> <span class="nf">ode_equations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">Ca</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>      <span class="c1"># state: Concentration of A in CSTR (mol/m^3)</span>
+        <span class="n">T</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>       <span class="c1"># state: Temperature in CSTR (K)</span>
+        <span class="n">Tc</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">2</span><span class="p">]]</span>      <span class="c1"># control: Temperature of cooling jacket (K)</span>
+        <span class="c1"># reaction rate</span>
+        <span class="n">rA</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">k0</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">EoverR</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">Ca</span>
+        <span class="c1"># Calculate concentration derivative</span>
+        <span class="n">dCadt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">q</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Caf</span> <span class="o">-</span> <span class="n">Ca</span><span class="p">)</span> <span class="o">-</span> <span class="n">rA</span>
+        <span class="c1"># Calculate temperature derivative</span>
+        <span class="n">dTdt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">q</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Tf</span> <span class="o">-</span> <span class="n">T</span><span class="p">)</span> \
+               <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">mdelH</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rho</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">Cp</span><span class="p">)</span> <span class="o">*</span> <span class="n">rA</span> \
+               <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">UA</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">rho</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">Cp</span> <span class="o">*</span> <span class="p">(</span><span class="n">Tc</span> <span class="o">-</span> <span class="n">T</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">dCadt</span><span class="p">,</span> <span class="n">dTdt</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span></div></div>
+
+
+
 <span class="n">ode_param_systems_auto</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;LorenzParam&#39;</span><span class="p">:</span> <span class="n">LorenzParam</span><span class="p">,</span>
                           <span class="s1">&#39;LotkaVolterraParam&#39;</span><span class="p">:</span> <span class="n">LotkaVolterraParam</span><span class="p">,</span>
                           <span class="s1">&#39;BrusselatorParam&#39;</span><span class="p">:</span> <span class="n">BrusselatorParam</span><span class="p">}</span>
 
 <span class="n">ode_param_systems_nonauto</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DuffingParam&#39;</span><span class="p">:</span> <span class="n">DuffingParam</span><span class="p">,</span>
-                             <span class="s1">&#39;TwoTankParam&#39;</span><span class="p">:</span> <span class="n">TwoTankParam</span><span class="p">}</span>
+                             <span class="s1">&#39;TwoTankParam&#39;</span><span class="p">:</span> <span class="n">TwoTankParam</span><span class="p">,</span>
+                             <span class="s1">&#39;LorenzControl&#39;</span><span class="p">:</span> <span class="n">LorenzControl</span><span class="p">,</span>
+                             <span class="s1">&#39;CSTR_Param&#39;</span><span class="p">:</span> <span class="n">CSTR_Param</span><span class="p">}</span>
 
 <span class="n">ode_hybrid_systems_auto</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;LotkaVolterraHybrid&#39;</span><span class="p">:</span> <span class="n">LotkaVolterraHybrid</span><span class="p">,</span>
                            <span class="s1">&#39;BrusselatorHybrid&#39;</span><span class="p">:</span> <span class="n">BrusselatorHybrid</span><span class="p">}</span>
 </pre></div>
 
            </div>
-           
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
-
-    </p>
+    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

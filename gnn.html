@@ -1,78 +1,37 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>GNN &mdash; NeuroMANCER 0.1 documentation</title>
-  
-
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GNN &mdash; NeuroMANCER 1.2.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Graph Dynamics" href="graph_dynamics.html" />
-    <link rel="prev" title="Gradients" href="gradients.html" /> 
+    <link rel="prev" title="Bounds" href="bounds.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> NeuroMANCER
-          
-
-          
-            
             <img src="_static/dadaist.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,23 +39,12 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -113,32 +61,7 @@
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">GNN</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#gnn.ArgSequential"><code class="docutils literal notranslate"><span class="pre">ArgSequential</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gnn.ArgSequential.forward"><code class="docutils literal notranslate"><span class="pre">ArgSequential.forward()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#gnn.ArgSequential.reg_error"><code class="docutils literal notranslate"><span class="pre">ArgSequential.reg_error()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#gnn.GraphFeatureUpdate"><code class="docutils literal notranslate"><span class="pre">GraphFeatureUpdate</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gnn.GraphFeatureUpdate.forward"><code class="docutils literal notranslate"><span class="pre">GraphFeatureUpdate.forward()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#gnn.GraphFeatureUpdate.reg_error"><code class="docutils literal notranslate"><span class="pre">GraphFeatureUpdate.reg_error()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#gnn.GraphFeatures"><code class="docutils literal notranslate"><span class="pre">GraphFeatures</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gnn.GraphFeatures.cat"><code class="docutils literal notranslate"><span class="pre">GraphFeatures.cat()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#gnn.Replace"><code class="docutils literal notranslate"><span class="pre">Replace</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gnn.Replace.integrate"><code class="docutils literal notranslate"><span class="pre">Replace.integrate()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#gnn.graph_interp_u"><code class="docutils literal notranslate"><span class="pre">graph_interp_u()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gnn.nnLambda"><code class="docutils literal notranslate"><span class="pre">nnLambda</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gnn.nnLambda.forward"><code class="docutils literal notranslate"><span class="pre">nnLambda.forward()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
@@ -147,78 +70,41 @@
 <li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NeuroMANCER</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>GNN</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">GNN</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/gnn.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="module-gnn">
-<span id="gnn"></span><h1>GNN<a class="headerlink" href="#module-gnn" title="Permalink to this heading">¶</a></h1>
+<span id="gnn"></span><h1>GNN<a class="headerlink" href="#module-gnn" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="gnn.ArgSequential">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">ArgSequential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#ArgSequential"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.ArgSequential" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">ArgSequential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#ArgSequential"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.ArgSequential" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="gnn.ArgSequential.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#ArgSequential.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.ArgSequential.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#ArgSequential.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.ArgSequential.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -232,23 +118,23 @@ registered hooks while the latter silently ignores them.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="gnn.ArgSequential.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#ArgSequential.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.ArgSequential.reg_error" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#ArgSequential.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.ArgSequential.reg_error" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="gnn.GraphFeatureUpdate">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">GraphFeatureUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatureUpdate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatureUpdate" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">GraphFeatureUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatureUpdate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatureUpdate" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="gnn.GraphFeatureUpdate.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatureUpdate.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatureUpdate.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatureUpdate.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatureUpdate.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Calls node_f and edge_f on the node and edge attributes of a graph.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>g</strong> – [GraphFeatures]</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>[GraphFeatures] Modified node and edge attributes.</p>
 </dd>
 </dl>
@@ -256,46 +142,61 @@ registered hooks while the latter silently ignores them.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="gnn.GraphFeatureUpdate.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatureUpdate.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatureUpdate.reg_error" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatureUpdate.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatureUpdate.reg_error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gnn.GraphFeatureUpdate.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#gnn.GraphFeatureUpdate.training" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="gnn.GraphFeatures">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">GraphFeatures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatures"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatures" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">GraphFeatures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatures"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatures" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="gnn.GraphFeatures.cat">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatures.cat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatures.cat" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#GraphFeatures.cat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.GraphFeatures.cat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gnn.GraphFeatures.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#gnn.GraphFeatures.training" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="gnn.Replace">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">Replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp_u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#Replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.Replace" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">Replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp_u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#Replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.Replace" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="gnn.Replace.integrate">
-<span class="sig-name descname"><span class="pre">integrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#Replace.integrate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.Replace.integrate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">integrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#Replace.integrate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.Replace.integrate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gnn.Replace.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#gnn.Replace.training" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="gnn.graph_interp_u">
-<span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">graph_interp_u</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#graph_interp_u"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.graph_interp_u" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">graph_interp_u</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#graph_interp_u"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.graph_interp_u" title="Permalink to this definition"></a></dt>
 <dd><p>Provides the interpetration to use integrators with graph features.
 Sums the edge attributes incident to a node and returns them as the node_attr.
 Concatenates the two node attributes incident to an edge and returns them as edge features.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>tq</strong> – Not used.</p></li>
 <li><p><strong>t</strong> – Not used.</p></li>
 <li><p><strong>u</strong> – {“edge_index”: Tensor, “node_attr”: Tensor, “edge_attr”: Tensor}</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>[GraphFeatuers]</p>
 </dd>
 </dl>
@@ -303,10 +204,10 @@ Concatenates the two node attributes incident to an edge and returns them as edg
 
 <dl class="py class">
 <dt class="sig sig-object py" id="gnn.nnLambda">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">nnLambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam=&lt;function</span> <span class="pre">nnLambda.&lt;lambda&gt;&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#nnLambda"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.nnLambda" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gnn.</span></span><span class="sig-name descname"><span class="pre">nnLambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam=&lt;function</span> <span class="pre">nnLambda.&lt;lambda&gt;&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#nnLambda"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.nnLambda" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="gnn.nnLambda.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#nnLambda.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.nnLambda.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gnn.html#nnLambda.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gnn.nnLambda.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -318,57 +219,44 @@ registered hooks while the latter silently ignores them.</p>
 </div>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gnn.nnLambda.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#gnn.nnLambda.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="graph_dynamics.html" class="btn btn-neutral float-right" title="Graph Dynamics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="gradients.html" class="btn btn-neutral float-left" title="Gradients" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bounds.html" class="btn btn-neutral float-left" title="Bounds" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="graph_dynamics.html" class="btn btn-neutral float-right" title="Graph Dynamics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
-
-    </p>
+    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,75 +1,34 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>dynamics &mdash; NeuroMANCER 0.1 documentation</title>
-  
-
-  
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dynamics &mdash; NeuroMANCER 1.2.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> NeuroMANCER
-          
-
-          
-            
             <img src="../_static/dadaist.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,23 +36,12 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../loggers.html">Loggers</a></li>
@@ -119,68 +67,33 @@
 <li class="toctree-l1"><a class="reference internal" href="../ode.html">ODE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simulator.html">Simulator</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">NeuroMANCER</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Module code</a> &raquo;</li>
-        
-      <li>dynamics</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">dynamics</li>
       <li class="wy-breadcrumbs-aside">
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <h1>Source code for dynamics</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">State space models (SSMs) for dynamical modeling.</span>
@@ -214,7 +127,7 @@
 <span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
-
+<span class="kn">import</span> <span class="nn">slim</span>
 <span class="kn">from</span> <span class="nn">neuromancer.component</span> <span class="kn">import</span> <span class="n">Component</span>
 
 
@@ -268,8 +181,8 @@
     <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">xou</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;block_ssm&#39;</span><span class="p">,</span>
-                 <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
+                 <span class="n">xou</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span>
+                 <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;block_ssm&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Block structured system dynamics:</span>
 
@@ -369,6 +282,49 @@
         <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">k</span><span class="o">.</span><span class="n">reg_error</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s1">&#39;reg_error&#39;</span><span class="p">)])</span></div></div>
 
 
+<div class="viewcode-block" id="LinearSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.LinearSSM">[docs]</a><span class="k">class</span> <span class="nc">LinearSSM</span><span class="p">(</span><span class="n">BlockSSM</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">E</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s1">&#39;State matrix A must be torch.Tensor type, &#39;</span> \
+            <span class="sa">f</span><span class="s1">&#39;got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s1">&#39;Input matrix B must be torch.Tensor type, &#39;</span> \
+            <span class="sa">f</span><span class="s1">&#39;got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s1">&#39;Output matrix C must be torch.Tensor type, &#39;</span> \
+            <span class="sa">f</span><span class="s1">&#39;got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> \
+            <span class="sa">f</span><span class="s1">&#39;State matrix A must be two dimensional, got </span><span class="si">{</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> \
+            <span class="sa">f</span><span class="s1">&#39;Input matrix B must be two dimensional, got </span><span class="si">{</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> \
+            <span class="sa">f</span><span class="s1">&#39;Output matrix C must be two dimensional, got </span><span class="si">{</span><span class="n">C</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">nx</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">nu</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">ny</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">fu</span> <span class="o">=</span> <span class="n">slim</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">](</span><span class="n">nu</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+        <span class="n">fx</span> <span class="o">=</span> <span class="n">slim</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">](</span><span class="n">nx</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+        <span class="n">fy</span> <span class="o">=</span> <span class="n">slim</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">](</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
+        <span class="n">fx</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="n">fu</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+        <span class="n">fy</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">E</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">),</span> \
+                <span class="sa">f</span><span class="s1">&#39;Disturbance matrix E must be torch.Tensor type, &#39;</span> \
+                <span class="sa">f</span><span class="s1">&#39;got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">E</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">E</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> \
+                <span class="sa">f</span><span class="s1">&#39;Disturbance matrix E must be two dimensional, got </span><span class="si">{</span><span class="n">E</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="n">nd</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">fd</span> <span class="o">=</span> <span class="n">slim</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">](</span><span class="n">nx</span><span class="p">,</span> <span class="n">nd</span><span class="p">)</span>
+            <span class="n">fd</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fd</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">fx</span><span class="o">=</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="o">=</span><span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="n">fu</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="n">input_key_map</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="BlackSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.BlackSSM">[docs]</a><span class="k">class</span> <span class="nc">BlackSSM</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
     <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
     <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
@@ -410,7 +366,7 @@
         <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
             <span class="n">x_prev</span> <span class="o">=</span> <span class="n">x</span>
-            <span class="n">xplus</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">][:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">xplus</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="n">k</span><span class="p">]][:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
             <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="p">(</span><span class="n">xplus</span><span class="p">)</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">fe</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fe</span><span class="p">(</span><span class="n">x_prev</span><span class="p">)</span>
@@ -487,7 +443,7 @@
 
 
 <div class="viewcode-block" id="ODENonAuto"><a class="viewcode-back" href="../dynamics.html#dynamics.ODENonAuto">[docs]</a><span class="k">class</span> <span class="nc">ODENonAuto</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
-    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">,</span> <span class="s2">&quot;Time&quot;</span><span class="p">]</span>
+    <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
     <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dynamics&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="p">[],</span> <span class="n">online_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -512,8 +468,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]]</span>
-        <span class="n">Time</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]]</span>  <span class="c1"># (# of batches, nsteps, 1)</span>
-        <span class="n">inputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> \
+        <span class="k">if</span> <span class="s1">&#39;Time&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">Time</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]]</span>  <span class="c1"># (# of batches, nsteps, 1)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># dummy time tensor that won&#39;t be used</span>
+            <span class="n">Time</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nsteps</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">inputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> \
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">Time</span>
         <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
@@ -650,42 +610,30 @@
 </pre></div>
 
            </div>
-           
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
-
-    </p>
+    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,78 +1,37 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Constraint &mdash; NeuroMANCER 0.1 documentation</title>
-  
-
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constraint &mdash; NeuroMANCER 1.2.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Gradients" href="gradients.html" />
     <link rel="prev" title="Component" href="component.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> NeuroMANCER
-          
-
-          
-            
             <img src="_static/dadaist.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,23 +39,12 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -110,57 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="arg.html">Arg</a></li>
 <li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Constraint</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#constraint.Constraint"><code class="docutils literal notranslate"><span class="pre">Constraint</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Constraint.forward"><code class="docutils literal notranslate"><span class="pre">Constraint.forward()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Constraint.grad"><code class="docutils literal notranslate"><span class="pre">Constraint.grad()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Constraint.update_name"><code class="docutils literal notranslate"><span class="pre">Constraint.update_name()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Constraint.variable_names"><code class="docutils literal notranslate"><span class="pre">Constraint.variable_names</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#constraint.Eq"><code class="docutils literal notranslate"><span class="pre">Eq</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Eq.forward"><code class="docutils literal notranslate"><span class="pre">Eq.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#constraint.GT"><code class="docutils literal notranslate"><span class="pre">GT</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.GT.forward"><code class="docutils literal notranslate"><span class="pre">GT.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#constraint.LT"><code class="docutils literal notranslate"><span class="pre">LT</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.LT.forward"><code class="docutils literal notranslate"><span class="pre">LT.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#constraint.Loss"><code class="docutils literal notranslate"><span class="pre">Loss</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Loss.forward"><code class="docutils literal notranslate"><span class="pre">Loss.forward()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Loss.grad"><code class="docutils literal notranslate"><span class="pre">Loss.grad()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#constraint.Objective"><code class="docutils literal notranslate"><span class="pre">Objective</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Objective.forward"><code class="docutils literal notranslate"><span class="pre">Objective.forward()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Objective.grad"><code class="docutils literal notranslate"><span class="pre">Objective.grad()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Objective.variable_names"><code class="docutils literal notranslate"><span class="pre">Objective.variable_names</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#constraint.Variable"><code class="docutils literal notranslate"><span class="pre">Variable</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.T"><code class="docutils literal notranslate"><span class="pre">Variable.T</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.display_name"><code class="docutils literal notranslate"><span class="pre">Variable.display_name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.draw"><code class="docutils literal notranslate"><span class="pre">Variable.draw()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.forward"><code class="docutils literal notranslate"><span class="pre">Variable.forward()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.get_value"><code class="docutils literal notranslate"><span class="pre">Variable.get_value()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.grad"><code class="docutils literal notranslate"><span class="pre">Variable.grad()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.key"><code class="docutils literal notranslate"><span class="pre">Variable.key</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.keys"><code class="docutils literal notranslate"><span class="pre">Variable.keys</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.mT"><code class="docutils literal notranslate"><span class="pre">Variable.mT</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.make_graph"><code class="docutils literal notranslate"><span class="pre">Variable.make_graph()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.minimize"><code class="docutils literal notranslate"><span class="pre">Variable.minimize()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.show"><code class="docutils literal notranslate"><span class="pre">Variable.show()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.unpack"><code class="docutils literal notranslate"><span class="pre">Variable.unpack</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#constraint.Variable.value"><code class="docutils literal notranslate"><span class="pre">Variable.value</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#constraint.variable"><code class="docutils literal notranslate"><span class="pre">variable()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
@@ -172,88 +70,51 @@
 <li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NeuroMANCER</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Constraint</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Constraint</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/constraint.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="module-constraint">
-<span id="constraint"></span><h1>Constraint<a class="headerlink" href="#module-constraint" title="Permalink to this heading">¶</a></h1>
+<span id="constraint"></span><h1>Constraint<a class="headerlink" href="#module-constraint" title="Permalink to this headline"></a></h1>
 <p>Definition of neuromancer.Constraint class used in conjunction with neuromancer.Variable class. A Constraint has the
 same behavior as a Loss but with intuitive syntax for defining via Variable objects.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="constraint.Constraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comparator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Constraint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Constraint" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comparator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Constraint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Constraint" title="Permalink to this definition"></a></dt>
 <dd><p>Drop in replacement for a Loss object but constructed by a composition of Variable objects
 using comparative infix operators, ‘&lt;’, ‘&gt;’, ‘==’, ‘&lt;=’, ‘&gt;=’ and ‘*’ to weight loss component and ‘^’ to
 determine l-norm of constraint violation in determining loss.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Constraint.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Constraint.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Constraint.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Constraint.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Constraint.forward" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>input_dict</strong> – (dict, {str: torch.Tensor}) Should contain keys corresponding to self.variable_names</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>0-dimensional torch.Tensor that can be cast as a floating point number</p>
 </dd>
 </dl>
@@ -261,128 +122,148 @@ determine l-norm of constraint violation in determining loss.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Constraint.grad">
-<span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Constraint.grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Constraint.grad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Constraint.grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Constraint.grad" title="Permalink to this definition"></a></dt>
 <dd><blockquote>
 <div><p>returns gradient of the loss w.r.t. input key</p>
 </div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>input_dict</strong> – (dict, {str: torch.Tensor}) Should contain keys corresponding to self.variable_names</p></li>
 <li><p><strong>input_key</strong> – (str) Name of variable in input dict to take gradient with respect to.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>(torch.Tensor)</p>
 </dd>
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="constraint.Constraint.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#constraint.Constraint.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Constraint.update_name">
-<span class="sig-name descname"><span class="pre">update_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Constraint.update_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Constraint.update_name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Constraint.update_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Constraint.update_name" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="constraint.Constraint.variable_names">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">variable_names</span></span><a class="headerlink" href="#constraint.Constraint.variable_names" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">variable_names</span></span><a class="headerlink" href="#constraint.Constraint.variable_names" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="constraint.Eq">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Eq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Eq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Eq" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Eq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Eq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Eq" title="Permalink to this definition"></a></dt>
 <dd><p>Equality constraint penalizing difference between left and right hand side.
 Used for defining infix operator for the Variable class and calculating constraint
 violation losses for the forward pass of Constraint objects.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Eq.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Eq.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Eq.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Eq.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Eq.forward" title="Permalink to this definition"></a></dt>
 <dd><p>constraint: g(x) == b
 value = g(x) - b
 penalty = g(x) - b
 loss = metric(penalty)</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>left</strong> – torch.Tensor</p></li>
 <li><p><strong>right</strong> – torch.Tensor</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>zero dimensional torch.Tensor</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="constraint.Eq.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#constraint.Eq.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="constraint.GT">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">GT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#GT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.GT" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">GT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#GT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.GT" title="Permalink to this definition"></a></dt>
 <dd><p>Greater than constraint for lower bounding the left hand side by the right hand side.
 Used for defining infix operator for the Variable class and calculating constraint
 violation losses for the forward pass of Constraint objects.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.GT.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#GT.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.GT.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#GT.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.GT.forward" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>left</strong> – torch.Tensor</p></li>
 <li><p><strong>right</strong> – torch.Tensor</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>zero dimensional torch.Tensor</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="constraint.GT.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#constraint.GT.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="constraint.LT">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">LT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#LT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.LT" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">LT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#LT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.LT" title="Permalink to this definition"></a></dt>
 <dd><p>Less than constraint for upper bounding the left hand side by the right hand side.
 Used for defining infix operator for the Variable class and calculating constraint
 violation losses for the forward pass of Constraint objects.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.LT.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#LT.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.LT.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#LT.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.LT.forward" title="Permalink to this definition"></a></dt>
 <dd><p>constraint: g(x) &lt;= b
 value = g(x) - b
 penalty = relu(g(x) - b)
 loss = metric(penalty)</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>left</strong> – torch.Tensor</p></li>
 <li><p><strong>right</strong> – torch.Tensor</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>zero dimensional torch.Tensor</p>
 </dd>
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="constraint.LT.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#constraint.LT.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="constraint.Loss">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'loss'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Loss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Loss" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'loss'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Loss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Loss" title="Permalink to this definition"></a></dt>
 <dd><p>Drop in replacement for a Constraint object but relies on a list of dictionary keys and a callable function
 to instantiate.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Loss.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="reference internal" href="_modules/constraint.html#Loss.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Loss.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.Tensor</span></span></span><a class="reference internal" href="_modules/constraint.html#Loss.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Loss.forward" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>variables</strong> – (dict, {str: torch.Tensor}) Should contain keys corresponding to self.variable_names</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>0-dimensional torch.Tensor that can be cast as a floating point number</p>
 </dd>
 </dl>
@@ -390,38 +271,43 @@ to instantiate.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Loss.grad">
-<span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Loss.grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Loss.grad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Loss.grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Loss.grad" title="Permalink to this definition"></a></dt>
 <dd><blockquote>
 <div><p>returns gradient of the loss w.r.t. input variables</p>
 </div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>variables</strong> – </p></li>
 <li><p><strong>input_key</strong> – string</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="constraint.Loss.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#constraint.Loss.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="constraint.Objective">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Objective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric=&lt;built-in</span> <span class="pre">method</span> <span class="pre">mean</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight=1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Objective"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Objective" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Objective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric=&lt;built-in</span> <span class="pre">method</span> <span class="pre">mean</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight=1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Objective"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Objective" title="Permalink to this definition"></a></dt>
 <dd><p>Drop in replacement for a Loss object constructed via neuromancer Variable object
 in the forward pass evaluates metric as torch function on Variable values</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Objective.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Objective.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Objective.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Objective.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Objective.forward" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>input_dict</strong> – (dict, {str: torch.Tensor}) Should contain keys corresponding to self.variable_names</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>(dict, {str: 0-dimensional torch.Tensor}) tensor value can be cast as a floating point number</p>
 </dd>
 </dl>
@@ -429,33 +315,38 @@ in the forward pass evaluates metric as torch function on Variable values</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Objective.grad">
-<span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Objective.grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Objective.grad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Objective.grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Objective.grad" title="Permalink to this definition"></a></dt>
 <dd><blockquote>
 <div><p>returns gradient of the loss w.r.t. input variables</p>
 </div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>input_dict</strong> – </p></li>
 <li><p><strong>input_key</strong> – string</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="constraint.Objective.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#constraint.Objective.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="constraint.Objective.variable_names">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">variable_names</span></span><a class="headerlink" href="#constraint.Objective.variable_names" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">variable_names</span></span><a class="headerlink" href="#constraint.Objective.variable_names" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="constraint.Variable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">Variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable" title="Permalink to this definition"></a></dt>
 <dd><p>Variable is an abstraction that allows for the definition of constraints and objectives with some nice
 syntactic sugar. When a Variable object is called given a dictionary a pytorch tensor is returned, and when
 a Variable object is subjected to a comparison operator a Constraint is returned. Mathematical operators return
@@ -463,20 +354,20 @@ Variables which will instantiate and perform the sequence of mathematical operat
 Supported infix operators (variable * variable, variable * numeric): +, -, <em>, &#64;, *</em>, &lt;, &lt;=, &gt;, &gt;=, ==, ^</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="constraint.Variable.T">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">T</span></span><a class="headerlink" href="#constraint.Variable.T" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">T</span></span><a class="headerlink" href="#constraint.Variable.T" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="constraint.Variable.display_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">display_name</span></span><a class="headerlink" href="#constraint.Variable.display_name" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">display_name</span></span><a class="headerlink" href="#constraint.Variable.display_name" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Variable.draw">
-<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.draw" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.draw" title="Permalink to this definition"></a></dt>
 <dd><p>Plot and save computational graph</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>figname</strong> – (str) Name to save figure to.</p>
 </dd>
 </dl>
@@ -484,13 +375,13 @@ Supported infix operators (variable * variable, variable * numeric): +, -, <em>,
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Variable.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Forward pass goes through topologically sorted nodes calculating or retrieving values.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>datadict</strong> – (dict, {str: Tensor}) Optional dictionary for Variable graphs which take input</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>(torch.Tensor) Tensor value from evaluating the variable’s computational graph.</p>
 </dd>
 </dl>
@@ -498,17 +389,17 @@ Supported infix operators (variable * variable, variable * numeric): +, -, <em>,
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Variable.get_value">
-<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.get_value" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.get_value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Variable.grad">
-<span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.grad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.grad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.grad" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="constraint.Variable.key">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#constraint.Variable.key" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#constraint.Variable.key" title="Permalink to this definition"></a></dt>
 <dd><p>Used by input Variables to retrieve Tensor values from a dictionary.
 Will be used as a display_name if display_name is not provided to __init__
 :return: (str) String intended to be a key in a dict {str: Tensor}</p>
@@ -516,17 +407,17 @@ Will be used as a display_name if display_name is not provided to __init__
 
 <dl class="py property">
 <dt class="sig sig-object py" id="constraint.Variable.keys">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">keys</span></span><a class="headerlink" href="#constraint.Variable.keys" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">keys</span></span><a class="headerlink" href="#constraint.Variable.keys" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="constraint.Variable.mT">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mT</span></span><a class="headerlink" href="#constraint.Variable.mT" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mT</span></span><a class="headerlink" href="#constraint.Variable.mT" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Variable.make_graph">
-<span class="sig-name descname"><span class="pre">make_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_variables</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.make_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.make_graph" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">make_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_variables</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.make_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.make_graph" title="Permalink to this definition"></a></dt>
 <dd><p>This is the function that composes the graph of the Variable from constituent input variables which
 are in-nodes to the Variable. It first builds an empty graph then adds itself to the graph.
 Then it goes through the inputs and instantiates Variable objects for them if they are not
@@ -535,10 +426,10 @@ In the penultimate step edges are added to the graph from the inputs to the Vari
 taking care to shallow copy nodes when there is more than one edge between nodes. Finally, the graph is
 topologically sorted for swift evaluation of the directed acyclic graph.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>input_variables</strong> – List of arbitrary inputs for self._func</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A topologically sorted list of Variable objects</p>
 </dd>
 </dl>
@@ -546,25 +437,30 @@ topologically sorted for swift evaluation of the directed acyclic graph.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Variable.minimize">
-<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric=&lt;built-in</span> <span class="pre">method</span> <span class="pre">mean</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight=1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.minimize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.minimize" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric=&lt;built-in</span> <span class="pre">method</span> <span class="pre">mean</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight=1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.minimize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.minimize" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="constraint.Variable.show">
-<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.show" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#Variable.show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.show" title="Permalink to this definition"></a></dt>
 <dd><p>Plot and display computational graph</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="constraint.Variable.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#constraint.Variable.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="constraint.Variable.unpack">
-<span class="sig-name descname"><span class="pre">unpack</span></span><a class="reference internal" href="_modules/constraint.html#Variable.unpack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.unpack" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">unpack</span></span><a class="reference internal" href="_modules/constraint.html#Variable.unpack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.Variable.unpack" title="Permalink to this definition"></a></dt>
 <dd><p>Creates new variables for a node that evaluates to multiple values.
 This is useful for unpacking results of functions that return multiple values such as <cite>torch.linalg.svd</cite>:</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>nret</strong> – (int) Number of return values from the torch function</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>[Variable] List of Variable objects for each value returned by the torch function</p>
 </dd>
 </dl>
@@ -572,20 +468,20 @@ This is useful for unpacking results of functions that return multiple values su
 
 <dl class="py property">
 <dt class="sig sig-object py" id="constraint.Variable.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#constraint.Variable.value" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#constraint.Variable.value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="constraint.variable">
-<span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">variable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#variable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.variable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">constraint.</span></span><span class="sig-name descname"><span class="pre">variable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/constraint.html#variable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#constraint.variable" title="Permalink to this definition"></a></dt>
 <dd><p>For instantiating a trainable Variable. returns Variable with trainable value = 0dim Tensor from std. normal dist.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>display_name</strong> – (str) for plotting graph and __repr__</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Variable with value = 0 dimensional nn.Parameter with requires_grad=True</p>
 </dd>
 </dl>
@@ -595,51 +491,33 @@ This is useful for unpacking results of functions that return multiple values su
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="gradients.html" class="btn btn-neutral float-right" title="Gradients" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="component.html" class="btn btn-neutral float-left" title="Component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="component.html" class="btn btn-neutral float-left" title="Component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gradients.html" class="btn btn-neutral float-right" title="Gradients" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
-
-    </p>
+    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

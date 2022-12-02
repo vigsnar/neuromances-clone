@@ -1,78 +1,37 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Bounds &mdash; NeuroMANCER 0.1 documentation</title>
-  
-
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bounds &mdash; NeuroMANCER 1.2.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Dataset" href="dataset.html" />
-    <link rel="prev" title="Blocks" href="blocks.html" /> 
+    <link rel="next" title="GNN" href="gnn.html" />
+    <link rel="prev" title="Gradients" href="gradients.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> NeuroMANCER
-          
-
-          
-            
             <img src="_static/dadaist.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,50 +39,12 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Bounds</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.Bounds"><code class="docutils literal notranslate"><span class="pre">Bounds</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.Bounds.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">Bounds.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.Bounds.forward"><code class="docutils literal notranslate"><span class="pre">Bounds.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.HardMaxBound"><code class="docutils literal notranslate"><span class="pre">HardMaxBound</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMaxBound.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">HardMaxBound.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMaxBound.forward"><code class="docutils literal notranslate"><span class="pre">HardMaxBound.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.HardMinBound"><code class="docutils literal notranslate"><span class="pre">HardMinBound</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinBound.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">HardMinBound.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinBound.forward"><code class="docutils literal notranslate"><span class="pre">HardMinBound.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.HardMinMaxBound"><code class="docutils literal notranslate"><span class="pre">HardMinMaxBound</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinMaxBound.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">HardMinMaxBound.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinMaxBound.forward"><code class="docutils literal notranslate"><span class="pre">HardMinMaxBound.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.HardMinMaxScale"><code class="docutils literal notranslate"><span class="pre">HardMinMaxScale</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinMaxScale.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">HardMinMaxScale.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinMaxScale.forward"><code class="docutils literal notranslate"><span class="pre">HardMinMaxScale.forward()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
@@ -139,34 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Bounds</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.Bounds"><code class="docutils literal notranslate"><span class="pre">Bounds</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.Bounds.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">Bounds.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.Bounds.forward"><code class="docutils literal notranslate"><span class="pre">Bounds.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.HardMaxBound"><code class="docutils literal notranslate"><span class="pre">HardMaxBound</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMaxBound.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">HardMaxBound.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMaxBound.forward"><code class="docutils literal notranslate"><span class="pre">HardMaxBound.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.HardMinBound"><code class="docutils literal notranslate"><span class="pre">HardMinBound</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinBound.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">HardMinBound.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinBound.forward"><code class="docutils literal notranslate"><span class="pre">HardMinBound.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.HardMinMaxBound"><code class="docutils literal notranslate"><span class="pre">HardMinMaxBound</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinMaxBound.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">HardMinMaxBound.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinMaxBound.forward"><code class="docutils literal notranslate"><span class="pre">HardMinMaxBound.forward()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#bounds.HardMinMaxScale"><code class="docutils literal notranslate"><span class="pre">HardMinMaxScale</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinMaxScale.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">HardMinMaxScale.DEFAULT_INPUT_KEYS</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bounds.HardMinMaxScale.forward"><code class="docutils literal notranslate"><span class="pre">HardMinMaxScale.forward()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bounds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
@@ -176,86 +70,49 @@
 <li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NeuroMANCER</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Bounds</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Bounds</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/bounds.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="module-bounds">
-<span id="bounds"></span><h1>Bounds<a class="headerlink" href="#module-bounds" title="Permalink to this heading">¶</a></h1>
+<span id="bounds"></span><h1>Bounds<a class="headerlink" href="#module-bounds" title="Permalink to this headline"></a></h1>
 <p>Definition of neuromancer.Bound class as a neuromancer.Component to allow
 imposing hard bound constraints in the forms:
 xmin &lt;= x &lt;= xmax</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="bounds.Bounds">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">Bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#Bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.Bounds" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">Bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#Bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.Bounds" title="Permalink to this definition"></a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="bounds.Bounds.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#bounds.Bounds.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#bounds.Bounds.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bounds.Bounds.forward">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#Bounds.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.Bounds.forward" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#Bounds.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.Bounds.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -271,15 +128,15 @@ registered hooks while the latter silently ignores them.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bounds.HardMaxBound">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">HardMaxBound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMaxBound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMaxBound" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">HardMaxBound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMaxBound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMaxBound" title="Permalink to this definition"></a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="bounds.HardMaxBound.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'xmax']</span></em><a class="headerlink" href="#bounds.HardMaxBound.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'xmax']</span></em><a class="headerlink" href="#bounds.HardMaxBound.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bounds.HardMaxBound.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMaxBound.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMaxBound.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMaxBound.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMaxBound.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -290,20 +147,25 @@ instead of this since the former takes care of running the
 registered hooks while the latter silently ignores them.</p>
 </div>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bounds.HardMaxBound.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#bounds.HardMaxBound.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bounds.HardMinBound">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">HardMinBound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinBound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinBound" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">HardMinBound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinBound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinBound" title="Permalink to this definition"></a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="bounds.HardMinBound.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'xmin']</span></em><a class="headerlink" href="#bounds.HardMinBound.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'xmin']</span></em><a class="headerlink" href="#bounds.HardMinBound.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bounds.HardMinBound.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinBound.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinBound.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinBound.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinBound.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -314,20 +176,25 @@ instead of this since the former takes care of running the
 registered hooks while the latter silently ignores them.</p>
 </div>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bounds.HardMinBound.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#bounds.HardMinBound.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bounds.HardMinMaxBound">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">HardMinMaxBound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinMaxBound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinMaxBound" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">HardMinMaxBound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinMaxBound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinMaxBound" title="Permalink to this definition"></a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="bounds.HardMinMaxBound.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'xmin',</span> <span class="pre">'xmax']</span></em><a class="headerlink" href="#bounds.HardMinMaxBound.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'xmin',</span> <span class="pre">'xmax']</span></em><a class="headerlink" href="#bounds.HardMinMaxBound.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bounds.HardMinMaxBound.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinMaxBound.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinMaxBound.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinMaxBound.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinMaxBound.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -338,20 +205,25 @@ instead of this since the former takes care of running the
 registered hooks while the latter silently ignores them.</p>
 </div>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bounds.HardMinMaxBound.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#bounds.HardMinMaxBound.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bounds.HardMinMaxScale">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">HardMinMaxScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinMaxScale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinMaxScale" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bounds.</span></span><span class="sig-name descname"><span class="pre">HardMinMaxScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinMaxScale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinMaxScale" title="Permalink to this definition"></a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="bounds.HardMinMaxScale.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'xmin',</span> <span class="pre">'xmax']</span></em><a class="headerlink" href="#bounds.HardMinMaxScale.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'xmin',</span> <span class="pre">'xmax']</span></em><a class="headerlink" href="#bounds.HardMinMaxScale.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bounds.HardMinMaxScale.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinMaxScale.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinMaxScale.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bounds.html#HardMinMaxScale.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bounds.HardMinMaxScale.forward" title="Permalink to this definition"></a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -362,6 +234,11 @@ instead of this since the former takes care of running the
 registered hooks while the latter silently ignores them.</p>
 </div>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bounds.HardMinMaxScale.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#bounds.HardMinMaxScale.training" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -369,51 +246,33 @@ registered hooks while the latter silently ignores them.</p>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="dataset.html" class="btn btn-neutral float-right" title="Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="blocks.html" class="btn btn-neutral float-left" title="Blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gradients.html" class="btn btn-neutral float-left" title="Gradients" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gnn.html" class="btn btn-neutral float-right" title="GNN" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2020, Aaron Tuor, Jan Drgona, Elliott Skomski, Soumya Vasisht
-
-    </p>
+    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
