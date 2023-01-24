@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>physics &mdash; NeuroMANCER 1.2.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
+            <img src="../_static/dadaist.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../estimators.html">Estimators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loggers.html">Loggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operators.html">Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot.html">Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem.html">Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rnn.html">RNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simulators.html">Simulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../trainer.html">Trainer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visuals.html">Visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arg.html">Arg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../callbacks.html">Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constraint.html">Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simulator.html">Simulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics.html">Physics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NeuroMANCER</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>physics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for physics</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="c1">######################## AGENT DEFINITIONS AND SPECIFICATIONS ######################</span>
+
+<div class="viewcode-block" id="Agent"><a class="viewcode-back" href="../physics.html#physics.Agent">[docs]</a><span class="k">class</span> <span class="nc">Agent</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An agent is an object in a networked or otherwise distributed system that can:</span>
+<span class="sd">    - have some intrinsic physics</span>
+<span class="sd">    - serve as anchor for connections (pins)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_names</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state_names</span> <span class="o">=</span> <span class="n">state_names</span>
+
+<div class="viewcode-block" id="Agent.intrinsic"><a class="viewcode-back" href="../physics.html#physics.Agent.intrinsic">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">intrinsic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="Agent.forward"><a class="viewcode-back" href="../physics.html#physics.Agent.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">state_names</span><span class="p">)</span> <span class="o">==</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">intrinsic</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div></div>
+
+<span class="c1">### Children:</span>
+
+<div class="viewcode-block" id="RCNode"><a class="viewcode-back" href="../physics.html#physics.RCNode">[docs]</a><span class="k">class</span> <span class="nc">RCNode</span><span class="p">(</span><span class="n">Agent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    RCNode agent. The intrinsic action of the agent is to effectively scale the interaction physics </span>
+<span class="sd">    according to the capacitance of the agent. Examples include lumped volumes, rooms, etc.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1.0</span><span class="p">])),</span> 
+                <span class="n">state_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">],</span>
+                <span class="n">scaling</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param C: capacitance</span>
+<span class="sd">        :param state_names: List of state names. Length should be same as dimension of state.</span>
+<span class="sd">        :param scaling: scale factor. Useful for expeceted multi-scale physics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">state_names</span><span class="o">=</span><span class="n">state_names</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">=</span> <span class="n">C</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scaling</span> <span class="o">=</span> <span class="n">scaling</span>
+
+<div class="viewcode-block" id="RCNode.intrinsic"><a class="viewcode-back" href="../physics.html#physics.RCNode.intrinsic">[docs]</a>    <span class="k">def</span> <span class="nf">intrinsic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">),</span><span class="bp">self</span><span class="o">.</span><span class="n">C</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">scaling</span><span class="o">*</span><span class="n">x</span></div></div>
+
+<div class="viewcode-block" id="SourceSink"><a class="viewcode-back" href="../physics.html#physics.SourceSink">[docs]</a><span class="k">class</span> <span class="nc">SourceSink</span><span class="p">(</span><span class="n">Agent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generic Source / Sink agent. Useful for &#39;dummy&#39; agents to which one can attach external signals.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">]):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param state_names: List of state names. Length should be same as dimension of state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">state_names</span> <span class="o">=</span> <span class="n">state_names</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SourceSink.intrinsic"><a class="viewcode-back" href="../physics.html#physics.SourceSink.intrinsic">[docs]</a>    <span class="k">def</span> <span class="nf">intrinsic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div></div>
+
+<span class="c1">####################### COUPLING DEFINITIONS AND SPECIFICATIONS ####################</span>
+
+<div class="viewcode-block" id="Interaction"><a class="viewcode-back" href="../physics.html#physics.Interaction">[docs]</a><span class="k">class</span> <span class="nc">Interaction</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An interaction is a physical connection between agents:</span>
+<span class="sd">    - interactions are pairwise</span>
+<span class="sd">    - interactions can be one-sided or symmetric (influence both agents)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_name</span><span class="p">,</span> <span class="n">pins</span><span class="p">,</span> <span class="n">symmetric</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param feature_name: (str) Specification of correct state for interaction physics</span>
+<span class="sd">        :param pins: list of lists of pairwise connections between agents (e.g. pins=[[0,1],[0,2]])</span>
+<span class="sd">        :param symmetric: one-way ot two-way interaction</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">symmetric</span> <span class="o">=</span> <span class="n">symmetric</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feature_name</span> <span class="o">=</span> <span class="n">feature_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pins</span> <span class="o">=</span> <span class="n">pins</span>
+
+<div class="viewcode-block" id="Interaction.interact"><a class="viewcode-back" href="../physics.html#physics.Interaction.interact">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">interact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="Interaction.forward"><a class="viewcode-back" href="../physics.html#physics.Interaction.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>    </div></div>
+
+<span class="c1">### Children:</span>
+
+<div class="viewcode-block" id="DeltaTemp"><a class="viewcode-back" href="../physics.html#physics.DeltaTemp">[docs]</a><span class="k">class</span> <span class="nc">DeltaTemp</span><span class="p">(</span><span class="n">Interaction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Interaction physics for difference in temperature (assumed) between agents.   </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                <span class="n">R</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)),</span> 
+                <span class="n">feature_name</span> <span class="o">=</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> 
+                <span class="n">symmetric</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">pins</span> <span class="o">=</span> <span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param R: resistivity for connection</span>
+<span class="sd">        :param feature_name: (str) Specification of correct state for interaction physics</span>
+<span class="sd">        :param pins: list of lists of pairwise connections between agents (e.g. pins=[[0,1],[0,2]])</span>
+<span class="sd">        :param symmetric: one-way ot two-way interaction</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">feature_name</span><span class="o">=</span><span class="n">feature_name</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="n">pins</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="n">symmetric</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">R</span> <span class="o">=</span> <span class="n">R</span>
+
+<div class="viewcode-block" id="DeltaTemp.interact"><a class="viewcode-back" href="../physics.html#physics.DeltaTemp.interact">[docs]</a>    <span class="k">def</span> <span class="nf">interact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">1e-2</span><span class="p">),</span><span class="bp">self</span><span class="o">.</span><span class="n">R</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[:,[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">]])</span></div></div>
+
+<div class="viewcode-block" id="DeltaTempSwitch"><a class="viewcode-back" href="../physics.html#physics.DeltaTempSwitch">[docs]</a><span class="k">class</span> <span class="nc">DeltaTempSwitch</span><span class="p">(</span><span class="n">Interaction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Interaction physics for difference in temperature (assumed) between agents. Switched on/off </span>
+<span class="sd">    depending on agent values (zero or nonzero).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                <span class="n">R</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1.0</span><span class="p">])),</span> 
+                <span class="n">feature_name</span> <span class="o">=</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> 
+                <span class="n">symmetric</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">pins</span> <span class="o">=</span> <span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param R: resistivity for connection</span>
+<span class="sd">        :param feature_name: (str) Specification of correct state for interaction physics</span>
+<span class="sd">        :param pins: list of lists of pairwise connections between agents (e.g. pins=[[0,1],[0,2]])</span>
+<span class="sd">        :param symmetric: one-way ot two-way interaction</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">feature_name</span><span class="o">=</span><span class="n">feature_name</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="n">pins</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="n">symmetric</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">R</span> <span class="o">=</span> <span class="n">R</span>
+
+<div class="viewcode-block" id="DeltaTempSwitch.interact"><a class="viewcode-back" href="../physics.html#physics.DeltaTempSwitch.interact">[docs]</a>    <span class="k">def</span> <span class="nf">interact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">1e-2</span><span class="p">),</span><span class="bp">self</span><span class="o">.</span><span class="n">R</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[:,[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">]])</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[:,[</span><span class="mi">1</span><span class="p">]]</span><span class="o">&gt;=</span><span class="mf">0.0</span><span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="HVACConnection"><a class="viewcode-back" href="../physics.html#physics.HVACConnection">[docs]</a><span class="k">class</span> <span class="nc">HVACConnection</span><span class="p">(</span><span class="n">Interaction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Imposition of a source term as an interaction.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                <span class="n">feature_name</span> <span class="o">=</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span>
+                <span class="n">symmetric</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> 
+                <span class="n">pins</span> <span class="o">=</span> <span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param feature_name: (str) Specification of correct state for interaction physics</span>
+<span class="sd">        :param pins: list of lists of pairwise connections between agents (e.g. pins=[[0,1],[0,2]])</span>
+<span class="sd">        :param symmetric: one-way ot two-way interaction</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">feature_name</span><span class="o">=</span><span class="n">feature_name</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="n">pins</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="n">symmetric</span><span class="p">)</span>
+
+<div class="viewcode-block" id="HVACConnection.interact"><a class="viewcode-back" href="../physics.html#physics.HVACConnection.interact">[docs]</a>    <span class="k">def</span> <span class="nf">interact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">[:,[</span><span class="mi">1</span><span class="p">]]</span> </div></div>
+
+<span class="c1">################################# HELPER FUNCTIONS #################################</span>
+
+<div class="viewcode-block" id="map_from_agents"><a class="viewcode-back" href="../physics.html#physics.map_from_agents">[docs]</a><span class="k">def</span> <span class="nf">map_from_agents</span><span class="p">(</span><span class="n">intrinsic_list</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Quick helper function to construct state mappings:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">agent_maps</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">agent_physics</span> <span class="ow">in</span> <span class="n">intrinsic_list</span><span class="p">:</span>
+        <span class="n">node_states</span> <span class="o">=</span> <span class="p">[(</span><span class="n">s</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="n">count</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">agent_physics</span><span class="o">.</span><span class="n">state_names</span><span class="p">)]</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">node_states</span><span class="p">)</span>
+        <span class="n">agent_maps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">(</span><span class="n">node_states</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">agent_maps</span></div>
+
+<span class="c1">### Aggregate all in dicts:</span>
+
+<span class="n">agents</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;RCNode&#39;</span><span class="p">:</span> <span class="n">RCNode</span><span class="p">,</span>
+          <span class="s1">&#39;SourceSink&#39;</span><span class="p">:</span> <span class="n">SourceSink</span><span class="p">}</span>
+
+<span class="n">couplings</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DeltaTemp&#39;</span><span class="p">:</span> <span class="n">DeltaTemp</span><span class="p">,</span>
+             <span class="s1">&#39;DeltaTempSwitch&#39;</span><span class="p">:</span> <span class="n">DeltaTempSwitch</span><span class="p">,</span>
+             <span class="s1">&#39;HVACConnection&#39;</span><span class="p">:</span> <span class="n">HVACConnection</span><span class="p">}</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

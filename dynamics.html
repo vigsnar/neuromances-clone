@@ -1,38 +1,79 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamics &mdash; NeuroMANCER 1.2.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <title>Dynamics &mdash; NeuroMANCER 1.2.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Activations" href="activations.html" />
     <link rel="prev" title="NeuroMANCER" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
             <img src="_static/dadaist.png" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -40,10 +81,61 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Dynamics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dynamics.BlackSSM"><code class="docutils literal notranslate"><span class="pre">BlackSSM</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlackSSM.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">BlackSSM.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlackSSM.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">BlackSSM.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlackSSM.check_features"><code class="docutils literal notranslate"><span class="pre">BlackSSM.check_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlackSSM.forward"><code class="docutils literal notranslate"><span class="pre">BlackSSM.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlackSSM.reg_error"><code class="docutils literal notranslate"><span class="pre">BlackSSM.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamics.BlockSSM"><code class="docutils literal notranslate"><span class="pre">BlockSSM</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlockSSM.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">BlockSSM.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlockSSM.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">BlockSSM.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlockSSM.check_features"><code class="docutils literal notranslate"><span class="pre">BlockSSM.check_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlockSSM.forward"><code class="docutils literal notranslate"><span class="pre">BlockSSM.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.BlockSSM.reg_error"><code class="docutils literal notranslate"><span class="pre">BlockSSM.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamics.LinearSSM"><code class="docutils literal notranslate"><span class="pre">LinearSSM</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamics.ODEAuto"><code class="docutils literal notranslate"><span class="pre">ODEAuto</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.ODEAuto.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">ODEAuto.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.ODEAuto.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">ODEAuto.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.ODEAuto.forward"><code class="docutils literal notranslate"><span class="pre">ODEAuto.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.ODEAuto.reg_error"><code class="docutils literal notranslate"><span class="pre">ODEAuto.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamics.ODENonAuto"><code class="docutils literal notranslate"><span class="pre">ODENonAuto</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.ODENonAuto.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">ODENonAuto.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.ODENonAuto.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">ODENonAuto.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.ODENonAuto.forward"><code class="docutils literal notranslate"><span class="pre">ODENonAuto.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.ODENonAuto.reg_error"><code class="docutils literal notranslate"><span class="pre">ODENonAuto.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamics.SSM"><code class="docutils literal notranslate"><span class="pre">SSM</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.SSM.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SSM.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.SSM.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SSM.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamics.SSM.update_input_keys"><code class="docutils literal notranslate"><span class="pre">SSM.update_input_keys()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamics.blackbox_model"><code class="docutils literal notranslate"><span class="pre">blackbox_model()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamics.block_model"><code class="docutils literal notranslate"><span class="pre">block_model()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
@@ -72,53 +164,100 @@
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physics.html">Physics</a></li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NeuroMANCER</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Dynamics</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Dynamics</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+            
             <a href="_sources/dynamics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="module-dynamics">
-<span id="dynamics"></span><h1>Dynamics<a class="headerlink" href="#module-dynamics" title="Permalink to this headline"></a></h1>
+<span id="dynamics"></span><h1>Dynamics<a class="headerlink" href="#module-dynamics" title="Permalink to this heading">¶</a></h1>
 <p>State space models (SSMs) for dynamical modeling.</p>
-<p>Nomenclature:</p>
-<blockquote>
-<div><ul class="simple">
+<dl class="simple">
+<dt>Nomenclature:</dt><dd><ul class="simple">
 <li><p>x: states</p></li>
 <li><p>y: predicted outputs</p></li>
 <li><p>u: control inputs</p></li>
 <li><p>d: uncontrolled inputs (measured disturbances)</p></li>
 </ul>
-</div></blockquote>
-<dl class="simple">
+</dd>
 <dt>Unstructured (blackbox) dynamical models:</dt><dd><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x_{t+1} = f(x_t,u_t,d_t) odot f_e(x_t)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{t+1} = f(x_t,u_t,d_t) \odot f_e(x_t)\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(y_{t} =  f_y(x_t)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(odot\)</span> is some operator acting on elements, e.g. + or *</p></li>
+<li><p><span class="math notranslate nohighlight">\(\odot\)</span> is some operator acting on elements, e.g. + or *</p></li>
 </ul>
 </dd>
 <dt>Block-structured dynamical models:</dt><dd><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x_{t+1} = f_x(x_t) odot f_u(u_t) odot f_d(d_t) odot f_e(x_t)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{t+1} = f_x(x_t) \odot f_u(u_t) \odot f_d(d_t) \odot f_e(x_t)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y_t =  f_y(x_t)\)</span></p></li>
+</ul>
+</dd>
+<dt>Autonomous ordinary differential equation model:</dt><dd><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_{t+1} = ODESolve(f_x(x_t))\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y_t =  f_y(x_t)\)</span></p></li>
+</ul>
+</dd>
+<dt>Non-autonomous ordinary differential equation model:</dt><dd><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_{t+1} = ODESolve(f_x(x_t, u_t, Time))\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(y_t =  f_y(x_t)\)</span></p></li>
 </ul>
 </dd>
@@ -130,37 +269,45 @@
 <li><p><span class="math notranslate nohighlight">\(f_u\)</span> are input dynamics</p></li>
 <li><p><span class="math notranslate nohighlight">\(f_d\)</span> are disturbance dynamics</p></li>
 <li><p><span class="math notranslate nohighlight">\(f_{yu}\)</span> models more direct effects of input on observations</p></li>
+<li><p><span class="math notranslate nohighlight">\(ODESolve(f_x(x_t))\)</span> integrates the ODE system via solver, e.g. RK</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="dynamics.BlackSSM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">BlackSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fe=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fyu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoe=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoyu=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name='black_ssm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map={}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_inputs=[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlackSSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlackSSM" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">BlackSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fe=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fyu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoe=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoyu=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name='black_ssm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map={}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_inputs=[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlackSSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlackSSM" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.BlackSSM.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x0',</span> <span class="pre">'Yf']</span></em><a class="headerlink" href="#dynamics.BlackSSM.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x0',</span> <span class="pre">'Yf']</span></em><a class="headerlink" href="#dynamics.BlackSSM.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.BlackSSM.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['reg_error',</span> <span class="pre">'X_pred',</span> <span class="pre">'Y_pred']</span></em><a class="headerlink" href="#dynamics.BlackSSM.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['reg_error',</span> <span class="pre">'X_pred',</span> <span class="pre">'Y_pred']</span></em><a class="headerlink" href="#dynamics.BlackSSM.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Black box state space model with unstructured system dynamics:</dt><dd><p><span class="math notranslate nohighlight">\(x_{t+1} = f(x_t,u_t,d_t) \odot f_e(x_t)\)</span>
+<span class="math notranslate nohighlight">\(y_{t} =  f_y(x_t)\)</span>
+<span class="math notranslate nohighlight">\(\odot\)</span> is some operator acting on elements, e.g. + or *</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dynamics.BlackSSM.check_features">
-<span class="sig-name descname"><span class="pre">check_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlackSSM.check_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlackSSM.check_features" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">check_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlackSSM.check_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlackSSM.check_features" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dynamics.BlackSSM.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlackSSM.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlackSSM.forward" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlackSSM.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlackSSM.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>performs nstep ahead rollout of a given dynamical system model</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dynamics.BlackSSM.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlackSSM.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlackSSM.reg_error" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlackSSM.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlackSSM.reg_error" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>0-dimensional torch.Tensor</p>
 </dd>
 </dl>
@@ -170,84 +317,94 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="dynamics.BlockSSM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">BlockSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fd=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fe=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fyu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xou=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xod=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoe=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoyu=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">residual=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name='block_ssm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map={}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlockSSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlockSSM" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">BlockSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fd=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fe=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fyu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xou=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xod=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoe=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoyu=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">residual=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name='block_ssm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map={}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlockSSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlockSSM" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.BlockSSM.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x0',</span> <span class="pre">'Yf']</span></em><a class="headerlink" href="#dynamics.BlockSSM.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x0',</span> <span class="pre">'Yf']</span></em><a class="headerlink" href="#dynamics.BlockSSM.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.BlockSSM.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['reg_error',</span> <span class="pre">'X_pred',</span> <span class="pre">'Y_pred']</span></em><a class="headerlink" href="#dynamics.BlockSSM.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="dynamics.BlockSSM.check_features">
-<span class="sig-name descname"><span class="pre">check_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlockSSM.check_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlockSSM.check_features" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="dynamics.BlockSSM.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlockSSM.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlockSSM.forward" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> – (dict: {str: Tensor})</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>output (dict: {str: Tensor})</p>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['reg_error',</span> <span class="pre">'X_pred',</span> <span class="pre">'Y_pred']</span></em><a class="headerlink" href="#dynamics.BlockSSM.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Block-structured system dynamical models:</dt><dd><p><span class="math notranslate nohighlight">\(x_{t+1} = f_x(x_t) \odot f_u(u_t) \odot f_d(d_t) \odot f_e(x_t)\)</span>
+<span class="math notranslate nohighlight">\(y_t =  f_y(x_t)\)</span></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="dynamics.BlockSSM.check_features">
+<span class="sig-name descname"><span class="pre">check_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlockSSM.check_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlockSSM.check_features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dynamics.BlockSSM.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlockSSM.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlockSSM.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>performs nstep ahead rollout of a given dynamical system model
+:param data: (dict: {str: Tensor})
+:return: output (dict: {str: Tensor})</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="dynamics.BlockSSM.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlockSSM.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlockSSM.reg_error" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#BlockSSM.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.BlockSSM.reg_error" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="dynamics.LinearSSM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">LinearSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#LinearSSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.LinearSSM" title="Permalink to this definition"></a></dt>
-<dd><dl class="py attribute">
-<dt class="sig sig-object py" id="dynamics.LinearSSM.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#dynamics.LinearSSM.training" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">LinearSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#LinearSSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.LinearSSM" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Implementation of discrete-time Linear State Space Model (LSSM).</dt><dd><p>x_{t+1} = A x_t + B u_t + E d_t
+y_{t+1} = C x_{t+1}</p>
+</dd>
+<dt>Where:</dt><dd><p>x - state variables
+y - measurement variables
+y - control input variables
+d - disturbance variables</p>
+</dd>
+</dl>
+<p>LinearSSM is implemented as a specific instance of BlockSSM.</p>
+<dl class="simple">
+<dt>for more information about LSSMs see:</dt><dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/State-space_representation">https://en.wikipedia.org/wiki/State-space_representation</a>
+<a class="reference external" href="https://www.mathworks.com/help/ident/ug/what-are-state-space-models.html">https://www.mathworks.com/help/ident/ug/what-are-state-space-models.html</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="dynamics.ODEAuto">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">ODEAuto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dynamics'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODEAuto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODEAuto" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">ODEAuto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dynamics'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODEAuto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODEAuto" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.ODEAuto.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x0',</span> <span class="pre">'Yf']</span></em><a class="headerlink" href="#dynamics.ODEAuto.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x0',</span> <span class="pre">'Yf']</span></em><a class="headerlink" href="#dynamics.ODEAuto.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.ODEAuto.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['reg_error',</span> <span class="pre">'X_pred',</span> <span class="pre">'Y_pred']</span></em><a class="headerlink" href="#dynamics.ODEAuto.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['reg_error',</span> <span class="pre">'X_pred',</span> <span class="pre">'Y_pred']</span></em><a class="headerlink" href="#dynamics.ODEAuto.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>State space model for solving autonomous ODEs w/ single-step integrators:</dt><dd><p><span class="math notranslate nohighlight">\(x_{t+1} = ODESolve(f_x(x_t))\)</span>
+<span class="math notranslate nohighlight">\(y_t =  f_y(x_t)\)</span>
+<span class="math notranslate nohighlight">\(dx_t/dt = f_x(x_t)\)</span> - defined ODE system
+<span class="math notranslate nohighlight">\(ODESolve(f_x(x_t))\)</span> - ODE solver that integrates the ODE system, e.g. RK</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dynamics.ODEAuto.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODEAuto.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODEAuto.forward" title="Permalink to this definition"></a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODEAuto.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODEAuto.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>performs nstep ahead rollout of a given dynamical system model</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dynamics.ODEAuto.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODEAuto.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODEAuto.reg_error" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODEAuto.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODEAuto.reg_error" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>0-dimensional torch.Tensor</p>
 </dd>
 </dl>
@@ -257,27 +414,35 @@ registered hooks while the latter silently ignores them.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="dynamics.ODENonAuto">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">ODENonAuto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dynamics'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_inputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">online_flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODENonAuto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODENonAuto" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">ODENonAuto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dynamics'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_inputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">online_flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODENonAuto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODENonAuto" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.ODENonAuto.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x0',</span> <span class="pre">'Yf']</span></em><a class="headerlink" href="#dynamics.ODENonAuto.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x0',</span> <span class="pre">'Yf']</span></em><a class="headerlink" href="#dynamics.ODENonAuto.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.ODENonAuto.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['reg_error',</span> <span class="pre">'X_pred',</span> <span class="pre">'Y_pred']</span></em><a class="headerlink" href="#dynamics.ODENonAuto.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['reg_error',</span> <span class="pre">'X_pred',</span> <span class="pre">'Y_pred']</span></em><a class="headerlink" href="#dynamics.ODENonAuto.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>State space model for non-autonomous ODEs w/ single-step integrators:</dt><dd><p><span class="math notranslate nohighlight">\(x_{t+1} = ODESolve(f_x(x_t, u_t, Time))\)</span>
+<span class="math notranslate nohighlight">\(y_t =  f_y(x_t)\)</span>
+<span class="math notranslate nohighlight">\(dx_t/dt = f_x(x_t, u_t, Time)\)</span> - defined ODE system with inputs u_t and Time
+<span class="math notranslate nohighlight">\(ODESolve(f_x(x_t, u_t, Time))\)</span> - ODE solver that integrates the ODE system, e.g. RK</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dynamics.ODENonAuto.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODENonAuto.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODENonAuto.forward" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODENonAuto.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODENonAuto.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>performs nstep ahead rollout of a given dynamical system model</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dynamics.ODENonAuto.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODENonAuto.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODENonAuto.reg_error" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#ODENonAuto.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.ODENonAuto.reg_error" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>0-dimensional torch.Tensor</p>
 </dd>
 </dl>
@@ -287,67 +452,101 @@ registered hooks while the latter silently ignores them.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="dynamics.SSM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">SSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#SSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.SSM" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">SSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#SSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.SSM" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.SSM.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dynamics.SSM.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dynamics.SSM.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="dynamics.SSM.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dynamics.SSM.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dynamics.SSM.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base State Space Model (SSM) class</p>
+<p>This class is used to manage naming of component input and output variables as they flow
+through the computational graph, as well as handle potential remapping of input and output keys
+to different names. It additionally provides a useful reference for users to see how components
+can be connected together in the overall computational graph.</p>
+<p>Components that inherit from this class should specify the class attributes DEFAULT_INPUT_KEYS
+and DEFAULT_OUTPUT_KEYS; these are used as the “canonical” names for input and output variables,
+respectively. These can be used to compare different components’ output and input keys to see
+whether one component can accept another’s output by default.</p>
+<p>By default, components have a <cite>name</cite> argument which is used to tag the output variables they
+generate; for instance, for a component called “estim”, the canonical output “x0” is renamed to
+“x0_estim”.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">estim</span> <span class="o">=</span> <span class="n">LinearEstimator</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;estim&quot;</span><span class="p">)</span>  <span class="c1"># output &quot;x0&quot; remapped to &quot;x0_estim&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ssm</span> <span class="o">=</span> <span class="n">BlockSSM</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{</span><span class="sa">f</span><span class="s2">&quot;x0_</span><span class="si">{</span><span class="n">estim</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="s2">&quot;x0&quot;</span><span class="p">})</span>  <span class="c1"># input_keys used to remap to canonical name</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dynamics.SSM.update_input_keys">
-<span class="sig-name descname"><span class="pre">update_input_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#SSM.update_input_keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.SSM.update_input_keys" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">update_input_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#SSM.update_input_keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.SSM.update_input_keys" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dynamics.blackbox_model">
-<span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">blackbox_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonlinmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_layers=2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fe=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fyu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linargs={}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoyu=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoe=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map={}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name='blackbox_model'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_inputs=[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#blackbox_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.blackbox_model" title="Permalink to this definition"></a></dt>
-<dd><p>Black box state space model.</p>
+<span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">blackbox_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonlinmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_layers=2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fe=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fyu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linargs={}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoyu=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoe=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map={}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name='blackbox_model'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_inputs=[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#blackbox_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.blackbox_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function that generates a black box state space model.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dynamics.block_model">
-<span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">block_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datadims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonlinmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_layers=2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fe=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fyu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">residual=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linargs={}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xou=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xod=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoe=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoyu=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name='blockmodel'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map={}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#block_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.block_model" title="Permalink to this definition"></a></dt>
-<dd><p>Generate a block-structured SSM with the same structure used across fx, fy, fu, and fd.</p>
+<span class="sig-prename descclassname"><span class="pre">dynamics.</span></span><span class="sig-name descname"><span class="pre">block_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datadims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonlinmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_layers=2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fe=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fyu=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">residual=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linargs={}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xou=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xod=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoe=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xoyu=&lt;built-in</span> <span class="pre">method</span> <span class="pre">add</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name='blockmodel'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map={}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dynamics.html#block_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dynamics.block_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function that generates a block-structured SSM with the same structure used across fx, fy, fu, and fd.</p>
 </dd></dl>
 
 </section>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="NeuroMANCER" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="activations.html" class="btn btn-neutral float-right" title="Activations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="activations.html" class="btn btn-neutral float-right" title="Activations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="NeuroMANCER" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
-  </div>
+    <p>
+        &copy; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

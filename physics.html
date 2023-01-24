@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Physics &mdash; NeuroMANCER 1.2.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Simulator" href="simulator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
+            <img src="_static/dadaist.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot.html">Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problem.html">Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rnn.html">RNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulators.html">Simulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trainer.html">Trainer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arg.html">Arg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="component.html">Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constraint.html">Constraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounds.html">Bounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnn.html">GNN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graph_dynamics.html">Graph Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrators.html">Integrators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#physics.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physics.Agent.forward"><code class="docutils literal notranslate"><span class="pre">Agent.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#physics.Agent.intrinsic"><code class="docutils literal notranslate"><span class="pre">Agent.intrinsic()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#physics.DeltaTemp"><code class="docutils literal notranslate"><span class="pre">DeltaTemp</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physics.DeltaTemp.interact"><code class="docutils literal notranslate"><span class="pre">DeltaTemp.interact()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#physics.DeltaTempSwitch"><code class="docutils literal notranslate"><span class="pre">DeltaTempSwitch</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physics.DeltaTempSwitch.interact"><code class="docutils literal notranslate"><span class="pre">DeltaTempSwitch.interact()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#physics.HVACConnection"><code class="docutils literal notranslate"><span class="pre">HVACConnection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physics.HVACConnection.interact"><code class="docutils literal notranslate"><span class="pre">HVACConnection.interact()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#physics.Interaction"><code class="docutils literal notranslate"><span class="pre">Interaction</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physics.Interaction.forward"><code class="docutils literal notranslate"><span class="pre">Interaction.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#physics.Interaction.interact"><code class="docutils literal notranslate"><span class="pre">Interaction.interact()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#physics.RCNode"><code class="docutils literal notranslate"><span class="pre">RCNode</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physics.RCNode.intrinsic"><code class="docutils literal notranslate"><span class="pre">RCNode.intrinsic()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#physics.SourceSink"><code class="docutils literal notranslate"><span class="pre">SourceSink</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physics.SourceSink.intrinsic"><code class="docutils literal notranslate"><span class="pre">SourceSink.intrinsic()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#physics.map_from_agents"><code class="docutils literal notranslate"><span class="pre">map_from_agents()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NeuroMANCER</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Physics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/physics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-physics">
+<span id="physics"></span><h1>Physics<a class="headerlink" href="#module-physics" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="physics.Agent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">physics.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_names</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#Agent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.Agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>An agent is an object in a networked or otherwise distributed system that can:
+- have some intrinsic physics
+- serve as anchor for connections (pins)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.Agent.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#Agent.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.Agent.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.Agent.intrinsic">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intrinsic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#Agent.intrinsic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.Agent.intrinsic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="physics.DeltaTemp">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">physics.</span></span><span class="sig-name descname"><span class="pre">DeltaTemp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R=Parameter</span> <span class="pre">containing:</span> <span class="pre">tensor(1.</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requires_grad=True)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_name='T'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pins=[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#DeltaTemp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.DeltaTemp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interaction physics for difference in temperature (assumed) between agents.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.DeltaTemp.interact">
+<span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#DeltaTemp.interact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.DeltaTemp.interact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="physics.DeltaTempSwitch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">physics.</span></span><span class="sig-name descname"><span class="pre">DeltaTempSwitch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">R=Parameter</span> <span class="pre">containing:</span> <span class="pre">tensor([1.],</span> <span class="pre">requires_grad=True),</span> <span class="pre">feature_name='T',</span> <span class="pre">symmetric=False,</span> <span class="pre">pins=[]</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#DeltaTempSwitch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.DeltaTempSwitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interaction physics for difference in temperature (assumed) between agents. Switched on/off 
+depending on agent values (zero or nonzero).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.DeltaTempSwitch.interact">
+<span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#DeltaTempSwitch.interact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.DeltaTempSwitch.interact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="physics.HVACConnection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">physics.</span></span><span class="sig-name descname"><span class="pre">HVACConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'T'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#HVACConnection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.HVACConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imposition of a source term as an interaction.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.HVACConnection.interact">
+<span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#HVACConnection.interact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.HVACConnection.interact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="physics.Interaction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">physics.</span></span><span class="sig-name descname"><span class="pre">Interaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#Interaction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.Interaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>An interaction is a physical connection between agents:
+- interactions are pairwise
+- interactions can be one-sided or symmetric (influence both agents)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.Interaction.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#Interaction.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.Interaction.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.Interaction.interact">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#Interaction.interact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.Interaction.interact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="physics.RCNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">physics.</span></span><span class="sig-name descname"><span class="pre">RCNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">C=Parameter</span> <span class="pre">containing:</span> <span class="pre">tensor([1.],</span> <span class="pre">requires_grad=True),</span> <span class="pre">state_names=['T'],</span> <span class="pre">scaling=1.0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#RCNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.RCNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>RCNode agent. The intrinsic action of the agent is to effectively scale the interaction physics 
+according to the capacitance of the agent. Examples include lumped volumes, rooms, etc.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.RCNode.intrinsic">
+<span class="sig-name descname"><span class="pre">intrinsic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#RCNode.intrinsic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.RCNode.intrinsic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="physics.SourceSink">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">physics.</span></span><span class="sig-name descname"><span class="pre">SourceSink</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['T']</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#SourceSink"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.SourceSink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic Source / Sink agent. Useful for ‘dummy’ agents to which one can attach external signals.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="physics.SourceSink.intrinsic">
+<span class="sig-name descname"><span class="pre">intrinsic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#SourceSink.intrinsic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.SourceSink.intrinsic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="physics.map_from_agents">
+<span class="sig-prename descclassname"><span class="pre">physics.</span></span><span class="sig-name descname"><span class="pre">map_from_agents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intrinsic_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/physics.html#map_from_agents"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#physics.map_from_agents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quick helper function to construct state mappings:</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="simulator.html" class="btn btn-neutral float-left" title="Simulator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,36 +1,78 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simulator &mdash; NeuroMANCER 1.2.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <title>Simulator &mdash; NeuroMANCER 1.2.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Physics" href="physics.html" />
     <link rel="prev" title="Solvers" href="solvers.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
             <img src="_static/dadaist.png" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -38,7 +80,17 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
@@ -69,41 +121,188 @@
 <li class="toctree-l1"><a class="reference internal" href="ode.html">ODE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.ControllerCallable"><code class="docutils literal notranslate"><span class="pre">ControllerCallable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.ControllerCallable.eval_policy"><code class="docutils literal notranslate"><span class="pre">ControllerCallable.eval_policy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.ControllerLinear"><code class="docutils literal notranslate"><span class="pre">ControllerLinear</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.ControllerLinear.eval_policy"><code class="docutils literal notranslate"><span class="pre">ControllerLinear.eval_policy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.ControllerPytorch"><code class="docutils literal notranslate"><span class="pre">ControllerPytorch</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.ControllerPytorch.eval_policy"><code class="docutils literal notranslate"><span class="pre">ControllerPytorch.eval_policy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.DynamicsLinSSM"><code class="docutils literal notranslate"><span class="pre">DynamicsLinSSM</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.DynamicsLinSSM.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">DynamicsLinSSM.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.DynamicsLinSSM.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">DynamicsLinSSM.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.DynamicsLinSSM.OPTIONAL_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">DynamicsLinSSM.OPTIONAL_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.DynamicsLinSSM.eval_model"><code class="docutils literal notranslate"><span class="pre">DynamicsLinSSM.eval_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.DynamicsNeuromancer"><code class="docutils literal notranslate"><span class="pre">DynamicsNeuromancer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.DynamicsNeuromancer.eval_model"><code class="docutils literal notranslate"><span class="pre">DynamicsNeuromancer.eval_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.DynamicsPSL"><code class="docutils literal notranslate"><span class="pre">DynamicsPSL</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.DynamicsPSL.eval_model"><code class="docutils literal notranslate"><span class="pre">DynamicsPSL.eval_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.EstimatorCallable"><code class="docutils literal notranslate"><span class="pre">EstimatorCallable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.EstimatorCallable.eval_estimator"><code class="docutils literal notranslate"><span class="pre">EstimatorCallable.eval_estimator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.EstimatorLinear"><code class="docutils literal notranslate"><span class="pre">EstimatorLinear</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.EstimatorLinear.eval_estimator"><code class="docutils literal notranslate"><span class="pre">EstimatorLinear.eval_estimator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.EstimatorPytorch"><code class="docutils literal notranslate"><span class="pre">EstimatorPytorch</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.EstimatorPytorch.eval_estimator"><code class="docutils literal notranslate"><span class="pre">EstimatorPytorch.eval_estimator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.MovingHorizon"><code class="docutils literal notranslate"><span class="pre">MovingHorizon</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.MovingHorizon.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">MovingHorizon.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.MovingHorizon.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">MovingHorizon.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.MovingHorizon.OPTIONAL_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">MovingHorizon.OPTIONAL_INPUT_KEYS</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.SystemComponent"><code class="docutils literal notranslate"><span class="pre">SystemComponent</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemComponent.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemComponent.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemComponent.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemComponent.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemComponent.OPTIONAL_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemComponent.OPTIONAL_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemComponent.step"><code class="docutils literal notranslate"><span class="pre">SystemComponent.step()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.SystemConstraints"><code class="docutils literal notranslate"><span class="pre">SystemConstraints</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemConstraints.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemConstraints.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemConstraints.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemConstraints.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemConstraints.OPTIONAL_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemConstraints.OPTIONAL_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemConstraints.eval_constraints"><code class="docutils literal notranslate"><span class="pre">SystemConstraints.eval_constraints()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemConstraints.post_process"><code class="docutils literal notranslate"><span class="pre">SystemConstraints.post_process()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemConstraints.pre_process"><code class="docutils literal notranslate"><span class="pre">SystemConstraints.pre_process()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.SystemController"><code class="docutils literal notranslate"><span class="pre">SystemController</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemController.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemController.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemController.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemController.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemController.OPTIONAL_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemController.OPTIONAL_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemController.eval_policy"><code class="docutils literal notranslate"><span class="pre">SystemController.eval_policy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemController.features"><code class="docutils literal notranslate"><span class="pre">SystemController.features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemController.rhc"><code class="docutils literal notranslate"><span class="pre">SystemController.rhc()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.SystemDynamics"><code class="docutils literal notranslate"><span class="pre">SystemDynamics</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemDynamics.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemDynamics.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemDynamics.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemDynamics.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemDynamics.OPTIONAL_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemDynamics.OPTIONAL_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemDynamics.eval_model"><code class="docutils literal notranslate"><span class="pre">SystemDynamics.eval_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemDynamics.update_input_keys"><code class="docutils literal notranslate"><span class="pre">SystemDynamics.update_input_keys()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.SystemEstimator"><code class="docutils literal notranslate"><span class="pre">SystemEstimator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemEstimator.DEFAULT_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemEstimator.DEFAULT_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemEstimator.DEFAULT_OUTPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemEstimator.DEFAULT_OUTPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemEstimator.OPTIONAL_INPUT_KEYS"><code class="docutils literal notranslate"><span class="pre">SystemEstimator.OPTIONAL_INPUT_KEYS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemEstimator.eval_estimator"><code class="docutils literal notranslate"><span class="pre">SystemEstimator.eval_estimator()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemEstimator.features"><code class="docutils literal notranslate"><span class="pre">SystemEstimator.features()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulator.SystemSimulator"><code class="docutils literal notranslate"><span class="pre">SystemSimulator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemSimulator.get_trajectories"><code class="docutils literal notranslate"><span class="pre">SystemSimulator.get_trajectories()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemSimulator.graph"><code class="docutils literal notranslate"><span class="pre">SystemSimulator.graph()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemSimulator.plot_graph"><code class="docutils literal notranslate"><span class="pre">SystemSimulator.plot_graph()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemSimulator.select_data_step"><code class="docutils literal notranslate"><span class="pre">SystemSimulator.select_data_step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemSimulator.simulate"><code class="docutils literal notranslate"><span class="pre">SystemSimulator.simulate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulator.SystemSimulator.step"><code class="docutils literal notranslate"><span class="pre">SystemSimulator.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="physics.html">Physics</a></li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NeuroMANCER</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Simulator</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Simulator</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+            
             <a href="_sources/simulator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="module-simulator">
-<span id="simulator"></span><h1>Simulator<a class="headerlink" href="#module-simulator" title="Permalink to this headline"></a></h1>
+<span id="simulator"></span><h1>Simulator<a class="headerlink" href="#module-simulator" title="Permalink to this heading">¶</a></h1>
+<dl class="simple">
+<dt>Classes for construction of open-loop and closed-loop Simulators.</dt><dd><ul class="simple">
+<li><p>SystemSimulator: aggregator class creating directed (possibly cyclic) computational graph</p></li>
+<li><p>SystemComponent: base abstract class for simulation components</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.ControllerCallable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">ControllerCallable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#ControllerCallable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerCallable" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">ControllerCallable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#ControllerCallable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerCallable" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Control policy class via generic python callable</dt><dd><p>u = policy(features)</p>
+</dd>
+</dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="simulator.ControllerCallable.eval_policy">
-<span class="sig-name descname"><span class="pre">eval_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#ControllerCallable.eval_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerCallable.eval_policy" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#ControllerCallable.eval_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerCallable.eval_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass policy evaluation</p>
 </dd></dl>
 
@@ -111,10 +310,18 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.ControllerLinear">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">ControllerLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#ControllerLinear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerLinear" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">ControllerLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#ControllerLinear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerLinear" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Linear control policy class:</dt><dd><p>u = K*features</p>
+</dd>
+<dt>where:</dt><dd><p>K - control gain matrix
+u - control action variables
+features - feature variables defined via input_keys</p>
+</dd>
+</dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="simulator.ControllerLinear.eval_policy">
-<span class="sig-name descname"><span class="pre">eval_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#ControllerLinear.eval_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerLinear.eval_policy" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#ControllerLinear.eval_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerLinear.eval_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass policy evaluation</p>
 </dd></dl>
 
@@ -122,10 +329,14 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.ControllerPytorch">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">ControllerPytorch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#ControllerPytorch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerPytorch" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">ControllerPytorch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#ControllerPytorch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerPytorch" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Control policy class via generic Pytorch nn.Module</dt><dd><p>u = policy(features)</p>
+</dd>
+</dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="simulator.ControllerPytorch.eval_policy">
-<span class="sig-name descname"><span class="pre">eval_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#ControllerPytorch.eval_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerPytorch.eval_policy" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#ControllerPytorch.eval_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.ControllerPytorch.eval_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass policy evaluation</p>
 </dd></dl>
 
@@ -133,15 +344,15 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.DynamicsLinSSM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">DynamicsLinSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#DynamicsLinSSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsLinSSM" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">DynamicsLinSSM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#DynamicsLinSSM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsLinSSM" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.DynamicsLinSSM.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'u']</span></em><a class="headerlink" href="#simulator.DynamicsLinSSM.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'u']</span></em><a class="headerlink" href="#simulator.DynamicsLinSSM.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.DynamicsLinSSM.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'y']</span></em><a class="headerlink" href="#simulator.DynamicsLinSSM.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'y']</span></em><a class="headerlink" href="#simulator.DynamicsLinSSM.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Class implementing Linear Time Invariant State Space Model </dt><dd><p>x_{t+1} = A x_t + B u_t + E d_t + w_t
 y_{t+1} = C x_{t+1} + D u_t</p>
@@ -151,12 +362,12 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.DynamicsLinSSM.OPTIONAL_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['d',</span> <span class="pre">'w',</span> <span class="pre">'Time']</span></em><a class="headerlink" href="#simulator.DynamicsLinSSM.OPTIONAL_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['d',</span> <span class="pre">'w',</span> <span class="pre">'Time']</span></em><a class="headerlink" href="#simulator.DynamicsLinSSM.OPTIONAL_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.DynamicsLinSSM.eval_model">
-<span class="sig-name descname"><span class="pre">eval_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#DynamicsLinSSM.eval_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsLinSSM.eval_model" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#DynamicsLinSSM.eval_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsLinSSM.eval_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>this internal method implements forward pass of a given system</p>
 </dd></dl>
 
@@ -164,11 +375,15 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.DynamicsNeuromancer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">DynamicsNeuromancer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#DynamicsNeuromancer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsNeuromancer" title="Permalink to this definition"></a></dt>
-<dd><p>Wrapper for Neuromancer SSM class</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">DynamicsNeuromancer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#DynamicsNeuromancer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsNeuromancer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for Neuromancer state space model (SSM) classes defined in neuromancer.dynamics.py
+For complete documentaton of Neuromancer’s SSM classes see:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://pnnl.github.io/neuromancer/dynamics.html">https://pnnl.github.io/neuromancer/dynamics.html</a></p>
+</div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.DynamicsNeuromancer.eval_model">
-<span class="sig-name descname"><span class="pre">eval_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#DynamicsNeuromancer.eval_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsNeuromancer.eval_model" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#DynamicsNeuromancer.eval_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsNeuromancer.eval_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>this internal method implements forward pass of a given system</p>
 </dd></dl>
 
@@ -176,14 +391,14 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.DynamicsPSL">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">DynamicsPSL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#DynamicsPSL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsPSL" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">DynamicsPSL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#DynamicsPSL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsPSL" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
-<dt>Wrapper for PSL system model</dt><dd><p>x_{t+1}, y_{t+1} = pslODE(x_t, u_t, d_t)</p>
+<dt>Wrapper for PSL system model simulating ordinary differential equation models:</dt><dd><p>x_{t+1}, y_{t+1} = ODE(x_t, u_t, d_t)</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.DynamicsPSL.eval_model">
-<span class="sig-name descname"><span class="pre">eval_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#DynamicsPSL.eval_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsPSL.eval_model" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#DynamicsPSL.eval_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.DynamicsPSL.eval_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>this internal method implements forward pass of a given system</p>
 </dd></dl>
 
@@ -191,10 +406,11 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.EstimatorCallable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">EstimatorCallable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#EstimatorCallable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorCallable" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">EstimatorCallable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#EstimatorCallable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorCallable" title="Permalink to this definition">¶</a></dt>
+<dd><p>System estimator given as a generic python callable.</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="simulator.EstimatorCallable.eval_estimator">
-<span class="sig-name descname"><span class="pre">eval_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#EstimatorCallable.eval_estimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorCallable.eval_estimator" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#EstimatorCallable.eval_estimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorCallable.eval_estimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass estimator evaluation</p>
 </dd></dl>
 
@@ -202,10 +418,18 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.EstimatorLinear">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">EstimatorLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#EstimatorLinear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorLinear" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">EstimatorLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#EstimatorLinear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorLinear" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Linear state estimator K.</dt><dd><p>x = K*m</p>
+</dd>
+<dt>where:</dt><dd><p>K - state estimator gain
+x - estimated state variable
+m - measurement variables defined via input_keys</p>
+</dd>
+</dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="simulator.EstimatorLinear.eval_estimator">
-<span class="sig-name descname"><span class="pre">eval_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#EstimatorLinear.eval_estimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorLinear.eval_estimator" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#EstimatorLinear.eval_estimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorLinear.eval_estimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass estimator evaluation</p>
 </dd></dl>
 
@@ -213,10 +437,11 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.EstimatorPytorch">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">EstimatorPytorch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#EstimatorPytorch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorPytorch" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">EstimatorPytorch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#EstimatorPytorch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorPytorch" title="Permalink to this definition">¶</a></dt>
+<dd><p>System estimator via generic Pytorch nn.Module</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="simulator.EstimatorPytorch.eval_estimator">
-<span class="sig-name descname"><span class="pre">eval_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#EstimatorPytorch.eval_estimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorPytorch.eval_estimator" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#EstimatorPytorch.eval_estimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.EstimatorPytorch.eval_estimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass estimator evaluation</p>
 </dd></dl>
 
@@ -224,47 +449,51 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.MovingHorizon">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">MovingHorizon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#MovingHorizon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.MovingHorizon" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">MovingHorizon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#MovingHorizon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.MovingHorizon" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.MovingHorizon.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.MovingHorizon.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.MovingHorizon.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.MovingHorizon.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.MovingHorizon.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd><p>Base class of the Closed loop system</p>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.MovingHorizon.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moving horizon class is creating sliding window of input time series data 
+with nstep horizon length.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.MovingHorizon.OPTIONAL_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.MovingHorizon.OPTIONAL_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.MovingHorizon.OPTIONAL_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.SystemComponent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemComponent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemComponent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemComponent" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemComponent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemComponent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemComponent" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemComponent.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#simulator.SystemComponent.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#simulator.SystemComponent.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemComponent.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#simulator.SystemComponent.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd><p>Base class of the Closed loop system</p>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#simulator.SystemComponent.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base abstract class representing component of the Simulator system.
+The behavior of each component is defined in the _forward_step() method.
+Each component has atributes .input_keys and .output_keys given as list of strings
+that define input and ouptut variables of the component, respectively.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemComponent.OPTIONAL_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#simulator.SystemComponent.OPTIONAL_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#simulator.SystemComponent.OPTIONAL_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemComponent.step">
-<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemComponent.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemComponent.step" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemComponent.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemComponent.step" title="Permalink to this definition">¶</a></dt>
 <dd><p>method for evaluating single step of a given system</p>
 </dd></dl>
 
@@ -272,173 +501,218 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.SystemConstraints">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constraints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemConstraints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemConstraints" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constraints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemConstraints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemConstraints.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemConstraints.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemConstraints.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemConstraints.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemConstraints.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd><p>Base class of the Closed loop system</p>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemConstraints.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weapper class to evaluate Neuromancer constraints in the SystemSimulator.
+For a complete documentation of Neuromancer’s constraints see:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://pnnl.github.io/neuromancer/constraint.html">https://pnnl.github.io/neuromancer/constraint.html</a></p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemConstraints.OPTIONAL_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemConstraints.OPTIONAL_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemConstraints.OPTIONAL_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemConstraints.eval_constraints">
-<span class="sig-name descname"><span class="pre">eval_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemConstraints.eval_constraints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemConstraints.eval_constraints" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemConstraints.eval_constraints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemConstraints.eval_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass policy evaluation</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemConstraints.post_process">
-<span class="sig-name descname"><span class="pre">post_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemConstraints.post_process"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemConstraints.post_process" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">post_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemConstraints.post_process"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemConstraints.post_process" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemConstraints.pre_process">
-<span class="sig-name descname"><span class="pre">pre_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemConstraints.pre_process"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemConstraints.pre_process" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">pre_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemConstraints.pre_process"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemConstraints.pre_process" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.SystemController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemController"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemController" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemController"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemController" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemController.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemController.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemController.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemController.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['u']</span></em><a class="headerlink" href="#simulator.SystemController.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd><p>Base class of the Closed loop system</p>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['u']</span></em><a class="headerlink" href="#simulator.SystemController.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base control policy class mapping feature variables defined via input_keys
+onto control action variables u.
+Control policy is given as:</p>
+<blockquote>
+<div><p>u = policy(features)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>where:</dt><dd><p>policy - control policy callable
+u - control action variables
+features - feature variables defined via input_keys</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemController.OPTIONAL_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemController.OPTIONAL_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemController.OPTIONAL_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemController.eval_policy">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eval_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#SystemController.eval_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemController.eval_policy" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eval_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#SystemController.eval_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemController.eval_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass policy evaluation</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemController.features">
-<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemController.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemController.features" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemController.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemController.features" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemController.rhc">
-<span class="sig-name descname"><span class="pre">rhc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemController.rhc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemController.rhc" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rhc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemController.rhc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemController.rhc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.SystemDynamics">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemDynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemDynamics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemDynamics" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemDynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemDynamics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemDynamics" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemDynamics.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x']</span></em><a class="headerlink" href="#simulator.SystemDynamics.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x']</span></em><a class="headerlink" href="#simulator.SystemDynamics.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemDynamics.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'y']</span></em><a class="headerlink" href="#simulator.SystemDynamics.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd><p>Base class of closed loop dynamics models</p>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x',</span> <span class="pre">'y']</span></em><a class="headerlink" href="#simulator.SystemDynamics.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base SystemComponent class for the dynamics models.</p>
+<dl class="simple">
+<dt>Default input keys: </dt><dd><p>“x” - state variables</p>
+</dd>
+<dt>Optional input keys:</dt><dd><p>“u” - control input variables
+“d” - observable disturbance variables
+“w” - unobservable disturbance variables
+“Time” - time variable</p>
+</dd>
+<dt>Default output keys:</dt><dd><p>“x” - state variables
+“y” - observable state variables</p>
+</dd>
+</dl>
+<p>The forward step behavior of the model is defined via .eval_model() method.
+Forward step updates output key variables variables based on input key variables.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemDynamics.OPTIONAL_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['u',</span> <span class="pre">'d',</span> <span class="pre">'w',</span> <span class="pre">'Time']</span></em><a class="headerlink" href="#simulator.SystemDynamics.OPTIONAL_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['u',</span> <span class="pre">'d',</span> <span class="pre">'w',</span> <span class="pre">'Time']</span></em><a class="headerlink" href="#simulator.SystemDynamics.OPTIONAL_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemDynamics.eval_model">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eval_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemDynamics.eval_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemDynamics.eval_model" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eval_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemDynamics.eval_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemDynamics.eval_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>this internal method implements forward pass of a given system</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemDynamics.update_input_keys">
-<span class="sig-name descname"><span class="pre">update_input_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemDynamics.update_input_keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemDynamics.update_input_keys" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">update_input_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_key_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemDynamics.update_input_keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemDynamics.update_input_keys" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.SystemEstimator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemEstimator" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemEstimator.DEFAULT_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemEstimator.DEFAULT_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DEFAULT_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemEstimator.DEFAULT_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemEstimator.DEFAULT_OUTPUT_KEYS">
-<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x']</span></em><a class="headerlink" href="#simulator.SystemEstimator.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition"></a></dt>
-<dd><p>Base class of the Closed loop system</p>
+<span class="sig-name descname"><span class="pre">DEFAULT_OUTPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['x']</span></em><a class="headerlink" href="#simulator.SystemEstimator.DEFAULT_OUTPUT_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd><p>SystemEstimator is a class that wraps state estimator callables.
+Estimators compute state variable estimates based on measurement data 
+given by variables defined in the input_keys.
+Estimator is defined as:</p>
+<blockquote>
+<div><p>x = estimator(m)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>where:</dt><dd><p>estimator - state estimator callable
+x - estimated state variable
+m - measurement variables defined via input_keys</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="simulator.SystemEstimator.OPTIONAL_INPUT_KEYS">
-<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemEstimator.OPTIONAL_INPUT_KEYS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">OPTIONAL_INPUT_KEYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#simulator.SystemEstimator.OPTIONAL_INPUT_KEYS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemEstimator.eval_estimator">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eval_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#SystemEstimator.eval_estimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemEstimator.eval_estimator" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eval_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/simulator.html#SystemEstimator.eval_estimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemEstimator.eval_estimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>implements forward pass estimator evaluation</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemEstimator.features">
-<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemEstimator.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemEstimator.features" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemEstimator.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemEstimator.features" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="simulator.SystemSimulator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemSimulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#simulator.SystemComponent" title="simulator.SystemComponent"><span class="pre">simulator.SystemComponent</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemSimulator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">simulator.</span></span><span class="sig-name descname"><span class="pre">SystemSimulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#simulator.SystemComponent" title="simulator.SystemComponent"><span class="pre">SystemComponent</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemSimulator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator" title="Permalink to this definition">¶</a></dt>
+<dd><p>SystemSimulator aggregates connected SystemComponent classes to form a simulation loop
+and performs simulation via .simulate() method.
+SystemSimulator supports simulation of directed cyclic computational graphs
+connecting SystemComponent via their input_keys and output_keys.</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemSimulator.get_trajectories">
-<span class="sig-name descname"><span class="pre">get_trajectories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.get_trajectories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.get_trajectories" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_trajectories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.get_trajectories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.get_trajectories" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemSimulator.graph">
-<span class="sig-name descname"><span class="pre">graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.graph" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.graph" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemSimulator.plot_graph">
-<span class="sig-name descname"><span class="pre">plot_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'closed_loop_graph.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.plot_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.plot_graph" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">plot_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'closed_loop_graph.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.plot_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.plot_graph" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemSimulator.select_data_step">
-<span class="sig-name descname"><span class="pre">select_data_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_init</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_traj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.select_data_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.select_data_step" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">select_data_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_init</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_traj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.select_data_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.select_data_step" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemSimulator.simulate">
-<span class="sig-name descname"><span class="pre">simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_init</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_traj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.simulate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.simulate" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_init</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_traj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.simulate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.simulate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="simulator.SystemSimulator.step">
-<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.step" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/simulator.html#SystemSimulator.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#simulator.SystemSimulator.step" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -447,32 +721,51 @@ y_{t+1} = C x_{t+1} + D u_t</p>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="solvers.html" class="btn btn-neutral float-left" title="Solvers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="physics.html" class="btn btn-neutral float-right" title="Physics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="solvers.html" class="btn btn-neutral float-left" title="Solvers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
-  </div>
+    <p>
+        &copy; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -1,37 +1,78 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estimators &mdash; NeuroMANCER 1.2.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <title>Estimators &mdash; NeuroMANCER 1.2.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Loggers" href="loggers.html" />
     <link rel="prev" title="Dataset" href="dataset.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
             <img src="_static/dadaist.png" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -39,14 +80,52 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Estimators</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Estimators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#estimators.FullyObservable"><code class="docutils literal notranslate"><span class="pre">FullyObservable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#estimators.FullyObservable.features"><code class="docutils literal notranslate"><span class="pre">FullyObservable.features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#estimators.FullyObservable.reg_error"><code class="docutils literal notranslate"><span class="pre">FullyObservable.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estimators.FullyObservableAugmented"><code class="docutils literal notranslate"><span class="pre">FullyObservableAugmented</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#estimators.FullyObservableAugmented.features"><code class="docutils literal notranslate"><span class="pre">FullyObservableAugmented.features()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estimators.LinearEstimator"><code class="docutils literal notranslate"><span class="pre">LinearEstimator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estimators.MLPAugmentedEstimator"><code class="docutils literal notranslate"><span class="pre">MLPAugmentedEstimator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#estimators.MLPAugmentedEstimator.forward"><code class="docutils literal notranslate"><span class="pre">MLPAugmentedEstimator.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estimators.MLPEstimator"><code class="docutils literal notranslate"><span class="pre">MLPEstimator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estimators.RNNEstimator"><code class="docutils literal notranslate"><span class="pre">RNNEstimator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#estimators.RNNEstimator.forward"><code class="docutils literal notranslate"><span class="pre">RNNEstimator.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estimators.ResMLPEstimator"><code class="docutils literal notranslate"><span class="pre">ResMLPEstimator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estimators.TimeDelayEstimator"><code class="docutils literal notranslate"><span class="pre">TimeDelayEstimator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#estimators.TimeDelayEstimator.features"><code class="docutils literal notranslate"><span class="pre">TimeDelayEstimator.features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#estimators.TimeDelayEstimator.forward"><code class="docutils literal notranslate"><span class="pre">TimeDelayEstimator.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#estimators.TimeDelayEstimator.reg_error"><code class="docutils literal notranslate"><span class="pre">TimeDelayEstimator.reg_error()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operators.html">Operators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot.html">Plot</a></li>
@@ -71,34 +150,73 @@
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physics.html">Physics</a></li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NeuroMANCER</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Estimators</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Estimators</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+            
             <a href="_sources/estimators.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="module-estimators">
-<span id="estimators"></span><h1>Estimators<a class="headerlink" href="#module-estimators" title="Permalink to this headline"></a></h1>
+<span id="estimators"></span><h1>Estimators<a class="headerlink" href="#module-estimators" title="Permalink to this heading">¶</a></h1>
 <dl class="simple">
 <dt>State estimators for SSM models</dt><dd><ul class="simple">
 <li><p>x: states (x0 - initial conditions)</p></li>
@@ -110,16 +228,16 @@
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="estimators.FullyObservable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">FullyObservable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.linear.Identity'&gt;,</span> <span class="pre">hsizes=[],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='fully_observable'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservable" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">FullyObservable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.linear.Identity'&gt;,</span> <span class="pre">hsizes=[],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='fully_observable'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservable" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="estimators.FullyObservable.features">
-<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservable.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservable.features" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservable.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservable.features" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compile a feature vector using data features corresponding to self.input_keys</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>data</strong> – (dict {str: torch.Tensor})</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(torch.Tensor)</p>
 </dd>
 </dl>
@@ -127,134 +245,99 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="estimators.FullyObservable.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservable.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservable.reg_error" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservable.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservable.reg_error" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A scalar value of regularization error associated with submodules</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="estimators.FullyObservable.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#estimators.FullyObservable.training" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="estimators.FullyObservableAugmented">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">FullyObservableAugmented</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">d0=0.0,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.linear.Identity'&gt;,</span> <span class="pre">hsizes=[],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='fully_observable_aug'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservableAugmented"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservableAugmented" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">FullyObservableAugmented</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">d0=0.0,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.linear.Identity'&gt;,</span> <span class="pre">hsizes=[],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='fully_observable_aug'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservableAugmented"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservableAugmented" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="estimators.FullyObservableAugmented.features">
-<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservableAugmented.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservableAugmented.features" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#FullyObservableAugmented.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.FullyObservableAugmented.features" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compile a feature vector using data features corresponding to self.input_keys</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>data</strong> – (dict {str: torch.Tensor})</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(torch.Tensor)</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="estimators.FullyObservableAugmented.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#estimators.FullyObservableAugmented.training" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="estimators.LinearEstimator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">LinearEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.linear.Identity'&gt;,</span> <span class="pre">hsizes=[],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='linear_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#LinearEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.LinearEstimator" title="Permalink to this definition"></a></dt>
-<dd><dl class="py attribute">
-<dt class="sig sig-object py" id="estimators.LinearEstimator.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#estimators.LinearEstimator.training" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">LinearEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.linear.Identity'&gt;,</span> <span class="pre">hsizes=[],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='linear_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#LinearEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.LinearEstimator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-</dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="estimators.MLPAugmentedEstimator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">MLPAugmentedEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;,</span> <span class="pre">hsizes=[64],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='MLP_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#MLPAugmentedEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.MLPAugmentedEstimator" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">MLPAugmentedEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;,</span> <span class="pre">hsizes=[64],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='MLP_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#MLPAugmentedEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.MLPAugmentedEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Appends observed variables to state estimated from a Multi-layer Perceptron</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="estimators.MLPAugmentedEstimator.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#MLPAugmentedEstimator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.MLPAugmentedEstimator.forward" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#MLPAugmentedEstimator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.MLPAugmentedEstimator.forward" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>data</strong> – (dict {str: torch.tensor)}</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(dict {str: torch.tensor)}</p>
 </dd>
 </dl>
 </dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="estimators.MLPAugmentedEstimator.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#estimators.MLPAugmentedEstimator.training" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="estimators.MLPEstimator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">MLPEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;,</span> <span class="pre">hsizes=[64],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='MLP_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#MLPEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.MLPEstimator" title="Permalink to this definition"></a></dt>
-<dd><dl class="py attribute">
-<dt class="sig sig-object py" id="estimators.MLPEstimator.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#estimators.MLPEstimator.training" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">MLPEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;,</span> <span class="pre">hsizes=[64],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='MLP_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#MLPEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.MLPEstimator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-</dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="estimators.RNNEstimator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">RNNEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;,</span> <span class="pre">hsizes=[64],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='RNN_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#RNNEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.RNNEstimator" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">RNNEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;,</span> <span class="pre">hsizes=[64],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='RNN_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#RNNEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.RNNEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="estimators.RNNEstimator.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#RNNEstimator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.RNNEstimator.forward" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#RNNEstimator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.RNNEstimator.forward" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>data</strong> – (dict {str: torch.tensor)}</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(dict {str: torch.tensor)}</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="estimators.RNNEstimator.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#estimators.RNNEstimator.training" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="estimators.ResMLPEstimator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">ResMLPEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;,</span> <span class="pre">hsizes=[64],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='ResMLP_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#ResMLPEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.ResMLPEstimator" title="Permalink to this definition"></a></dt>
-<dd><dl class="py attribute">
-<dt class="sig sig-object py" id="estimators.ResMLPEstimator.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#estimators.ResMLPEstimator.training" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">ResMLPEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data_dims,</span> <span class="pre">nsteps=1,</span> <span class="pre">window_size=1,</span> <span class="pre">bias=False,</span> <span class="pre">linear_map=&lt;class</span> <span class="pre">'slim.linear.Linear'&gt;,</span> <span class="pre">nonlin=&lt;class</span> <span class="pre">'torch.nn.modules.activation.GELU'&gt;,</span> <span class="pre">hsizes=[64],</span> <span class="pre">input_keys=['Yp'],</span> <span class="pre">linargs={},</span> <span class="pre">name='ResMLP_estim'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#ResMLPEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.ResMLPEstimator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-</dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="estimators.TimeDelayEstimator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">TimeDelayEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'estimator'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#TimeDelayEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.TimeDelayEstimator" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">estimators.</span></span><span class="sig-name descname"><span class="pre">TimeDelayEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'estimator'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#TimeDelayEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.TimeDelayEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="estimators.TimeDelayEstimator.features">
-<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#TimeDelayEstimator.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.TimeDelayEstimator.features" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#TimeDelayEstimator.features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.TimeDelayEstimator.features" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compile a feature vector using data features corresponding to self.input_keys</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>data</strong> – (dict {str: torch.Tensor})</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(torch.Tensor)</p>
 </dd>
 </dl>
@@ -262,12 +345,12 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="estimators.TimeDelayEstimator.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#TimeDelayEstimator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.TimeDelayEstimator.forward" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#TimeDelayEstimator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.TimeDelayEstimator.forward" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>data</strong> – (dict {str: torch.tensor)}</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(dict {str: torch.tensor)}</p>
 </dd>
 </dl>
@@ -275,18 +358,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="estimators.TimeDelayEstimator.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#TimeDelayEstimator.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.TimeDelayEstimator.reg_error" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estimators.html#TimeDelayEstimator.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#estimators.TimeDelayEstimator.reg_error" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A scalar value of regularization error associated with submodules</p>
 </dd>
 </dl>
 </dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="estimators.TimeDelayEstimator.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#estimators.TimeDelayEstimator.training" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -294,33 +372,51 @@
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="dataset.html" class="btn btn-neutral float-left" title="Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="loggers.html" class="btn btn-neutral float-right" title="Loggers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="loggers.html" class="btn btn-neutral float-right" title="Loggers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dataset.html" class="btn btn-neutral float-left" title="Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
-  </div>
+    <p>
+        &copy; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

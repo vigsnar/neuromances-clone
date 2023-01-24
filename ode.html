@@ -1,37 +1,78 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ODE &mdash; NeuroMANCER 1.2.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <title>ODE &mdash; NeuroMANCER 1.2.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="PWA Maps" href="pwa_maps.html" />
     <link rel="prev" title="Maps" href="maps.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
             <img src="_static/dadaist.png" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -39,7 +80,17 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
@@ -67,188 +118,275 @@
 <li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a></li>
 <li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ODE</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ODE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ode.BrusselatorHybrid"><code class="docutils literal notranslate"><span class="pre">BrusselatorHybrid</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.BrusselatorHybrid.ode_equations"><code class="docutils literal notranslate"><span class="pre">BrusselatorHybrid.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.BrusselatorParam"><code class="docutils literal notranslate"><span class="pre">BrusselatorParam</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.BrusselatorParam.ode_equations"><code class="docutils literal notranslate"><span class="pre">BrusselatorParam.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.CSTR_Param"><code class="docutils literal notranslate"><span class="pre">CSTR_Param</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.CSTR_Param.ode_equations"><code class="docutils literal notranslate"><span class="pre">CSTR_Param.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.ControlODE"><code class="docutils literal notranslate"><span class="pre">ControlODE</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.ControlODE.ode_equations"><code class="docutils literal notranslate"><span class="pre">ControlODE.ode_equations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ode.ControlODE.reg_error"><code class="docutils literal notranslate"><span class="pre">ControlODE.reg_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.DuffingParam"><code class="docutils literal notranslate"><span class="pre">DuffingParam</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.DuffingParam.ode_equations"><code class="docutils literal notranslate"><span class="pre">DuffingParam.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.GeneralNetworkedODE"><code class="docutils literal notranslate"><span class="pre">GeneralNetworkedODE</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.GeneralNetworkedODE.coupling_physics"><code class="docutils literal notranslate"><span class="pre">GeneralNetworkedODE.coupling_physics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ode.GeneralNetworkedODE.intrinsic_physics"><code class="docutils literal notranslate"><span class="pre">GeneralNetworkedODE.intrinsic_physics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ode.GeneralNetworkedODE.ode_equations"><code class="docutils literal notranslate"><span class="pre">GeneralNetworkedODE.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.LorenzControl"><code class="docutils literal notranslate"><span class="pre">LorenzControl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.LorenzControl.ode_equations"><code class="docutils literal notranslate"><span class="pre">LorenzControl.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.LorenzParam"><code class="docutils literal notranslate"><span class="pre">LorenzParam</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.LorenzParam.ode_equations"><code class="docutils literal notranslate"><span class="pre">LorenzParam.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.LotkaVolterraHybrid"><code class="docutils literal notranslate"><span class="pre">LotkaVolterraHybrid</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.LotkaVolterraHybrid.ode_equations"><code class="docutils literal notranslate"><span class="pre">LotkaVolterraHybrid.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.LotkaVolterraParam"><code class="docutils literal notranslate"><span class="pre">LotkaVolterraParam</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.LotkaVolterraParam.ode_equations"><code class="docutils literal notranslate"><span class="pre">LotkaVolterraParam.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.ODESystem"><code class="docutils literal notranslate"><span class="pre">ODESystem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.ODESystem.forward"><code class="docutils literal notranslate"><span class="pre">ODESystem.forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ode.ODESystem.ode_equations"><code class="docutils literal notranslate"><span class="pre">ODESystem.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.TwoTankParam"><code class="docutils literal notranslate"><span class="pre">TwoTankParam</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.TwoTankParam.ode_equations"><code class="docutils literal notranslate"><span class="pre">TwoTankParam.ode_equations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ode.VanDerPolControl"><code class="docutils literal notranslate"><span class="pre">VanDerPolControl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ode.VanDerPolControl.ode_equations"><code class="docutils literal notranslate"><span class="pre">VanDerPolControl.ode_equations()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physics.html">Physics</a></li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NeuroMANCER</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">ODE</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>ODE</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+            
             <a href="_sources/ode.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="module-ode">
-<span id="ode"></span><h1>ODE<a class="headerlink" href="#module-ode" title="Permalink to this headline"></a></h1>
+<span id="ode"></span><h1>ODE<a class="headerlink" href="#module-ode" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.BrusselatorHybrid">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">BrusselatorHybrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#BrusselatorHybrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.BrusselatorHybrid" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">BrusselatorHybrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#BrusselatorHybrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.BrusselatorHybrid" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.BrusselatorHybrid.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#BrusselatorHybrid.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.BrusselatorHybrid.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.BrusselatorHybrid.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.BrusselatorHybrid.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#BrusselatorHybrid.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.BrusselatorHybrid.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.BrusselatorParam">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">BrusselatorParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#BrusselatorParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.BrusselatorParam" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">BrusselatorParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#BrusselatorParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.BrusselatorParam" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.BrusselatorParam.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#BrusselatorParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.BrusselatorParam.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.BrusselatorParam.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.BrusselatorParam.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#BrusselatorParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.BrusselatorParam.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.CSTR_Param">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">CSTR_Param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#CSTR_Param"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.CSTR_Param" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">CSTR_Param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#CSTR_Param"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.CSTR_Param" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.CSTR_Param.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#CSTR_Param.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.CSTR_Param.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.CSTR_Param.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.CSTR_Param.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#CSTR_Param.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.CSTR_Param.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.ControlODE">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">ControlODE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">np</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_con</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ControlODE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ControlODE" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">ControlODE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">np</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_con</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ControlODE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ControlODE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for defining closed-loop dynamical system composed of ODEs and control policies,
 can be mix-and-matched according to expert knowledge.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ode.ControlODE.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ControlODE.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ControlODE.ode_equations" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ControlODE.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ControlODE.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ode.ControlODE.reg_error">
-<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ControlODE.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ControlODE.reg_error" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.ControlODE.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.ControlODE.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reg_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ControlODE.reg_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ControlODE.reg_error" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.DuffingParam">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">DuffingParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#DuffingParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.DuffingParam" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">DuffingParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#DuffingParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.DuffingParam" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.DuffingParam.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#DuffingParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.DuffingParam.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.DuffingParam.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.DuffingParam.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#DuffingParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.DuffingParam.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="ode.GeneralNetworkedODE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">GeneralNetworkedODE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">couplings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inductive_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'additive'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#GeneralNetworkedODE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.GeneralNetworkedODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coupled nonlinear dynamical system with heterogeneous agents. This class acts as an
+aggregator for multiple interacting physics that contribute to the dynamics of one
+or more agents.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ode.GeneralNetworkedODE.coupling_physics">
+<span class="sig-name descname"><span class="pre">coupling_physics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#GeneralNetworkedODE.coupling_physics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.GeneralNetworkedODE.coupling_physics" title="Permalink to this definition">¶</a></dt>
+<dd><p>This coupling physics assumes that each coupling physics nn.Module contains the
+connection information, including what agents are connected and if the connection 
+is symmetric.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ode.GeneralNetworkedODE.intrinsic_physics">
+<span class="sig-name descname"><span class="pre">intrinsic_physics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#GeneralNetworkedODE.intrinsic_physics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.GeneralNetworkedODE.intrinsic_physics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate and return the contribution from all agents’ intrinsic physics</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ode.GeneralNetworkedODE.ode_equations">
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#GeneralNetworkedODE.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.GeneralNetworkedODE.ode_equations" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Select the inductive bias to use for the problem:</dt><dd><ul class="simple">
+<li><p>Additive: f(x_i) + sum(g(x_i,x_j))</p></li>
+<li><p>General: f(x_i, sum(g(x_i,x_j)))</p></li>
+<li><p>Composed: f(sum(g(x_i,x_j)))</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="ode.LorenzControl">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">LorenzControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LorenzControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LorenzControl" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">LorenzControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LorenzControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LorenzControl" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.LorenzControl.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LorenzControl.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LorenzControl.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.LorenzControl.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.LorenzControl.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LorenzControl.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LorenzControl.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.LorenzParam">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">LorenzParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LorenzParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LorenzParam" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">LorenzParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LorenzParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LorenzParam" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.LorenzParam.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LorenzParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LorenzParam.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.LorenzParam.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.LorenzParam.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LorenzParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LorenzParam.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.LotkaVolterraHybrid">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">LotkaVolterraHybrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LotkaVolterraHybrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LotkaVolterraHybrid" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">LotkaVolterraHybrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LotkaVolterraHybrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LotkaVolterraHybrid" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.LotkaVolterraHybrid.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LotkaVolterraHybrid.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LotkaVolterraHybrid.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.LotkaVolterraHybrid.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.LotkaVolterraHybrid.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LotkaVolterraHybrid.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LotkaVolterraHybrid.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.LotkaVolterraParam">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">LotkaVolterraParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LotkaVolterraParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LotkaVolterraParam" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">LotkaVolterraParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LotkaVolterraParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LotkaVolterraParam" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.LotkaVolterraParam.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LotkaVolterraParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LotkaVolterraParam.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.LotkaVolterraParam.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.LotkaVolterraParam.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#LotkaVolterraParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.LotkaVolterraParam.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.ODESystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">ODESystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ODESystem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ODESystem" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">ODESystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ODESystem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ODESystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for defining RHS of arbitrary ODE functions, 
 can be mix-and-matched according to expert knowledge.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ode.ODESystem.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ODESystem.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ODESystem.forward" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ODESystem.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ODESystem.forward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -262,42 +400,27 @@ registered hooks while the latter silently ignores them.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ode.ODESystem.ode_equations">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ODESystem.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ODESystem.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.ODESystem.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.ODESystem.training" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#ODESystem.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.ODESystem.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.TwoTankParam">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">TwoTankParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#TwoTankParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.TwoTankParam" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">TwoTankParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#TwoTankParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.TwoTankParam" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.TwoTankParam.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#TwoTankParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.TwoTankParam.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.TwoTankParam.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.TwoTankParam.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#TwoTankParam.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.TwoTankParam.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ode.VanDerPolControl">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">VanDerPolControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#VanDerPolControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.VanDerPolControl" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ode.</span></span><span class="sig-name descname"><span class="pre">VanDerPolControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#VanDerPolControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.VanDerPolControl" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="ode.VanDerPolControl.ode_equations">
-<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#VanDerPolControl.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.VanDerPolControl.ode_equations" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="ode.VanDerPolControl.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#ode.VanDerPolControl.training" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ode_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ode.html#VanDerPolControl.ode_equations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ode.VanDerPolControl.ode_equations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -306,33 +429,51 @@ registered hooks while the latter silently ignores them.</p>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="maps.html" class="btn btn-neutral float-left" title="Maps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pwa_maps.html" class="btn btn-neutral float-right" title="PWA Maps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pwa_maps.html" class="btn btn-neutral float-right" title="PWA Maps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="maps.html" class="btn btn-neutral float-left" title="Maps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
-  </div>
+    <p>
+        &copy; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -1,34 +1,75 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dynamics &mdash; NeuroMANCER 1.2.1 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <meta charset="utf-8">
   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>dynamics &mdash; NeuroMANCER 1.2.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
             <img src="../_static/dadaist.png" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -36,7 +77,17 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dynamics.html">Dynamics</a></li>
@@ -68,50 +119,94 @@
 <li class="toctree-l1"><a class="reference internal" href="../pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../solvers.html">Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simulator.html">Simulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics.html">Physics</a></li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">NeuroMANCER</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
-      <li class="breadcrumb-item active">dynamics</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>dynamics</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <h1>Source code for dynamics</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">State space models (SSMs) for dynamical modeling.</span>
 
 <span class="sd">Nomenclature:</span>
-
 <span class="sd">    + x: states</span>
 <span class="sd">    + y: predicted outputs</span>
 <span class="sd">    + u: control inputs</span>
 <span class="sd">    + d: uncontrolled inputs (measured disturbances)</span>
 
 <span class="sd">Unstructured (blackbox) dynamical models:</span>
-<span class="sd">    + :math:`x_{t+1} = f(x_t,u_t,d_t) odot f_e(x_t)`</span>
+<span class="sd">    + :math:`x_{t+1} = f(x_t,u_t,d_t) \odot f_e(x_t)`</span>
 <span class="sd">    + :math:`y_{t} =  f_y(x_t)`</span>
-<span class="sd">    + :math:`odot` is some operator acting on elements, e.g. + or *</span>
+<span class="sd">    + :math:`\odot` is some operator acting on elements, e.g. + or *</span>
 
 <span class="sd">Block-structured dynamical models:</span>
-<span class="sd">    + :math:`x_{t+1} = f_x(x_t) odot f_u(u_t) odot f_d(d_t) odot f_e(x_t)`</span>
+<span class="sd">    + :math:`x_{t+1} = f_x(x_t) \odot f_u(u_t) \odot f_d(d_t) \odot f_e(x_t)`</span>
+<span class="sd">    + :math:`y_t =  f_y(x_t)`</span>
+
+<span class="sd">Autonomous ordinary differential equation model:</span>
+<span class="sd">    + :math:`x_{t+1} = ODESolve(f_x(x_t))`</span>
+<span class="sd">    + :math:`y_t =  f_y(x_t)`</span>
+
+<span class="sd">Non-autonomous ordinary differential equation model:</span>
+<span class="sd">    + :math:`x_{t+1} = ODESolve(f_x(x_t, u_t, Time))`</span>
 <span class="sd">    + :math:`y_t =  f_y(x_t)`</span>
 
 <span class="sd">Block components:</span>
@@ -122,6 +217,7 @@
 <span class="sd">    + :math:`f_u` are input dynamics</span>
 <span class="sd">    + :math:`f_d` are disturbance dynamics</span>
 <span class="sd">    + :math:`f_{yu}` models more direct effects of input on observations</span>
+<span class="sd">    + :math:`ODESolve(f_x(x_t))` integrates the ODE system via solver, e.g. RK</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">torch</span>
@@ -134,28 +230,29 @@
 <div class="viewcode-block" id="SSM"><a class="viewcode-back" href="../dynamics.html#dynamics.SSM">[docs]</a><span class="k">class</span> <span class="nc">SSM</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
     <span class="n">DEFAULT_INPUT_KEYS</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
     <span class="n">DEFAULT_OUTPUT_KEYS</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Base State Space Model (SSM) class</span>
+
+<span class="sd">    This class is used to manage naming of component input and output variables as they flow</span>
+<span class="sd">    through the computational graph, as well as handle potential remapping of input and output keys</span>
+<span class="sd">    to different names. It additionally provides a useful reference for users to see how components</span>
+<span class="sd">    can be connected together in the overall computational graph.</span>
+
+<span class="sd">    Components that inherit from this class should specify the class attributes DEFAULT_INPUT_KEYS</span>
+<span class="sd">    and DEFAULT_OUTPUT_KEYS; these are used as the &quot;canonical&quot; names for input and output variables,</span>
+<span class="sd">    respectively. These can be used to compare different components&#39; output and input keys to see</span>
+<span class="sd">    whether one component can accept another&#39;s output by default.</span>
+
+<span class="sd">    By default, components have a `name` argument which is used to tag the output variables they</span>
+<span class="sd">    generate; for instance, for a component called &quot;estim&quot;, the canonical output &quot;x0&quot; is renamed to</span>
+<span class="sd">    &quot;x0_estim&quot;.</span>
+
+<span class="sd">    &gt;&gt;&gt; estim = LinearEstimator(..., name=&quot;estim&quot;)  # output &quot;x0&quot; remapped to &quot;x0_estim&quot;</span>
+<span class="sd">    &gt;&gt;&gt; ssm = BlockSSM(..., input_key_map={f&quot;x0_{estim.name}&quot;: &quot;x0&quot;})  # input_keys used to remap to canonical name</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Base State Space Model (SSM) class</span>
-
-<span class="sd">        This class is used to manage naming of component input and output variables as they flow</span>
-<span class="sd">        through the computational graph, as well as handle potential remapping of input and output keys</span>
-<span class="sd">        to different names. It additionally provides a useful reference for users to see how components</span>
-<span class="sd">        can be connected together in the overall computational graph.</span>
-
-<span class="sd">        Components that inherit from this class should specify the class attributes DEFAULT_INPUT_KEYS</span>
-<span class="sd">        and DEFAULT_OUTPUT_KEYS; these are used as the &quot;canonical&quot; names for input and output variables,</span>
-<span class="sd">        respectively. These can be used to compare different components&#39; output and input keys to see</span>
-<span class="sd">        whether one component can accept another&#39;s output by default.</span>
-
-<span class="sd">        By default, components have a `name` argument which is used to tag the output variables they</span>
-<span class="sd">        generate; for instance, for a component called &quot;estim&quot;, the canonical output &quot;x0&quot; is renamed to</span>
-<span class="sd">        &quot;x0_estim&quot;.</span>
-
-<span class="sd">        &gt;&gt;&gt; estim = LinearEstimator(..., name=&quot;estim&quot;)  # output &quot;x0&quot; remapped to &quot;x0_estim&quot;</span>
-<span class="sd">        &gt;&gt;&gt; ssm = BlockSSM(..., input_key_map={f&quot;x0_{estim.name}&quot;: &quot;x0&quot;})  # input_keys used to remap to canonical name</span>
-
 <span class="sd">        :param input_key_map: (dict {str: str}) For renaming canonical input keys to state space model</span>
 <span class="sd">        :param name: (str) Name will be appended to output keys.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -170,22 +267,21 @@
             <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">input_key_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()},</span>
             <span class="o">**</span><span class="n">input_key_map</span>
         <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span><span class="p">),</span> \
-            <span class="s2">&quot;Length of given input keys must equal the length of default input keys&quot;</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div></div>
 
 
 <div class="viewcode-block" id="BlockSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.BlockSSM">[docs]</a><span class="k">class</span> <span class="nc">BlockSSM</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
-
     <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
     <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
-
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Block-structured system dynamical models:</span>
+<span class="sd">        :math:`x_{t+1} = f_x(x_t) \odot f_u(u_t) \odot f_d(d_t) \odot f_e(x_t)`</span>
+<span class="sd">        :math:`y_t =  f_y(x_t)`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">xou</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span>
                  <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;block_ssm&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Block structured system dynamics:</span>
-
 <span class="sd">        :param fx: (nn.Module) State transition function</span>
 <span class="sd">        :param fy: (nn.Module) Observation function</span>
 <span class="sd">        :param fu: (nn.Module) Input function</span>
@@ -240,7 +336,7 @@
 
 <div class="viewcode-block" id="BlockSSM.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.BlockSSM.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-
+<span class="sd">        performs nstep ahead rollout of a given dynamical system model</span>
 <span class="sd">        :param data: (dict: {str: Tensor})</span>
 <span class="sd">        :return: output (dict: {str: Tensor})</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -283,9 +379,30 @@
 
 
 <div class="viewcode-block" id="LinearSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.LinearSSM">[docs]</a><span class="k">class</span> <span class="nc">LinearSSM</span><span class="p">(</span><span class="n">BlockSSM</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implementation of discrete-time Linear State Space Model (LSSM).</span>
+<span class="sd">        x_{t+1} = A x_t + B u_t + E d_t</span>
+<span class="sd">        y_{t+1} = C x_{t+1}</span>
+<span class="sd">    Where:</span>
+<span class="sd">        x - state variables</span>
+<span class="sd">        y - measurement variables</span>
+<span class="sd">        y - control input variables</span>
+<span class="sd">        d - disturbance variables</span>
+
+<span class="sd">    LinearSSM is implemented as a specific instance of BlockSSM.</span>
+
+<span class="sd">    for more information about LSSMs see:</span>
+<span class="sd">        https://en.wikipedia.org/wiki/State-space_representation</span>
+<span class="sd">        https://www.mathworks.com/help/ident/ug/what-are-state-space-models.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">E</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-
+<span class="sd">        :param A: (torch.tensor) state/system matrix</span>
+<span class="sd">        :param B: (torch.tensor) input matrix</span>
+<span class="sd">        :param C: (torch.tensor) output matrix</span>
+<span class="sd">        :param E: (torch.tensor) disturbance matrix</span>
+<span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys to alternate names</span>
+<span class="sd">        :param name: (str) Name for tracking output</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">),</span> \
             <span class="sa">f</span><span class="s1">&#39;State matrix A must be torch.Tensor type, &#39;</span> \
@@ -318,7 +435,7 @@
             <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">E</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> \
                 <span class="sa">f</span><span class="s1">&#39;Disturbance matrix E must be two dimensional, got </span><span class="si">{</span><span class="n">E</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span>
             <span class="n">nd</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-            <span class="n">fd</span> <span class="o">=</span> <span class="n">slim</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">](</span><span class="n">nx</span><span class="p">,</span> <span class="n">nd</span><span class="p">)</span>
+            <span class="n">fd</span> <span class="o">=</span> <span class="n">slim</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">](</span><span class="n">nd</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
             <span class="n">fd</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">fd</span> <span class="o">=</span> <span class="kc">None</span>
@@ -328,12 +445,16 @@
 <div class="viewcode-block" id="BlackSSM"><a class="viewcode-back" href="../dynamics.html#dynamics.BlackSSM">[docs]</a><span class="k">class</span> <span class="nc">BlackSSM</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
     <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
     <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Black box state space model with unstructured system dynamics:</span>
+<span class="sd">        :math:`x_{t+1} = f(x_t,u_t,d_t) \odot f_e(x_t)`</span>
+<span class="sd">        :math:`y_{t} =  f_y(x_t)`</span>
+<span class="sd">        :math:`\odot` is some operator acting on elements, e.g. + or *</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">fe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fyu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;black_ssm&#39;</span><span class="p">,</span>
                  <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="p">[]):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Black box state space model with unstructured system dynamics:</span>
-
 <span class="sd">        :param fx: (nn.Module) State transition function depending on previous state, inputs and disturbances</span>
 <span class="sd">        :param fy: (nn.Module) Observation function</span>
 <span class="sd">        :param fyu: (nn.Module) Input-Observation function</span>
@@ -359,6 +480,7 @@
 
 <div class="viewcode-block" id="BlackSSM.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.BlackSSM.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        performs nstep ahead rollout of a given dynamical system model</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">FE</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
@@ -401,11 +523,16 @@
 <div class="viewcode-block" id="ODEAuto"><a class="viewcode-back" href="../dynamics.html#dynamics.ODEAuto">[docs]</a><span class="k">class</span> <span class="nc">ODEAuto</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
     <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
     <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    State space model for solving autonomous ODEs w/ single-step integrators:</span>
+<span class="sd">        :math:`x_{t+1} = ODESolve(f_x(x_t))`</span>
+<span class="sd">        :math:`y_t =  f_y(x_t)`</span>
+<span class="sd">        :math:`dx_t/dt = f_x(x_t)` - defined ODE system</span>
+<span class="sd">        :math:`ODESolve(f_x(x_t))` - ODE solver that integrates the ODE system, e.g. RK</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dynamics&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        State space model for solving autonomous ODEs w/ single-step integrators:</span>
-
 <span class="sd">        :param fx: (nn.Module) State transition function depending on previous state, inputs and disturbances</span>
 <span class="sd">        :param fy: (nn.Module) Observation function</span>
 <span class="sd">        :param name: (str) Name for tracking output</span>
@@ -419,6 +546,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">nx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ny</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">out_features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fy</span><span class="o">.</span><span class="n">out_features</span>
 
 <div class="viewcode-block" id="ODEAuto.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.ODEAuto.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        performs nstep ahead rollout of a given dynamical system model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]]</span>
         <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
@@ -445,16 +575,21 @@
 <div class="viewcode-block" id="ODENonAuto"><a class="viewcode-back" href="../dynamics.html#dynamics.ODENonAuto">[docs]</a><span class="k">class</span> <span class="nc">ODENonAuto</span><span class="p">(</span><span class="n">SSM</span><span class="p">):</span>
     <span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">,</span> <span class="s2">&quot;Yf&quot;</span><span class="p">]</span>
     <span class="n">DEFAULT_OUTPUT_KEYS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reg_error&quot;</span><span class="p">,</span> <span class="s2">&quot;X_pred&quot;</span><span class="p">,</span> <span class="s2">&quot;Y_pred&quot;</span><span class="p">]</span>
-
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    State space model for non-autonomous ODEs w/ single-step integrators:</span>
+<span class="sd">        :math:`x_{t+1} = ODESolve(f_x(x_t, u_t, Time))`</span>
+<span class="sd">        :math:`y_t =  f_y(x_t)`</span>
+<span class="sd">        :math:`dx_t/dt = f_x(x_t, u_t, Time)` - defined ODE system with inputs u_t and Time</span>
+<span class="sd">        :math:`ODESolve(f_x(x_t, u_t, Time))` - ODE solver that integrates the ODE system, e.g. RK</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dynamics&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="p">[],</span> <span class="n">online_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        State space model for non-autonomous ODEs w/ single-step integrators:</span>
-
 <span class="sd">        :param fx: (nn.Module) State transition function depending on previous state, inputs and disturbances</span>
 <span class="sd">        :param fy: (nn.Module) Observation function</span>
 <span class="sd">        :param name: (str) Name for tracking output</span>
 <span class="sd">        :param input_key_map: (dict {str: str}) Mapping canonical expected input keys to alternate names</span>
 <span class="sd">        :param extra_inputs: (list of str) Input keys to be added to canonical input.</span>
+<span class="sd">        :param online_flag: (bool) whether to use online interpolation or not.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_INPUT_KEYS</span> <span class="o">+</span> <span class="n">extra_inputs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">extra_inputs</span> <span class="o">=</span> <span class="n">extra_inputs</span>
@@ -465,6 +600,7 @@
 
 <div class="viewcode-block" id="ODENonAuto.forward"><a class="viewcode-back" href="../dynamics.html#dynamics.ODENonAuto.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        performs nstep ahead rollout of a given dynamical system model</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">nsteps</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;Yf&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_key_map</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]]</span>
@@ -517,7 +653,7 @@
               <span class="n">activation</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">residual</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span>
               <span class="n">xou</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xod</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;blockmodel&#39;</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{}):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Generate a block-structured SSM with the same structure used across fx, fy, fu, and fd.</span>
+<span class="sd">    Helper function that generates a block-structured SSM with the same structure used across fx, fy, fu, and fd.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">assert</span> <span class="n">kind</span> <span class="ow">in</span> <span class="n">_bssm_kinds</span><span class="p">,</span> \
         <span class="sa">f</span><span class="s2">&quot;Unrecognized model kind </span><span class="si">{</span><span class="n">kind</span><span class="si">}</span><span class="s2">; supported models are </span><span class="si">{</span><span class="n">_bssm_kinds</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -580,7 +716,7 @@
              <span class="n">activation</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">,</span> <span class="n">linargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span>
              <span class="n">xoyu</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">xoe</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="n">input_key_map</span><span class="o">=</span><span class="p">{},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;blackbox_model&#39;</span><span class="p">,</span> <span class="n">extra_inputs</span><span class="o">=</span><span class="p">[]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Black box state space model.</span>
+<span class="sd">    Helper function that generates a black box state space model.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">nd</span> <span class="o">=</span> <span class="n">_extract_dims</span><span class="p">(</span><span class="n">datadims</span><span class="p">)</span>
     <span class="n">hsizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">nx</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_layers</span>
@@ -610,30 +746,42 @@
 </pre></div>
 
            </div>
+           
           </div>
           <footer>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
-  </div>
+    <p>
+        &copy; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

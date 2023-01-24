@@ -1,37 +1,78 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dataset &mdash; NeuroMANCER 1.2.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <title>Dataset &mdash; NeuroMANCER 1.2.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/tiny_dadaist.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Estimators" href="estimators.html" />
     <link rel="prev" title="Blocks" href="blocks.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="index.html" class="icon icon-home"> NeuroMANCER
+          
+
+          
+            
             <img src="_static/dadaist.png" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -39,13 +80,61 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dynamics.html">Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blocks.html">Blocks</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Dataset</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dataset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.DictDataset"><code class="docutils literal notranslate"><span class="pre">DictDataset</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.DictDataset.collate_fn"><code class="docutils literal notranslate"><span class="pre">DictDataset.collate_fn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.GraphDataset"><code class="docutils literal notranslate"><span class="pre">GraphDataset</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.GraphDataset.build_graphs"><code class="docutils literal notranslate"><span class="pre">GraphDataset.build_graphs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.GraphDataset.collate_fn"><code class="docutils literal notranslate"><span class="pre">GraphDataset.collate_fn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.GraphDataset.make_map"><code class="docutils literal notranslate"><span class="pre">GraphDataset.make_map()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.GraphDataset.shuffle"><code class="docutils literal notranslate"><span class="pre">GraphDataset.shuffle()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.SequenceDataset"><code class="docutils literal notranslate"><span class="pre">SequenceDataset</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.SequenceDataset.collate_fn"><code class="docutils literal notranslate"><span class="pre">SequenceDataset.collate_fn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.SequenceDataset.get_full_batch"><code class="docutils literal notranslate"><span class="pre">SequenceDataset.get_full_batch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.SequenceDataset.get_full_sequence"><code class="docutils literal notranslate"><span class="pre">SequenceDataset.get_full_sequence()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.StaticDataset"><code class="docutils literal notranslate"><span class="pre">StaticDataset</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.StaticDataset.collate_fn"><code class="docutils literal notranslate"><span class="pre">StaticDataset.collate_fn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset.StaticDataset.get_full_batch"><code class="docutils literal notranslate"><span class="pre">StaticDataset.get_full_batch()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.batch_tensor"><code class="docutils literal notranslate"><span class="pre">batch_tensor()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.denormalize_01"><code class="docutils literal notranslate"><span class="pre">denormalize_01()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.denormalize_11"><code class="docutils literal notranslate"><span class="pre">denormalize_11()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.destandardize"><code class="docutils literal notranslate"><span class="pre">destandardize()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.get_sequence_dataloaders"><code class="docutils literal notranslate"><span class="pre">get_sequence_dataloaders()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.get_static_dataloaders"><code class="docutils literal notranslate"><span class="pre">get_static_dataloaders()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.normalize_01"><code class="docutils literal notranslate"><span class="pre">normalize_01()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.normalize_11"><code class="docutils literal notranslate"><span class="pre">normalize_11()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.normalize_data"><code class="docutils literal notranslate"><span class="pre">normalize_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.read_file"><code class="docutils literal notranslate"><span class="pre">read_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.split_sequence_data"><code class="docutils literal notranslate"><span class="pre">split_sequence_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.split_static_data"><code class="docutils literal notranslate"><span class="pre">split_static_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.standardize"><code class="docutils literal notranslate"><span class="pre">standardize()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset.unbatch_tensor"><code class="docutils literal notranslate"><span class="pre">unbatch_tensor()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loggers.html">Loggers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operators.html">Operators</a></li>
@@ -71,44 +160,83 @@
 <li class="toctree-l1"><a class="reference internal" href="pwa_maps.html">PWA Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers.html">Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physics.html">Physics</a></li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">NeuroMANCER</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Dataset</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Dataset</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+            
             <a href="_sources/dataset.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="module-dataset">
-<span id="dataset"></span><h1>Dataset<a class="headerlink" href="#module-dataset" title="Permalink to this headline"></a></h1>
+<span id="dataset"></span><h1>Dataset<a class="headerlink" href="#module-dataset" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="dataset.DictDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">DictDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'train'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#DictDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.DictDataset" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">DictDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'train'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#DictDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.DictDataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic dataset compatible with neuromancer Trainer</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="dataset.DictDataset.collate_fn">
-<span class="sig-name descname"><span class="pre">collate_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#DictDataset.collate_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.DictDataset.collate_fn" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">collate_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#DictDataset.collate_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.DictDataset.collate_fn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wraps the default PyTorch batch collation function and adds a name field.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>batch</strong> – (dict str: torch.Tensor) dataset sample.</p>
 </dd>
 </dl>
@@ -118,10 +246,10 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="dataset.GraphDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">GraphDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_attr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_attr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_attr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_len</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_horizon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_stride</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_graphs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.015</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_self_loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">GraphDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_attr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_attr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_attr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_len</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_horizon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_stride</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_graphs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.015</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_self_loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="dataset.GraphDataset.build_graphs">
-<span class="sig-name descname"><span class="pre">build_graphs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_loops</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset.build_graphs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset.build_graphs" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">build_graphs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_loops</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset.build_graphs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset.build_graphs" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>try:</dt><dd><p>from torch_geometric.nn import radius_graph</p>
 </dd>
@@ -131,12 +259,12 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dataset.GraphDataset.collate_fn">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collate_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset.collate_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset.collate_fn" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collate_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset.collate_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset.collate_fn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Batch collation for dictionaries of samples generated by this dataset. This wraps the
 default PyTorch batch collation function and does some light post-processing to transpose
 the data for NeuroMANCER models and add a “name” field.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>batch</strong> – (list of dict str: torch.Tensor) dataset sample. Requires key ‘edge_index’</p>
 </dd>
 </dl>
@@ -144,13 +272,13 @@ the data for NeuroMANCER models and add a “name” field.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dataset.GraphDataset.make_map">
-<span class="sig-name descname"><span class="pre">make_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset.make_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset.make_map" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">make_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset.make_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset.make_map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Order the sample sequences</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dataset.GraphDataset.shuffle">
-<span class="sig-name descname"><span class="pre">shuffle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset.shuffle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset.shuffle" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">shuffle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#GraphDataset.shuffle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.GraphDataset.shuffle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Randomizes the order of sample sequences</p>
 </dd></dl>
 
@@ -158,15 +286,15 @@ the data for NeuroMANCER models and add a “name” field.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="dataset.SequenceDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">SequenceDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving_horizon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#SequenceDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.SequenceDataset" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">SequenceDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving_horizon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#SequenceDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.SequenceDataset" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="dataset.SequenceDataset.collate_fn">
-<span class="sig-name descname"><span class="pre">collate_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#SequenceDataset.collate_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.SequenceDataset.collate_fn" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">collate_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#SequenceDataset.collate_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.SequenceDataset.collate_fn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Batch collation for dictionaries of samples generated by this dataset. This wraps the
 default PyTorch batch collation function and does some light post-processing to transpose
 the data for NeuroMANCER models and add a “name” field.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>batch</strong> – (dict str: torch.Tensor) dataset sample.</p>
 </dd>
 </dl>
@@ -174,26 +302,26 @@ the data for NeuroMANCER models and add a “name” field.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dataset.SequenceDataset.get_full_batch">
-<span class="sig-name descname"><span class="pre">get_full_batch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#SequenceDataset.get_full_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.SequenceDataset.get_full_batch" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_full_batch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#SequenceDataset.get_full_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.SequenceDataset.get_full_batch" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dataset.SequenceDataset.get_full_sequence">
-<span class="sig-name descname"><span class="pre">get_full_sequence</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#SequenceDataset.get_full_sequence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.SequenceDataset.get_full_sequence" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_full_sequence</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#SequenceDataset.get_full_sequence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.SequenceDataset.get_full_sequence" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="dataset.StaticDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">StaticDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#StaticDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.StaticDataset" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">StaticDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#StaticDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.StaticDataset" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="dataset.StaticDataset.collate_fn">
-<span class="sig-name descname"><span class="pre">collate_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#StaticDataset.collate_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.StaticDataset.collate_fn" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">collate_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#StaticDataset.collate_fn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.StaticDataset.collate_fn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Batch collation for dictionaries of samples generated by this dataset. This wraps the
 default PyTorch batch collation function and simply adds a “name” field to a batch.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>batch</strong> – (dict str: torch.Tensor) dataset sample.</p>
 </dd>
 </dl>
@@ -201,19 +329,19 @@ default PyTorch batch collation function and simply adds a “name” field to a
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dataset.StaticDataset.get_full_batch">
-<span class="sig-name descname"><span class="pre">get_full_batch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#StaticDataset.get_full_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.StaticDataset.get_full_batch" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_full_batch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#StaticDataset.get_full_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.StaticDataset.get_full_batch" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.batch_tensor">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">batch_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#batch_tensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.batch_tensor" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">batch_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#batch_tensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.batch_tensor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.denormalize_01">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">denormalize_01</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#denormalize_01"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.denormalize_01" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">denormalize_01</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#denormalize_01"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.denormalize_01" title="Permalink to this definition">¶</a></dt>
 <dd><p>denormalize min max norm
 :param M: (2-d np.array) Data to be normalized
 :param Mmin: (int) Minimum value
@@ -223,7 +351,7 @@ default PyTorch batch collation function and simply adds a “name” field to a
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.denormalize_11">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">denormalize_11</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#denormalize_11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.denormalize_11" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">denormalize_11</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#denormalize_11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.denormalize_11" title="Permalink to this definition">¶</a></dt>
 <dd><p>denormalize min max norm
 :param M: (2-d np.array) Data to be normalized
 :param Mmin: (int) Minimum value
@@ -233,17 +361,17 @@ default PyTorch batch collation function and simply adds a “name” field to a
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.destandardize">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">destandardize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#destandardize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.destandardize" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">destandardize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#destandardize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.destandardize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.get_sequence_dataloaders">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">get_sequence_dataloaders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving_horizon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">32</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#get_sequence_dataloaders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.get_sequence_dataloaders" title="Permalink to this definition"></a></dt>
-<dd><p>This will generate dataloaders and open-loop sequence dictionaries for a given dictionary of
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">get_sequence_dataloaders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving_horizon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#get_sequence_dataloaders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.get_sequence_dataloaders" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function will generate dataloaders and open-loop sequence dictionaries for a given dictionary of
 data. Dataloaders are hard-coded for full-batch training to match NeuroMANCER’s original
 training setup.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – (dict str: np.array or list[dict str: np.array]) data dictionary or list of data
 dictionaries; if latter is provided, multi-sequence datasets are created and splits are
@@ -253,6 +381,10 @@ computed over the number of sequences rather than their lengths.</p></li>
 <li><p><strong>norm_type</strong> – (str) type of normalization; see function <cite>normalize_data</cite> for more info.</p></li>
 <li><p><strong>split_ratio</strong> – (list float) percentage of data in train and development splits; see
 function <cite>split_sequence_data</cite> for more info.</p></li>
+<li><p><strong>num_workers</strong> – (int, optional) how many subprocesses to use for data loading.
+0 means that the data will be loaded in the main process. (default: 0)</p></li>
+<li><p><strong>batch_size</strong> – (int, optional) how many samples per batch to load
+(default: full-batch via len(data)).</p></li>
 </ul>
 </dd>
 </dl>
@@ -260,11 +392,11 @@ function <cite>split_sequence_data</cite> for more info.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.get_static_dataloaders">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">get_static_dataloaders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">32</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#get_static_dataloaders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.get_static_dataloaders" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">get_static_dataloaders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">32</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#get_static_dataloaders"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.get_static_dataloaders" title="Permalink to this definition">¶</a></dt>
 <dd><p>This will generate dataloaders for a given dictionary of data.
 Dataloaders are hard-coded for full-batch training to match NeuroMANCER’s training setup.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – (dict str: np.array or list[dict str: np.array]) data dictionary or list of data
 dictionaries; if latter is provided, multi-sequence datasets are created and splits are
@@ -279,16 +411,16 @@ function <cite>split_sequence_data</cite> for more info.get_static_dataloaders</
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.normalize_01">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">normalize_01</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#normalize_01"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.normalize_01" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">normalize_01</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#normalize_01"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.normalize_01" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>M</strong> – (2-d np.array) Data to be normalized</p></li>
 <li><p><strong>Mmin</strong> – (int) Optional minimum. If not provided is inferred from data.</p></li>
 <li><p><strong>Mmax</strong> – (int) Optional maximum. If not provided is inferred from data.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(2-d np.array) Min-max normalized data</p>
 </dd>
 </dl>
@@ -296,16 +428,16 @@ function <cite>split_sequence_data</cite> for more info.get_static_dataloaders</
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.normalize_11">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">normalize_11</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#normalize_11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.normalize_11" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">normalize_11</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Mmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#normalize_11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.normalize_11" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>M</strong> – (2-d np.array) Data to be normalized</p></li>
 <li><p><strong>Mmin</strong> – (int) Optional minimum. If not provided is inferred from data.</p></li>
 <li><p><strong>Mmax</strong> – (int) Optional maximum. If not provided is inferred from data.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(2-d np.array) Min-max normalized data</p>
 </dd>
 </dl>
@@ -313,10 +445,10 @@ function <cite>split_sequence_data</cite> for more info.get_static_dataloaders</
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.normalize_data">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">normalize_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#normalize_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.normalize_data" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">normalize_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#normalize_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.normalize_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Normalize data, optionally using arbitrary statistics (e.g. computed from train split).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – (dict str: np.array) data dictionary.</p></li>
 <li><p><strong>norm_type</strong> – (str) type of normalization to use; can be “zero-one”, “one-one”, or “zscore”.</p></li>
@@ -329,16 +461,16 @@ case stats are inferred by underlying normalization function.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.read_file">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">read_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_or_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#read_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.read_file" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">read_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_or_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#read_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.read_file" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.split_sequence_data">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">split_sequence_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving_horizon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#split_sequence_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.split_sequence_data" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">split_sequence_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moving_horizon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#split_sequence_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.split_sequence_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Split a data dictionary into train, development, and test sets. Splits data into thirds by
 default, but arbitrary split ratios for train and development can be provided.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – (dict str: np.array or list[str: np.array]) data dictionary.</p></li>
 <li><p><strong>nsteps</strong> – (int) N-step prediction horizon for batching data; used here to ensure split
@@ -354,11 +486,11 @@ development sets (out of 100.0). Default is None, which splits data into thirds.
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.split_static_data">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">split_static_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#split_static_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.split_static_data" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">split_static_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#split_static_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.split_static_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Split a data dictionary into train, development, and test sets. Splits data into thirds by
 default, but arbitrary split ratios for train and development can be provided.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – (dict str: np.array or list[str: np.array]) data dictionary.</p></li>
 <li><p><strong>split_ratio</strong> – (list float) Two numbers indicating percentage of data included in train and
@@ -370,45 +502,63 @@ development sets (out of 100.0). Default is None, which splits data into thirds.
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.standardize">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">standardize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#standardize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.standardize" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">standardize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#standardize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.standardize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="dataset.unbatch_tensor">
-<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">unbatch_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#unbatch_tensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.unbatch_tensor" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">dataset.</span></span><span class="sig-name descname"><span class="pre">unbatch_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dataset.html#unbatch_tensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dataset.unbatch_tensor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="blocks.html" class="btn btn-neutral float-left" title="Blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="estimators.html" class="btn btn-neutral float-right" title="Estimators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="estimators.html" class="btn btn-neutral float-right" title="Estimators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="blocks.html" class="btn btn-neutral float-left" title="Blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie.</p>
-  </div>
+    <p>
+        &copy; Copyright 2022, Aaron Tuor, Jan Drgona, Mia Skomski, Stefan Dernbach, James Koch, Zhao Chen, Christian Møldrup Legaard, Draguna Vrabie
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
